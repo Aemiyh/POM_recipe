@@ -26,7 +26,7 @@
 
         <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-            <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+            <a class="navbar-brand mr-1" href="index.html">Cooking Similarity</a>
 
             <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
                 <i class="fas fa-bars"></i>
@@ -54,12 +54,25 @@
 
             <!-- Sidebar -->
             <ul class="sidebar navbar-nav">
+                <!--  Colonne à gauche-->
+                <select>
+                    <option value="tartes">Tartes</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="macarons">Macarons</option>
+                </select>
+                <br>
+               <div class="">
+
+               </div>
+               
+
+
             </ul>
 
             <div id="content-wrapper">
 
                 <div class="container-fluid">
-                    <!-- Area Chart Example - Tarte 2-->
+                    <!-- Area Chart Example - Tarte 1-->
                     <div class="card mb-3">
                         <div class="card-header">
                             <i class="fas fa-chart-bar"></i>
@@ -67,7 +80,13 @@
                         <div class="card-body">
                             <canvas id="myBarChart" width="100%" height="30"></canvas>
                         </div>
-                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                        <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
+                        <div class="card-footer small text-muted">
+                                <label for="file" padding-right: 10px; font-size: 1rem;>Temps de préparation:</label>
+                                <progress id="file" max="100" value="15"> 15% </progress>
+                                <label for="file" padding-right: 10px; font-size: 1rem;>Temps de Cuisson:</label>
+                                <progress id="file" max="100" value="35"> 35% </progress>
+                        </div>
                     </div>
                     <!-- Area Chart Example - Tarte 2-->
                     <div class="card mb-3">
@@ -77,9 +96,15 @@
                         <div class="card-body">
                             <canvas id="myBarChart2" width="100%" height="30"></canvas>
                         </div>
-                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                        <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
+                        <div class="card-footer small text-muted">
+                                <label for="file" padding-right: 10px; font-size: 1rem;>Temps de préparation:</label>
+                                <progress id="file" max="100" value="15"> 15% </progress>
+                                <label for="file" padding-right: 10px; font-size: 1rem;>Temps de Cuisson:</label>
+                                <progress id="file" max="100" value="45"> 45% </progress>
+                            </div>
                     </div>
-                                        <!-- Area Chart Example - Tarte 2-->
+                                        <!-- Area Chart Example - Tarte 3-->
                     <div class="card mb-3">
                         <div class="card-header">
                             <i class="fas fa-chart-bar"></i>
@@ -87,7 +112,13 @@
                         <div class="card-body">
                             <canvas id="myBarChart3" width="100%" height="30"></canvas>
                         </div>
-                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                        <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
+                        <div class="card-footer small text-muted">
+                            <label for="file" padding-right: 10px; font-size: 1rem;>Temps de préparation:</label>
+                            <progress id="file" max="100" value="100"> 100% </progress>
+                            <label for="file" padding-right: 10px; font-size: 1rem;>Temps de Cuisson:</label>
+                            <progress id="file" max="100" value="20"> 20% </progress>
+                        </div>
                     </div>
                 </div>
                 <!-- /.container-fluid -->

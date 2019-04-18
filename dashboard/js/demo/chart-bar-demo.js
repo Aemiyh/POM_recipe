@@ -12,26 +12,26 @@ var myLineChart = new Chart(ctx, {
       label: "Ingredient",
       backgroundColor: "rgba(2,117,216,1)",
       borderColor: "rgba(2,117,216,1)",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
+      data: [2, 1, 1, 1, 6, 1, 0.5, 1],
     }],
   },
   options: {
     scales: {
       xAxes: [{
         time: {
-          unit: 'month'
+          unit: 'Kg'
         },
         gridLines: {
           display: false
         },
         ticks: {
-          maxTicksLimit: 10
+          maxTicksLimit: 12
         }
       }],
       yAxes: [{
         ticks: {
           min: 0,
-          max: 15000,
+          max: 10,
           maxTicksLimit: 5
         },
         gridLines: {
@@ -50,19 +50,19 @@ var ctx = document.getElementById("myBarChart2");
 var myLineChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["Oignons", "Tomates", "Pâte brisée", "Poive", "Sel", "Jambons de parme", "Basilique", "Oeufs", "Pot de ricotta"],
+    labels: ["Tomates", "Pâte brisée", "Poivre", "Sel", "Jambons de parme", "Basilique", "Oeufs", "Pot de ricotta"],
     datasets: [{
       label: "Ingredient",
       backgroundColor: "rgba(2,117,216,1)",
       borderColor: "rgba(2,117,216,1)",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
+      data: [2, 1, 1, 1, 6, 1, 0.5, 1],
     }],
   },
   options: {
     scales: {
       xAxes: [{
         time: {
-          unit: 'month'
+          unit: 'Kg'
         },
         gridLines: {
           display: false
@@ -74,7 +74,7 @@ var myLineChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 15000,
+          max: 10,
           maxTicksLimit: 5
         },
         gridLines: {
@@ -93,31 +93,31 @@ var ctx = document.getElementById("myBarChart3");
 var myLineChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["Oignons", "Tomates", "Pâte brisée", "Poivrons", "Cornichons", "Moutarde", "Fromage rapée"],
+    labels: ["Pâte brisée", "Boîte de thon naturel", "Ratatouille congelée", "Crème fraîche", "Olives", "Gruyère","Herbes de Provence", "Poivre", "Sel"],
     datasets: [{
       label: "Ingredient",
       backgroundColor: "rgba(2,117,216,1)",
       borderColor: "rgba(2,117,216,1)",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
+      data: [1, 1, 1, 0.4, 1, 1, 1, 1, 1],
     }],
   },
   options: {
     scales: {
       xAxes: [{
         time: {
-          unit: 'month'
+          unit: 'Kg'
         },
         gridLines: {
           display: false
         },
         ticks: {
-          maxTicksLimit: 6
+          maxTicksLimit: 12
         }
       }],
       yAxes: [{
         ticks: {
           min: 0,
-          max: 15000,
+          max: 10,
           maxTicksLimit: 5
         },
         gridLines: {
