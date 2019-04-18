@@ -55,18 +55,17 @@
             <!-- Sidebar -->
             <ul class="sidebar navbar-nav">
                 <!--  Colonne à gauche-->
-                <select>
-                    <option value="tartes">Tartes</option>
-                    <option value="pizza">Pizza</option>
-                    <option value="macarons">Macarons</option>
-                </select>
-                <br>
-                <div class="">
-
-                </div>
-
-
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span>Recettes</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                        <a class="dropdown-item" id="tartes" href="#">Tartes</a>
+                        <a class="dropdown-item" id="pizza"href="#">Pizza</a>
+                        <a class="dropdown-item" id="macarons" href="#">Macarons</a>
+                    </div>
+                </li>
             </ul>
 
             <div id="content-wrapper">
@@ -103,11 +102,11 @@
                         <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
                         <div class="card-footer small text-muted">
                             <div class="progress">
-                                <div class="progress-bar bg-info" role="progressbar" style="width: 35%"  title="Temps de préparation" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top">
-                                    <span class="progress-type">35 min</span> <!-- Text  -->
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 15%"  title="Temps de préparation" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top">
+                                    <span class="progress-type">15 min</span> <!-- Text  -->
                                 </div>
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" title="Temps de cuisson" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top">
-                                    <span class="progress-type">20 min</span> <!-- Text  -->
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 45%" title="Temps de cuisson" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top">
+                                    <span class="progress-type">45 min</span> <!-- Text  -->
                                 </div>
                             </div>
                         </div>
