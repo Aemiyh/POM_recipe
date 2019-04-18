@@ -89,7 +89,7 @@ var myLineChart = new Chart(ctx, {
 });
 
 // Bar Chart 3
-var ctx = document.getElementById("myBarChart4");
+var ctx = document.getElementById("myBarChart3");
 var myLineChart = new Chart(ctx, {
   type: 'bar',
   data: {
