@@ -67,7 +67,7 @@
                     }
                 });
                 });
-                
+
                 $('#categories').append('<p id="pruneaux"> Pour <span data-var="person" class="TKdjustableNumber" data-min="2" data-max="100">Personne</span>, il faut <span data-var="pruneaux"></span> g de'+ pruneauxData.ingredient+ '.</p>')
 
             })();
