@@ -55,7 +55,7 @@
                 }
                 extractData().then(function(data) {
                     var pruneauxData = data[0];
-                    //console.log(pruneauxData);
+                    console.log(pruneauxData);
                     var element = document.getElementById("pruneaux");
                     var tangle = new Tangle(element, {
                     initialize: function () {
@@ -67,7 +67,7 @@
                     }
                 });
                 });
-                
+
                 $('#categories').append('<p id="pruneaux"> Pour <span data-var="person" class="TKdjustableNumber" data-min="2" data-max="100">Personne</span>, il faut <span data-var="pruneaux"></span> g de'+ pruneauxData.ingredient+ '.</p>')
 
             })();
@@ -139,12 +139,76 @@
             </ul>
 
             <div id="content-wrapper">
-                
-                <!-- generation automatique en javascript des graphiques -->
 
+                <div class="container-fluid">
+                    <!-- Area Chart Example - Tarte 1-->
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <i class="fas fa-chart-bar"></i>
+                            Tarte salée aux tomates et poivrons</div>
+                        <div class="card-body">
+                            <canvas id="myBarChart" width="100%" height="30"></canvas>
+                        </div>
+                        <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
+                        <div class="card-footer small text-muted">
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 35%"  title="Temps de préparation" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top">
+                                    <span class="progress-type">35 min</span> <!-- Text  -->
+                                </div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" title="Temps de cuisson" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top">
+                                    <span class="progress-type">20 min</span> <!-- Text  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Area Chart Example - Tarte 2-->
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <i class="fas fa-chart-bar"></i>
+                            Tarte salée à la ricotta</div>
+                        <div class="card-body">
+                            <canvas id="myBarChart2" width="100%" height="30"></canvas>
+                        </div>
+                        <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
+                        <div class="card-footer small text-muted">
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 15%"  title="Temps de préparation" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top">
+                                    <span class="progress-type">15 min</span> <!-- Text  -->
+                                </div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 45%" title="Temps de cuisson" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top">
+                                    <span class="progress-type">45 min</span> <!-- Text  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Area Chart Example - Tarte 3-->
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <i class="fas fa-chart-bar"></i>
+                            Tarte salée à la ratatouille et au thon</div>
+                        <div class="card-body">
+                            <canvas id="myBarChart3" width="100%" height="30"></canvas>
+                        </div>
+                        <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
+                        <div class="card-footer small text-muted">
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 35%"  title="Temps de préparation" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top">
+                                    <span class="progress-type">35 min</span> <!-- Text  -->
+                                </div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" title="Temps de cuisson" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top">
+                                    <span class="progress-type">20 min</span> <!-- Text  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <p>This is a simple example.</p>
                
                 <p id="pruneaux"> Pour <span data-var="person" class="TKAdjustableNumber" data-min="2" data-max="100"> personnes</span>, il faut <span data-var="pruneaux"></span> g de pruneaux</p>
+               <div id="categories">
+
+               </div>
+           
 
                 <!-- /.container-fluid -->
 
@@ -154,7 +218,6 @@
                         <div class="copyright text-center my-auto">
                             <span>Cooking similarity 2019
                     </div>
-                        </div>
                 </footer>
 
             </div>
