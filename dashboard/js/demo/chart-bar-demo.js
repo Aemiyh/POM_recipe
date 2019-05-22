@@ -23,7 +23,6 @@ window.onload = function() {
 
 
         $.getJSON( "./data/Cookies_small.json", function( data){
-
             function createAndModifyDivs() {
                 var text = "<div class=\"container-fluid\">"
                 var progress1 = "<div class=\"card-footer small text-muted\"><div class=\"progress\">";
@@ -32,18 +31,43 @@ window.onload = function() {
                 var progress4 = "<div class=\"progress-bar bg-danger\" role=\"progressbar\" style=\"width: 45%\" title=\"Temps de cuisson\" aria-valuenow=\"45\" aria-valuemin=\"0\" aria-valuemax=\"100\" data-toggle=\"tooltip\" data-placement=\"top\">";
                 var progress5 = "<span class=\"progress-type\">45 min</span></div></div></div>";
                 var progress = progress1+progress2+progress3+progress4+progress5;
+
+
+                var tangle1 = "<p id=\"pruneaux\"> Pour <span data-var=\"person\" class=\"TKAdjustableNumber\" data-min=\"2\" data-max=`\"100\"> personnes</span>, il faut <span data-var=\"pruneaux\"></span> g de pruneaux</p><div id=\"categories\"></div>"
                 for (var i =0; i < data.length; i ++) {
                     text += "<div class=\"card mb-3\"><div class=\"card-header\"><i class=\"fas fa-chart-bar\"></i>"+" "+data[i].title+"</div><div class=\"card-body\"><canvas id=\"myBarChart"+i+"\" width=\"100%\" height=\"30\"></canvas></div>";
                     text+=progress;
+                    text+="<p id=\"pruneaux"+i+"\"> Pour <span data-var=\"person\" class=\"TKAdjustableNumber\" data-min=\"2\" data-max=\"100\"> personnes</span>, il y a  <span data-var=\"pruneaux"+i+"\"></span> calories</p><div id=\"categories\"></div>";
                     text+="</div>";
                 }
                 text += "</div>"
                 document.getElementById("content-wrapper").innerHTML = text;
+
             }
 
             createAndModifyDivs();
 
+            //Tangle
+            for ( var i =0; i <data.length;i++){
+                var element = document.getElementById("pruneaux"+i);
+                var tangle = new Tangle(element, {
+                    initialize: function () {
+                        this.person = 4;
+                        this.quantitePerPerson = data[i].calories;
+                    },
+                    update: function () {
+                        //A REVOIR POUR AUTOMATISER
+                        this.pruneaux0 = this.person * this.quantitePerPerson;
+                        this.pruneaux1 = this.person * this.quantitePerPerson;
+                        this.pruneaux2 = this.person * this.quantitePerPerson;
+                        this.pruneaux3 = this.person * this.quantitePerPerson;
+                        this.pruneaux4 = this.person * this.quantitePerPerson;
+                    }
+                });
+            }
 
+
+            //Charts
             JSONItems = data;
             for ( var i =0; i <data.length;i++){
                 // Bar Chart 0,1,2
