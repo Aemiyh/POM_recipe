@@ -32,19 +32,19 @@
       "Dust puffs with confectioners' sugar before serving."
     ],
     "fat": 9.0,
-    "ingredients": [
-      "4 sticks (2 cups) cold unsalted butter",
-      "4 cups all-purpose flour",
-      "1\/4 teaspoon salt",
-      "1 cup sour cream",
-      "2 large firm-ripe bananas",
-      "12 ounces cream cheese, softened",
-      "1\/2 cup granulated sugar",
-      "2 large egg yolks",
-      "2 tablespoons rum",
-      "2 teaspoons fresh lemon juice",
-      "1\/2 cup confectioners' sugar"
-    ],
+    "ingredients": {
+      "sticks (2 cups) cold unsalted butter" : "4",
+      "cups all-purpose flour" : "4",
+      "teaspoon salt" : "0,25",
+      "cup sour cream" : "1",
+      "large firm-ripe bananas" : "2",
+      "ounces cream cheese, softened" : "12",
+      "cup granulated sugar" : "0,5",
+      "large egg yolks" : "2",
+      "tablespoons rum" : "2",
+      "teaspoons fresh lemon juice" : "2",
+      "cup confectioners' sugar" : "0,5"
+  },
     "protein": 1.0,
     "rating": 4.375,
     "sodium": 34.0,
@@ -80,14 +80,14 @@
       "Bake cookies until golden brown, about 25 minutes. Cool on rack."
     ],
     "fat": 7.0,
-    "ingredients": [
-      "1 cup all purpose flour",
-      "4 ounces chilled cream cheese, cut into 1\/2-inch pieces",
-      "1\/2 cup (1 stick) chilled unsalted butter, cut into 1\/2-inch pieces",
-      "1\/2 cup apricot jam",
-      "1 cup sweetened flaked coconut",
-      "1 cup dried tart or Bing cherries"
-    ],
+    "ingredients": {
+      "cup all purpose flour" : "1",
+      "ounces chilled cream cheese, cut into 1\/2-inch pieces" : "4",
+      "cup (1 stick) chilled unsalted butter, cut into 1\/2-inch pieces" : "0,5",
+      "cup apricot jam" : "0,5",
+      "cup sweetened flaked coconut" : "1",
+      "cup dried tart or Bing cherries" : "1"
+    },
     "protein": 1.0,
     "rating": 3.125,
     "sodium": 31.0,
@@ -128,16 +128,16 @@
       "Bake cookies, one sheet at time, until bottoms are golden, 12 to 15 minutes total. Cool on sheets 2 minutes, then transfer with a metal spatula to racks to cool completely. Make more cookies with remaining dough on cooled baking sheets."
     ],
     "fat": 4.0,
-    "ingredients": [
-      "2 sticks (1 cup) unsalted butter, softened",
-      "1 cup sugar",
-      "1\/2 teaspoon salt",
-      "1 large egg",
-      "1 teaspoon pure vanilla extract",
-      "2 cups all-purpose flour",
-      "1 cup coarse sanding sugar (see Cooks' Note)",
-      "Special equipment: Wax paper; 2 large baking sheets; parchment paper"
-    ],
+    "ingredients": {
+      "sticks (1 cup) unsalted butter, softened" : "2",
+      "cup sugar" : "1",
+      "teaspoon salt" : "0,5",
+      "large egg" : "1",
+      "teaspoon pure vanilla extract": "1",
+      "cups all-purpose flour" : "2",
+      "cup coarse sanding sugar (see Cooks' Note)" : "1",
+      "Special equipment: Wax paper; 2 large baking sheets; parchment paper":"0"
+    },
     "protein": 1.0,
     "rating": 3.75,
     "sodium": 26.0,
@@ -173,18 +173,18 @@
       "MAKE AHEAD: Cookies can be baked (but not filled) 2 weeks ahead; wrap tightly and freeze. Thaw before filling. Cookies can be filled 1 day ahead; store airtight at room temperature."
     ],
     "fat": 6.0,
-    "ingredients": [
-      "1 1\/2 cups all-purpose flour",
-      "1 1\/2 cups unsalted, roasted almonds",
-      "1 teaspoon baking powder",
-      "1\/2 teaspoons kosher salt",
-      "1 cup (2 sticks) unsalted butter, room temperature",
-      "1\/2 cup granulated sugar",
-      "1 large egg",
-      "1 teaspoon vanilla extract",
-      "1\/2 cup coarse sanding or raw sugar",
-      "Jams and\/or lemon curd (for filling)"
-    ],
+    "ingredients": {
+      "cups all-purpose flour" : "0,5",
+      "cups unsalted, roasted almonds" : "0,5",
+      "teaspoon baking powder" : "1",
+      "teaspoons kosher salt" : "0,5",
+      "cup (2 sticks) unsalted butter, room temperature" : "1",
+      "cup granulated sugar" : "0,5",
+      "large egg" : "1",
+      "teaspoon vanilla extract" : "1",
+      "cup coarse sanding or raw sugar" : "0,5",
+      "Jams and\/or lemon curd (for filling)":"1"
+    },
     "protein": 1.0,
     "rating": 4.375,
     "sodium": 51.0,
@@ -216,14 +216,14 @@
       "Bake ricciarelli until edges are lightly golden and firm and centers are still a little soft, 10\u201312 minutes; let cool on baking sheet. Dust with powdered sugar."
     ],
     "fat": 5.0,
-    "ingredients": [
-      "1 1\/4 cups slivered almonds",
-      "1 teaspoon finely grated lemon zest",
-      "1\/2 cup powdered sugar, divided, plus more for dusting",
-      "1 large egg white",
-      "Pinch of kosher salt",
-      "1\/4 teaspoon vanilla extract"
-    ],
+    "ingredients": {
+      "cups slivered almonds" : "0,25",
+      "teaspoon finely grated lemon zest" : "1",
+      "cup powdered sugar, divided, plus more for dusting" : "0,5",
+      "large egg white" : "1",
+      "Pinch of kosher salt":"0",
+      "teaspoon vanilla extract": "0,25"
+    },
     "protein": 2.0,
     "rating": 0.0,
     "sodium": 15.0,

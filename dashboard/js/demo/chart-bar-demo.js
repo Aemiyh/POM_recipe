@@ -90,8 +90,6 @@ window.onload = function() {
                 });
             }
 
-
-
         });
     });
 }
