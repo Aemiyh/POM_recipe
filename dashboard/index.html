@@ -33,48 +33,6 @@
         <script type="text/javascript" src="TangleKit/sprintf.js"></script>
         <script type="text/javascript" src="TangleKit/BVTouchable.js"></script>
         <script type="text/javascript" src="TangleKit/TangleKit.js"></script>
-
-        <script type="text/javascript">
-
-            (function() {
-
-
-                //var pruneaux = extractData();
-
-                function extractData() {
-
-                    var categoriesArray = [];
-                    return $.getJSON('./data/tartes.json').then(function(data){
-                        $.each(data['recettes'][0]["ingredients"],function(categoriesName, categories) {
-                            $.each(categories,function(ingredient, valeur) {
-                                categoriesArray.push({ 'ingredient': ingredient, "valeur": valeur});
-                            });
-                        });
-                        return categoriesArray;
-                    });
-                }
-                extractData().then(function(data) {
-                    var pruneauxData = data[0];
-                    //console.log(pruneauxData);
-                    var element = document.getElementById("pruneaux");
-                    var tangle = new Tangle(element, {
-                        initialize: function () {
-                            this.person = 4;
-                            this.quantitePerPerson = pruneauxData["valeur"];
-                        },
-                        update: function () {
-                            this.pruneaux = this.person * this.quantitePerPerson;
-                        }
-                    });
-
-                });
-
-                //$('#categories').append('<p id="pruneaux"> Pour <span data-var="person" class="TKdjustableNumber" data-min="2" data-max="100">Personne</span>, il faut <span data-var="pruneaux"></span> g de'+ pruneauxData.ingredient+ '.</p>');
-
-            })();
-
-        </script>
-
     </head>
 
     <body id="page-top">
@@ -140,10 +98,6 @@
             </ul>
 
             <!--- Tangle -->
-            <p id="pruneaux"> Pour <span data-var="person" class="TKAdjustableNumber" data-min="2" data-max="100"> personnes</span>, il faut <span data-var="pruneaux"></span> g de pruneaux</p>
-            <div id="categories">
-
-            </div>
 
             <div id="content-wrapper">
 
