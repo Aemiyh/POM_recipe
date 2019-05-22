@@ -19,11 +19,11 @@
 
         <!-- Custom styles for this template-->
         <link href="css/sb-admin.css" rel="stylesheet">
-        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
-	    <!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
-        
+        <!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
+
         <!-- Tangle -->
         <script type="text/javascript" src="Tangle.js"></script>
         <!-- <script type="text/javascript" src="js/tangleRecette.js"></script> -->
@@ -39,7 +39,7 @@
             (function() {
 
 
-                // var pruneaux = extractData();
+                //var pruneaux = extractData();
 
                 function extractData() {
 
@@ -50,7 +50,7 @@
                                 categoriesArray.push({ 'ingredient': ingredient, "valeur": valeur});
                             });
                         });
-                    return categoriesArray;
+                        return categoriesArray;
                     });
                 }
                 extractData().then(function(data) {
@@ -58,21 +58,22 @@
                     //console.log(pruneauxData);
                     var element = document.getElementById("pruneaux");
                     var tangle = new Tangle(element, {
-                    initialize: function () {
-                        this.person = 4;
-                        this.quantitePerPerson = pruneauxData["valeur"];
-                    },
-                    update: function () {
-                        this.pruneaux = this.person * this.quantitePerPerson;
-                    }
+                        initialize: function () {
+                            this.person = 4;
+                            this.quantitePerPerson = pruneauxData["valeur"];
+                        },
+                        update: function () {
+                            this.pruneaux = this.person * this.quantitePerPerson;
+                        }
+                    });
+
                 });
-                });
-                
-                $('#categories').append('<p id="pruneaux"> Pour <span data-var="person" class="TKdjustableNumber" data-min="2" data-max="100">Personne</span>, il faut <span data-var="pruneaux"></span> g de'+ pruneauxData.ingredient+ '.</p>')
+
+                //$('#categories').append('<p id="pruneaux"> Pour <span data-var="person" class="TKdjustableNumber" data-min="2" data-max="100">Personne</span>, il faut <span data-var="pruneaux"></span> g de'+ pruneauxData.ingredient+ '.</p>');
 
             })();
 
-            </script>
+        </script>
 
     </head>
 
@@ -133,18 +134,24 @@
                     </div>
                 </li>
                 <!-- Time slider -->
-				<form class="range-field">
-				  <input type="range" min="0" max="100" />
+                <form class="range-field">
+                    <input type="range" min="0" max="100" />
                 </form>
             </ul>
 
+            <!--- Tangle -->
+            <p id="pruneaux"> Pour <span data-var="person" class="TKAdjustableNumber" data-min="2" data-max="100"> personnes</span>, il faut <span data-var="pruneaux"></span> g de pruneaux</p>
+            <div id="categories">
+
+            </div>
+
             <div id="content-wrapper">
-                
+
                 <!-- generation automatique en javascript des graphiques -->
 
                 <p>This is a simple example.</p>
-               
-                <p id="pruneaux"> Pour <span data-var="person" class="TKAdjustableNumber" data-min="2" data-max="100"> personnes</span>, il faut <span data-var="pruneaux"></span> g de pruneaux</p>
+
+
 
                 <!-- /.container-fluid -->
 
@@ -152,14 +159,11 @@
                 <footer class="sticky-footer">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
-                            <span>Cooking similarity 2019
-                    </div>
+                            <span>Copyright © Cooking similarity 2019</span>
                         </div>
+                    </div>
                 </footer>
-
-            </div>
-            <!-- /.content-wrapper -->
-
+            </div><!-- /.content-wrapper -->
         </div>
         <!-- /#wrapper -->
 
