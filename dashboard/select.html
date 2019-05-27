@@ -55,15 +55,13 @@
       border-bottom: 1px solid black;
   }
   .dc-chart select {
-      width: 150px;
+      width: 200px;
   }
 </style>
 
 <script type="text/javascript">
     var ingredientsArray = [];
-    var ingredientsArray2 = [];
-    var categoriesArray = [];
-    var categoriesArray3 = [];
+    var titleArray = [];
 
     $.getJSON( "./data/Cookies_small.json", function( data){
         $.each(data[0]["ingredients"],function(ingredientsName, quantite) {
@@ -71,31 +69,27 @@
             
         });
         for ( var i =0; i <data.length;i++){
-            categoriesArray.push(data[i].title);
+            titleArray.push(data[i].title);
         }
         var select1 = dc.selectMenu('#select1'),
             select2 = dc.selectMenu('#select2'),
             select3 = dc.selectMenu('#select3'),
             datatable = dc.dataTable('#datatable');
         // create a bunch of crosslinked categorical data
-        var letters = ["Cookies", "Sandwich", "Pasta"];
-        // for(var i = 0; i < 26; ++i)
-        //     letters.push(String.fromCharCode(i+65));
-
-        //ici letters
-        var colors= ingredientsArray;
-        var states=categoriesArray;
+        var categoriesRecipe = ["Cookies", "Sandwich", "Pasta"];
+        var ingredientsN= ingredientsArray;
+        var titlesRecipe=titleArray;
         var data = [], SIZE = 500;
         function rnd(a) {
             return a[Math.floor(Math.random()*a.length)];
         }
         for(i = 0; i < SIZE; ++i)
-            data.push({letter: letters[i], color: rnd(colors), state: rnd(states)});
+            data.push({categoriesR: rnd(categoriesRecipe), ingredients: rnd(ingredientsN), recette: rnd(titlesRecipe)});
         var ndx = crossfilter(data),
-            letterDimension = ndx.dimension(function(d) { return d.letter; }),
-            colorDimension = ndx.dimension(function(d) { return d.color; }),
-            stateDimension = ndx.dimension(function(d) { return d.state; }),
-            letterDimension2 = ndx.dimension(function(d) { return d.letter; });
+            letterDimension = ndx.dimension(function(d) { return d.categoriesR; }),
+            colorDimension = ndx.dimension(function(d) { return d.ingredients; }),
+            stateDimension = ndx.dimension(function(d) { return d.recette; }),
+            letterDimension2 = ndx.dimension(function(d) { return d.categoriesR; });
         select1
             .dimension(letterDimension)
             .group(letterDimension.group())
@@ -113,8 +107,8 @@
             .controlsUseVisibility(true);
         datatable
             .dimension(letterDimension2)
-            .section(function(d) { return d.letter; })
-            .columns(['color', 'state'])
+            .section(function(d) { return d.categoriesR; })
+            .columns(['ingredients', 'recette'])
             .size(data.length);
         dc.renderAll();
     });
