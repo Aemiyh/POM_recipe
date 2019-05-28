@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>dc.js - Select Menu Example</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/dc.css"/> -->
+</head>
+<body>
+
+<div class="container">
+<script type="text/javascript" src="header.js"></script>
+  <p>A meaningless example of multiple selectMenus on some random data...</p>
+  <div id="select1">
+    <div>
+      <a class='reset'
+         href='javascript:select1.filterAll();dc.redrawAll();'
+         style='visibility: hidden;'>reset</a>
+    </div>
+  </div>
+  <div id="select2">
+    <div>
+      <a class='reset'
+         href='javascript:select2.filterAll();dc.redrawAll();'
+         style='visibility: hidden;'>reset</a>
+    </div>
+  </div>
+  <div id="select3">
+    <div>
+      <a class='reset'
+         href='javascript:select3.filterAll();dc.redrawAll();'
+         style='visibility: hidden;'>reset</a>
+    </div>
+  </div>
+<div style="clear: both"></div>
+<div id="datatable"></div>
+
+
+<script type="text/javascript" src="./js/js_dc/promise-polyfill.js"></script>
+<script type="text/javascript" src="./js/js_dc/fetch.umd.js"></script>
+<script type="text/javascript" src="./js/js_dc/d3.js"></script>
+<script type="text/javascript" src="./js/js_dc/crossfilter.js"></script>
+<script type="text/javascript" src="./js/js_dc/dc.js"></script>
+
+<style type="text/css">
+  .dc-chart th {
+    text-align: left
+  }
+  .dc-chart th,.dc-chart td {
+      padding-left: 10px;
+  }
+  .dc-chart tr.dc-table-group td {
+      padding-top: 4px;
+      border-bottom: 1px solid black;
+  }
+  .dc-chart select {
+      width: 200px;
+  }
+</style>
+
+<script type="text/javascript">
+    var ingredientsArray = [];
+    var titleArray = [];
+
+    $.getJSON( "./data/Cookies_small.json", function( data){
+        $.each(data[0]["ingredients"],function(ingredientsName, quantite) {
+                ingredientsArray.push(ingredientsName);
+            
+        });
+        for ( var i =0; i <data.length;i++){
+            titleArray.push(data[i].title);
+        }
+        var select1 = dc.selectMenu('#select1'),
+            select2 = dc.selectMenu('#select2'),
+            select3 = dc.selectMenu('#select3'),
+            datatable = dc.dataTable('#datatable');
+        // create a bunch of crosslinked categorical data
+        var categoriesRecipe = ["Cookies", "Sandwich", "Pasta"];
+        var ingredientsN= ingredientsArray;
+        var titlesRecipe=titleArray;
+        var data = [], SIZE = 500;
+        function rnd(a) {
+            return a[Math.floor(Math.random()*a.length)];
+        }
+        for(i = 0; i < SIZE; ++i)
+            data.push({categoriesR: rnd(categoriesRecipe), ingredients: rnd(ingredientsN), recette: rnd(titlesRecipe)});
+        var ndx = crossfilter(data),
+            letterDimension = ndx.dimension(function(d) { return d.categoriesR; }),
+            colorDimension = ndx.dimension(function(d) { return d.ingredients; }),
+            stateDimension = ndx.dimension(function(d) { return d.recette; }),
+            letterDimension2 = ndx.dimension(function(d) { return d.categoriesR; });
+        select1
+            .dimension(letterDimension)
+            .group(letterDimension.group())
+            .controlsUseVisibility(true);
+        select2
+            .dimension(colorDimension)
+            .group(colorDimension.group())
+            .multiple(true)
+            .numberVisible(10)
+            .controlsUseVisibility(true);
+        select3.dimension(stateDimension)
+            .group(stateDimension.group())
+            .multiple(true)
+            .numberVisible(10)
+            .controlsUseVisibility(true);
+        datatable
+            .dimension(letterDimension2)
+            .section(function(d) { return d.categoriesR; })
+            .columns(['ingredients', 'recette'])
+            .size(data.length);
+        dc.renderAll();
+    });
+</script>
+</div>
+</body>
+</html>
