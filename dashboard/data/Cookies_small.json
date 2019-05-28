@@ -35,15 +35,15 @@
     "ingredients": {
       "unsalted butter" : "4",
       "flour" : "4",
-      "salt" : "0,25",
+      "salt" : "0.25",
       "sour cream" : "1",
       "bananas" : "2",
       "cream cheese" : "12",
-      "granulated sugar" : "0,5",
+      "granulated sugar" : "0.5",
       "egg yolks" : "2",
       "rum" : "2",
       "fresh lemon juice" : "2",
-      "sugar" : "0,5"
+      "sugar" : "0.5"
   },
     "protein": 1.0,
     "rating": 4.375,
@@ -83,8 +83,8 @@
     "ingredients": {
       "flour" : "1",
       "cream cheese" : "4",
-      "unsalted butter" : "0,5",
-      "apricot jam" : "0,5",
+      "unsalted butter" : "0.5",
+      "apricot jam" : "0.5",
       "sweetened flaked coconut" : "1",
       "dried tart" : "1"
     },
@@ -131,7 +131,7 @@
     "ingredients": {
       "unsalted butter" : "2",
       "sugar" : "1",
-      "salt" : "0,5",
+      "salt" : "0.5",
       "egg" : "1",
       "vanilla extract": "1",
       "flour" : "2",
@@ -174,15 +174,15 @@
     ],
     "fat": 6.0,
     "ingredients": {
-      "flour" : "0,5",
-      "unsalted roasted almonds" : "0,5",
+      "flour" : "0.5",
+      "unsalted roasted almonds" : "0.5",
       "baking powder" : "1",
-      "kosher salt" : "0,5",
+      "kosher salt" : "0.5",
       "unsalted butter" : "1",
-      "granulated sugar" : "0,5",
+      "granulated sugar" : "0.5",
       "large egg" : "1",
       "vanilla extract" : "1",
-      "raw sugar" : "0,5",
+      "raw sugar" : "0.5",
       "Jams lemon curd":"1"
     },
     "protein": 1.0,
@@ -217,12 +217,12 @@
     ],
     "fat": 5.0,
     "ingredients": {
-      "slivered almonds" : "0,25",
+      "slivered almonds" : "0.25",
       "lemon zest" : "1",
-      "powdered sugar" : "0,5",
+      "powdered sugar" : "0.5",
       "egg white" : "1",
       "kosher salt":"0",
-      "vanilla extract": "0,25"
+      "vanilla extract": "0.25"
     },
     "protein": 2.0,
     "rating": 0.0,
