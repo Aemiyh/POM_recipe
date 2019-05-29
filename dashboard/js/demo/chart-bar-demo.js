@@ -74,7 +74,7 @@ window.onload = function() {
                     data: {
                         labels: recettesArray[i].labels,
                         datasets: [{
-                            label: 'Value',
+                            label: 'Cup/Value',
                             backgroundColor: 'rgba(2,117,216,1)',
                             borderColor: 'rgba(2,117,216,1)',
                             data: recettesArray[i].datas
@@ -90,13 +90,13 @@ window.onload = function() {
                             display: false
                             },
                             ticks: {
-                            maxTicksLimit: 12
+                            maxTicksLimit: 15
                             }
                         }],
                         yAxes: [{
                             ticks: {
                             min: 0,
-                            max: 150,
+                            max: 15,
                             maxTicksLimit: 5
                             },
                             gridLines: {
