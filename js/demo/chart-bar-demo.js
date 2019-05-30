@@ -2,6 +2,7 @@ Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSyste
 Chart.defaults.global.defaultFontColor = '#292b2c';
 
 var JSONItems = [];
+var ingredientsList = [];
 
 window.onload = function() {
 
@@ -28,10 +29,45 @@ window.onload = function() {
                 text += "</div>"
                 document.getElementById("content-wrapper").innerHTML = text;
 
+                var selectiontext="<li class=\"nav-item dropdown\">"
+                selectiontext+="<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"pagesDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">"
+                selectiontext+="<i class=\"fas fa-fw fa-folder\"></i><span>Recettes</span></a>"
+                selectiontext+="<div class=\"dropdown-menu\" aria-labelledby=\"pagesDropdown\">"
+                selectiontext+="<a class=\"dropdown-item\" id=\"tartes\" href=\"#\">Tartes</a><a class=\"dropdown-item\" id=\"pizza\"href=\"#\">Pizza</a>"
+                selectiontext+="<a class=\"dropdown-item\" id=\"macarons\" href=\"#\">Macarons</a></div></li>"
+                selectiontext+="<li class=\"nav-item dropdown\">"
+                selectiontext+="<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"pagesDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">"
+                selectiontext+="<i class=\"fas fa-fw fa-folder\"></i><span>Type</span></a>"
+                selectiontext+="<div class=\"dropdown-menu\" aria-labelledby=\"pagesDropdown\">"
+                selectiontext+="<a class=\"dropdown-item\" id=\"tartes\" href=\"#\">Salée</a>"
+                selectiontext+="<a class=\"dropdown-item\" id=\"pizza\"href=\"#\">Sucrée</a>"
+                selectiontext+="<a class=\"dropdown-item\" id=\"macarons\" href=\"#\">Végétarienne</a>"
+                selectiontext+="</div></li>"
+                selectiontext+="<form class=\"range-field\">"
+                selectiontext+="<input type=\"range\" min=\"0\" max=\"100\" />"
+                selectiontext+="</form></ul>"
+                // selectiontext+="<br></br>"
+
+                /*     FILTRE SELECTION   */
+                selectiontext+="<form><select name=\"ingredients\" multiple>"
+                $.each(data, function (index, value) { 
+                    $.each(data[index].ingredients, function (ingredientsName, quantite) 
+                        { 
+                            ingredientsList.push(ingredientsName) ;
+                        }) 
+                }) 
+                for(var j=0; j<ingredientsList.length;j++){
+                    
+                    
+                    selectiontext+="<option>";
+                    selectiontext+= ingredientsList[j];
+                    selectiontext+="</option>";
+                }
+                console.log(ingredientsList.length);
+                selectiontext+='</select></form>'
+                document.getElementById("leftColonne").innerHTML = selectiontext;
             }
-
             createAndModifyDivs();
-
             //Tangle
             for ( var i =0; i <data.length;i++){
                 var element = document.getElementById("pruneaux"+i);
