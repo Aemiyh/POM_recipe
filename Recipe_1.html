@@ -13141,7 +13141,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13159,7 +13159,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13175,7 +13175,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -13308,7 +13308,7 @@ Les jeux de données doivent contenir des catégories de recette pertinente tel 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Nombre de résultats par catégorie</span>
@@ -13337,10 +13337,11 @@ Les jeux de données doivent contenir des catégories de recette pertinente tel 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">getNumbersOfRecipeByCategories</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">getNumbersOfRecipeByCategories</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">d</span><span class="p">[</span><span class="s2">&quot;Bean&quot;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13353,686 +13354,97 @@ Les jeux de données doivent contenir des catégories de recette pertinente tel 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;Sandwich&#39;: 428,
- &#39;Bean&#39;: 577,
- &#39;Fruit&#39;: 1958,
- &#39;Tomato&#39;: 2140,
- &#39;turkey&#39;: 456,
- &#39;Vegetable&#39;: 2087,
- &#39;Kid-Friendly&#39;: 1791,
- &#39;Apple&#39;: 666,
- &#39;Lentil&#39;: 98,
- &#39;Lettuce&#39;: 225,
- &#39;Cookie&#39;: 69,
- &#39;Food Processor&#39;: 973,
- &#39;Onion&#39;: 2238,
- &#39;Pork&#39;: 928,
- &#39;Bake&#39;: 4413,
- &#39;Bastille Day&#39;: 30,
- &#34;New Year&#39;s Eve&#34;: 165,
- &#39;Dried Fruit&#39;: 206,
- &#39;Port&#39;: 110,
- &#39;Winter&#39;: 3099,
- &#39;Chill&#39;: 1126,
- &#39;Bon Appétit&#39;: 9355,
- &#39;Soup/Stew&#39;: 1164,
- &#39;Dairy&#39;: 1496,
- &#39;Potato&#39;: 1128,
- &#39;Fennel&#39;: 371,
- &#39;Gourmet&#39;: 6648,
- &#39;New York&#39;: 49,
- &#39;Fish&#39;: 936,
- &#39;Olive&#39;: 556,
- &#39;Sauté&#39;: 2044,
- &#39;Low Fat&#39;: 929,
- &#39;Low Cal&#39;: 1049,
- &#39;High Fiber&#39;: 1013,
- &#39;Dinner&#39;: 2705,
- &#39;Healthy&#39;: 2351,
- &#39;Simmer&#39;: 890,
- &#39;Pescatarian&#39;: 6042,
- &#39;Dairy Free&#39;: 3206,
- &#39;Peanut Free&#39;: 8390,
- &#39;Tree Nut Free&#39;: 7044,
- &#39;Soy Free&#39;: 8088,
- &#39;Kosher&#39;: 6175,
- &#39;Cheese&#39;: 1355,
- &#39;Pasta&#39;: 968,
- &#39;Side&#39;: 3151,
- &#39;Vegetarian&#39;: 6846,
- &#39;Quick &amp; Easy&#39;: 5372,
- &#39;Fall&#39;: 3015,
- &#39;California&#39;: 146,
- &#39;Basil&#39;: 565,
- &#39;Bacon&#39;: 587,
- &#39;Summer&#39;: 4151,
- &#39;Salad&#39;: 1516,
- &#39;Easter&#39;: 234,
- &#39;Ham&#39;: 222,
- &#39;Asparagus&#39;: 207,
- &#39;Spinach&#39;: 377,
- &#39;Carrot&#39;: 701,
- &#39;Spring&#39;: 1715,
- &#39;Sugar Snap Pea&#39;: 77,
- &#39;Boil&#39;: 445,
- &#39;Wheat/Gluten-Free&#39;: 4906,
- &#39;No Sugar Added&#39;: 3132,
- &#39;Egg&#39;: 1768,
- &#39;No-Cook&#39;: 1251,
- &#39;Cocktail Party&#39;: 1154,
- &#39;Kumquat&#39;: 43,
- &#39;Beef&#39;: 811,
- &#39;Ginger&#39;: 1146,
- &#39;Stir-Fry&#39;: 227,
- &#39;Soy Sauce&#39;: 293,
- &#39;Mustard&#39;: 600,
- &#39;Picnic&#39;: 519,
- &#39;Lunch&#39;: 1359,
- &#39;Mayonnaise&#39;: 378,
- &#39;Pea&#39;: 211,
- &#39;Sugar Conscious&#39;: 2466,
- &#39;Milk/Cream&#39;: 1995,
- &#39;Thanksgiving&#39;: 1458,
- &#39;Rosemary&#39;: 371,
- &#39;Sweet Potato/Yam&#39;: 286,
- &#39;Nutmeg&#39;: 108,
- &#39;Chicken&#39;: 1344,
- &#39;Garlic&#39;: 1643,
- &#39;Pepper&#39;: 612,
- &#39;Breakfast&#39;: 712,
- &#39;Coconut&#39;: 365,
- &#39;Shrimp&#39;: 505,
- &#39;Lemongrass&#39;: 84,
- &#39;Cake&#39;: 720,
- &#39;Chocolate&#39;: 855,
- &#39;Dessert&#39;: 3573,
- &#39;Tropical Fruit&#39;: 62,
- &#39;Banana&#39;: 177,
- &#39;Party&#39;: 892,
- &#39;Peanut Butter&#39;: 32,
- &#39;Birthday&#39;: 193,
- &#39;Low Carb&#39;: 363,
- &#34;Father&#39;s Day&#34;: 295,
- &#39;Beef Tenderloin&#39;: 72,
- &#39;Brandy&#39;: 270,
- &#39;Massachusetts&#39;: 47,
- &#39;Sauce&#39;: 1065,
- &#39;Peach&#39;: 194,
- &#39;Chive&#39;: 251,
- &#39;Escarole&#39;: 43,
- &#39;Bread&#39;: 499,
- &#39;Brunch&#39;: 833,
- &#39;Christmas&#39;: 1039,
- &#34;Mother&#39;s Day&#34;: 165,
- &#34;New Year&#39;s Day&#34;: 82,
- &#39;Honey&#39;: 401,
- &#39;Jam or Jelly&#39;: 159,
- &#39;Kidney Friendly&#39;: 2313,
- &#39;Braise&#39;: 330,
- &#39;Tuna&#39;: 134,
- &#39;Radish&#39;: 208,
- &#39;Capers&#39;: 185,
- &#39;Asian Pear&#39;: 20,
- &#39;Watercress&#39;: 138,
- &#39;Sesame&#39;: 147,
- &#39;Self&#39;: 312,
- &#39;Low Sodium&#39;: 389,
- &#39;Cod&#39;: 76,
- &#39;Halibut&#39;: 89,
- &#39;Leafy Green&#39;: 903,
- &#39;Parmesan&#39;: 644,
- &#39;Family Reunion&#39;: 316,
- &#39;Endive&#39;: 112,
- &#39;Breadcrumbs&#39;: 55,
- &#39;Nut&#39;: 905,
- &#39;Super Bowl&#39;: 311,
- &#39;Pecan&#39;: 331,
- &#39;Shower&#39;: 327,
- &#39;Condiment/Spread&#39;: 924,
- &#39;Fry&#39;: 430,
- &#39;Pan-Fry&#39;: 249,
- &#39;Herb&#39;: 1681,
- &#39;Cucumber&#39;: 379,
- &#39;Advance Prep Required&#39;: 109,
- &#39;Paleo&#39;: 779,
- &#39;Pear&#39;: 279,
- &#39;Spice&#39;: 680,
- &#39;Blender&#39;: 618,
- &#39;Roast&#39;: 1320,
- &#39;Green Bean&#39;: 226,
- &#39;Vegan&#39;: 1851,
- &#39;Apricot&#39;: 269,
- &#39;Cherry&#39;: 244,
- &#39;Back to School&#39;: 202,
- &#39;Steak&#39;: 243,
- &#39;Bell Pepper&#39;: 767,
- &#39;Poker/Game Night&#39;: 135,
- &#39;Lemon&#39;: 1104,
- &#39;Australia&#39;: 7,
- &#39;Vinegar&#39;: 658,
- &#39;Casserole/Gratin&#39;: 199,
- &#39;Squash&#39;: 151,
- &#39;Butternut Squash&#39;: 182,
- &#39;Swiss Cheese&#39;: 74,
- &#39;Sage&#39;: 182,
- &#39;Fontina&#39;: 40,
- &#39;Avocado&#39;: 273,
- &#39;Fortified Wine&#39;: 76,
- &#39;White Wine&#39;: 487,
- &#39;Deep-Fry&#39;: 92,
- &#39;Cinnamon&#39;: 464,
- &#39;Broccoli Rabe&#39;: 48,
- &#39;Grill&#39;: 564,
- &#39;Grill/Barbecue&#39;: 1104,
- &#39;Lime&#39;: 546,
- &#39;Lime Juice&#39;: 133,
- &#39;Bitters&#39;: 127,
- &#39;Liqueur&#39;: 317,
- &#39;Alcoholic&#39;: 835,
- &#39;Cocktail&#39;: 380,
- &#39;Rye&#39;: 19,
- &#39;Drink&#39;: 1087,
- &#39;Crab&#39;: 156,
- &#39;Backyard BBQ&#39;: 938,
- &#39;Citrus&#39;: 863,
- &#39;Freeze/Chill&#39;: 417,
- &#39;Rice&#39;: 538,
- &#39;Appetizer&#39;: 1372,
- &#39;Oscars&#39;: 112,
- &#39;Goat Cheese&#39;: 307,
- &#39;Mint&#39;: 616,
- &#39;Christmas Eve&#39;: 331,
- &#39;Engagement Party&#39;: 184,
- &#39;Potluck&#39;: 485,
- &#39;Jalapeño&#39;: 361,
- &#39;Cilantro&#39;: 607,
- &#39;Grapefruit&#39;: 120,
- &#39;Orange&#39;: 837,
- &#39;Pomegranate&#39;: 77,
- &#39;Mushroom&#39;: 843,
- &#39;Hot Pepper&#39;: 487,
- &#39;Mixer&#39;: 630,
- &#39;Artichoke&#39;: 153,
- &#39;One-Pot Meal&#39;: 11,
- &#39;HarperCollins&#39;: 121,
- &#39;Prosciutto&#39;: 155,
- &#39;Quick and Healthy&#39;: 65,
- &#39;Collard Greens&#39;: 31,
- &#39;Fig&#39;: 154,
- &#39;Mozzarella&#39;: 190,
- &#39;Ground Beef&#39;: 90,
- &#39;Veal&#39;: 123,
- &#39;Pumpkin&#39;: 118,
- &#39;Seed&#39;: 150,
- &#39;Fruit Juice&#39;: 488,
- &#39;Eggplant&#39;: 219,
- &#39;Santa Monica&#39;: 10,
- &#39;Fourth of July&#39;: 376,
- &#39;Corn&#39;: 371,
- &#39;Chile Pepper&#39;: 237,
- &#39;Molasses&#39;: 112,
- &#39;Buttermilk&#39;: 73,
- &#39;Cornmeal&#39;: 271,
- &#39;Clove&#39;: 193,
- &#39;Blackberry&#39;: 144,
- &#39;Strawberry&#39;: 308,
- &#39;Almond&#39;: 584,
- &#39;Microwave&#39;: 37,
- &#39;Tofu&#39;: 92,
- &#39;Thyme&#39;: 333,
- &#39;Parsley&#39;: 514,
- &#39;Coffee Grinder&#39;: 17,
- &#39;Salad Dressing&#39;: 178,
- &#39;Oregano&#39;: 101,
- &#39;Berry&#39;: 465,
- &#39;Double Boiler&#39;: 32,
- &#39;Bulgur&#39;: 30,
- &#39;Blue Cheese&#39;: 235,
- &#39;Arugula&#39;: 278,
- &#34;Valentine&#39;s Day&#34;: 233,
- &#39;Cream Cheese&#39;: 375,
- &#39;Raspberry&#39;: 340,
- &#39;Hazelnut&#39;: 182,
- &#39;Peanut&#39;: 153,
- &#39;Tree Nut&#39;: 107,
- &#39;Cashew&#39;: 68,
- &#39;Ricotta&#39;: 160,
- &#39;Jícama&#39;: 36,
- &#39;Chestnut&#39;: 74,
- &#39;Maple Syrup&#39;: 146,
- &#39;Anniversary&#39;: 111,
- &#39;Poultry&#39;: 620,
- &#39;Pistachio&#39;: 176,
- &#39;Saffron&#39;: 113,
- &#39;Horseradish&#39;: 166,
- &#39;Dill&#39;: 271,
- &#39;Low/No Sugar&#39;: 282,
- &#39;Cinco de Mayo&#39;: 179,
- &#39;Tomatillo&#39;: 82,
- &#39;Cranberry&#39;: 370,
- &#39;Beer&#39;: 112,
- &#39;Bourbon&#39;: 125,
- &#39;Meat&#39;: 285,
- &#39;Brisket&#39;: 38,
- &#39;Pork Chop&#39;: 93,
- &#39;Grains&#39;: 9,
- &#39;Mango&#39;: 244,
- &#39;Salmon&#39;: 315,
- &#39;Yogurt&#39;: 528,
- &#39;Kansas&#39;: 3,
- &#39;Lamb Shank&#39;: 18,
- &#39;Anise&#39;: 116,
- &#39;Condiment&#39;: 96,
- &#39;Portland&#39;: 15,
- &#39;Oregon&#39;: 19,
- &#39;Cabbage&#39;: 307,
- &#39;Beet&#39;: 210,
- &#39;Leek&#39;: 266,
- &#39;Parsnip&#39;: 140,
- &#39;Shallot&#39;: 353,
- &#39;Beef Rib&#39;: 56,
- &#39;Frozen Dessert&#39;: 354,
- &#39;Pastry&#39;: 99,
- &#39;Duck&#39;: 99,
- &#39;Broil&#39;: 489,
- &#39;Noodle&#39;: 162,
- &#39;Lunar New Year&#39;: 46,
- &#39;Stuffing/Dressing&#39;: 138,
- &#39;Sausage&#39;: 384,
- &#39;Rum&#39;: 331,
- &#39;Pineapple&#39;: 264,
- &#39;Curry&#39;: 273,
- &#39;Cheddar&#39;: 257,
- &#39;Fat Free&#39;: 376,
- &#39;Quince&#39;: 31,
- &#39;Non-Alcoholic&#39;: 218,
- &#34;St. Patrick&#39;s Day&#34;: 55,
- &#39;Punch&#39;: 73,
- &#39;Guava&#39;: 21,
- &#39;Passion Fruit&#39;: 44,
- &#39;30 Days of Groceries&#39;: 7,
- &#39;Chickpea&#39;: 162,
- &#39;Feta&#39;: 229,
- &#39;Chard&#39;: 85,
- &#39;Soy&#39;: 111,
- &#39;Root Vegetable&#39;: 188,
- &#39;Oktoberfest&#39;: 37,
- &#39;Blueberry&#39;: 180,
- &#39;Sour Cream&#39;: 404,
- &#39;Butter&#39;: 195,
- &#39;Green Onion/Scallion&#39;: 116,
- &#39;Tea&#39;: 110,
- &#39;Turnip&#39;: 92,
- &#39;Bok Choy&#39;: 59,
- &#39;Shellfish&#39;: 560,
- &#39;Seafood&#39;: 401,
- &#39;Celery&#39;: 341,
- &#39;Wedding&#39;: 112,
- &#39;Shavuot&#39;: 21,
- &#39;Whiskey&#39;: 57,
- &#39;Red Wine&#39;: 271,
- &#39;Paprika&#39;: 55,
- &#39;Hanukkah&#39;: 118,
- &#39;Steam&#39;: 225,
- &#39;Brussel Sprout&#39;: 56,
- &#39;Snapper&#39;: 59,
- &#39;Low Cholesterol&#39;: 445,
- &#39;Ice Cream Machine&#39;: 162,
- &#39;Zucchini&#39;: 298,
- &#39;Tailgating&#39;: 129,
- &#39;Tarragon&#39;: 240,
- &#39;Kentucky Derby&#39;: 40,
- &#39;Prune&#39;: 108,
- &#39;Lemon Juice&#39;: 154,
- &#39;Cognac/Armagnac&#39;: 91,
- &#39;Vanilla&#39;: 267,
- &#39;Plantain&#39;: 21,
- &#39;Mardi Gras&#39;: 59,
- &#39;Passover&#39;: 183,
- &#39;Kosher for Passover&#39;: 31,
- &#39;Walnut&#39;: 425,
- &#39;Kale&#39;: 145,
- &#39;Quail&#39;: 15,
- &#39;Coffee&#39;: 190,
- &#39;Egg Nog&#39;: 9,
- &#39;House &amp; Garden&#39;: 459,
- &#39;Phyllo/Puff Pastry Dough&#39;: 126,
- &#39;Gin&#39;: 226,
- &#39;Tequila&#39;: 89,
- &#39;Vodka&#39;: 125,
- &#39;Yellow Squash&#39;: 25,
- &#39;Cauliflower&#39;: 120,
- &#39;Wasabi&#39;: 23,
- &#39;Cumin&#39;: 93,
- &#39;Spirit&#39;: 219,
- &#39;Calvados&#39;: 20,
- &#39;Coriander&#39;: 131,
- &#39;Wok&#39;: 102,
- &#39;Whole Wheat&#39;: 30,
- &#39;Buffet&#39;: 132,
- &#39;Gouda&#39;: 10,
- &#39;Marinate&#39;: 601,
- &#39;Hominy/Cornmeal/Masa&#39;: 84,
- &#39;Trout&#39;: 54,
- &#39;Raisin&#39;: 340,
- &#39;Plum&#39;: 114,
- &#39;Date&#39;: 123,
- &#39;Quinoa&#39;: 51,
- &#39;Oat&#39;: 137,
- &#39;Mustard Greens&#39;: 36,
- &#39;Broccoli&#39;: 122,
- &#39;22-Minute Meals&#39;: 17,
- &#39;Lobster&#39;: 83,
- &#39;Candy&#39;: 75,
- &#39;Halloween&#39;: 42,
- &#39;Ramadan&#39;: 39,
- &#39;Lamb&#39;: 359,
- &#39;Apple Juice&#39;: 6,
- &#39;Seattle&#39;: 10,
- &#39;Washington&#39;: 26,
- &#39;Tortillas&#39;: 158,
- &#39;Melon&#39;: 62,
- &#39;Cantaloupe&#39;: 51,
- &#39;Orange Juice&#39;: 52,
- &#39;Grape&#39;: 70,
- &#39;Parade&#39;: 143,
- &#39;Pine Nut&#39;: 228,
- &#39;Butterscotch/Caramel&#39;: 12,
- &#39;Friendsgiving&#39;: 9,
- &#39;Swordfish&#39;: 16,
- &#39;Kirsch&#39;: 31,
- &#39;Stew&#39;: 178,
- &#39;Low Sugar&#39;: 14,
- &#39;Weelicious&#39;: 33,
- &#39;Currant&#39;: 108,
- &#39;Candy Thermometer&#39;: 66,
- &#39;Pork Tenderloin&#39;: 120,
- &#39;Smoothie&#39;: 42,
- &#39;Mussel&#39;: 127,
- &#39;Sherry&#39;: 125,
- &#39;Poach&#39;: 135,
- &#39;Pittsburgh&#39;: 12,
- &#39;Pennsylvania&#39;: 34,
- &#39;Dallas&#39;: 5,
- &#39;Texas&#39;: 23,
- &#39;Aperitif&#39;: 12,
- &#39;Campari&#39;: 19,
- &#39;Champagne&#39;: 106,
- &#39;Cookies&#39;: 273,
- &#39;Nectarine&#39;: 60,
- &#39;Pasadena&#39;: 12,
- &#39;Florida&#39;: 43,
- &#39;Wine&#39;: 191,
- &#39;Amaretto&#39;: 39,
- &#39;Frangelico&#39;: 23,
- &#39;Legume&#39;: 69,
- &#39;Lamb Chop&#39;: 45,
- &#39;Bran&#39;: 3,
- &#39;Papaya&#39;: 58,
- &#39;Sukkot&#39;: 14,
- &#39;Rosh Hashanah/Yom Kippur&#39;: 68,
- &#39;Margarita&#39;: 20,
- &#39;Triple Sec&#39;: 80,
- &#39;Pancake&#39;: 5,
- &#39;Rutabaga&#39;: 44,
- &#39;Pernod&#39;: 54,
- &#39;Marshmallow&#39;: 9,
- &#39;Guam&#39;: 1,
- &#39;Poultry Sausage&#39;: 23,
- &#39;Ground Lamb&#39;: 35,
- &#39;Scallop&#39;: 170,
- &#39;Hamburger&#39;: 4,
- &#39;Beef Shank&#39;: 14,
- &#39;Wisconsin&#39;: 4,
- &#39;Watermelon&#39;: 72,
- &#39;Hot Drink&#39;: 37,
- &#39;Oyster&#39;: 38,
- &#39;Rosé&#39;: 4,
- &#39;Scotch&#39;: 22,
- &#39;Sesame Oil&#39;: 42,
- &#39;Caraway&#39;: 29,
- &#39;Cardamom&#39;: 44,
- &#39;Brie&#39;: 12,
- &#39;Raw&#39;: 78,
- &#39;Washington, D.C.&#39;: 10,
- &#39;Spain&#39;: 2,
- &#39;Goose&#39;: 16,
- &#39;Chili&#39;: 3,
- &#39;Monterey Jack&#39;: 50,
- &#39;cookbooks&#39;: 3,
- &#39;Macaroni and Cheese&#39;: 3,
- &#39;Edible Gift&#39;: 120,
- &#39;Ireland&#39;: 14,
- &#39;Michigan&#39;: 24,
- &#39;No Meat, No Problem&#39;: 6,
- &#39;Pork Rib&#39;: 57,
- &#39;Radicchio&#39;: 18,
- &#39;Rack of Lamb&#39;: 29,
- &#39;Poppy&#39;: 20,
- &#39;Brine&#39;: 36,
- &#39;San Francisco&#39;: 8,
- &#39;Game&#39;: 36,
- &#39;Venison&#39;: 9,
- &#39;snack&#39;: 28,
- &#39;snack week&#39;: 19,
- &#39;Pressure Cooker&#39;: 8,
- &#39;Couscous&#39;: 93,
- &#34;Hors D&#39;Oeuvre&#34;: 17,
- &#39;Graduation&#39;: 89,
- &#39;Los Angeles&#39;: 21,
- &#39;Tangerine&#39;: 36,
- &#39;Clam&#39;: 134,
- &#39;Connecticut&#39;: 11,
- &#39;House Cocktail&#39;: 6,
- &#39;Labor Day&#39;: 9,
- &#39;Macadamia Nut&#39;: 50,
- &#39;Lima Bean&#39;: 55,
- &#39;Flaming Hot Summer&#39;: 12,
- &#39;Cook Like a Diner&#39;: 4,
- &#39;Omelet&#39;: 2,
- &#39;Denver&#39;: 3,
- &#39;Ohio&#39;: 13,
- &#39;Cottage Cheese&#39;: 37,
- &#39;Jerusalem Artichoke&#39;: 19,
- &#39;Mexico&#39;: 5,
- &#39;Poblano&#39;: 7,
- &#39;Barley&#39;: 50,
- &#39;Organic&#39;: 7,
- &#39;Marsala&#39;: 36,
- &#39;Potato Salad&#39;: 2,
- &#39;Bass&#39;: 90,
- &#39;Lychee&#39;: 8,
- &#39;Chambord&#39;: 15,
- &#39;Honeydew&#39;: 40,
- &#39;Utah&#39;: 3,
- &#39;Slow Cooker&#39;: 25,
- &#39;North Carolina&#39;: 17,
- &#39;Anchovy&#39;: 45,
- &#39;Sake&#39;: 21,
- &#39;Brown Rice&#39;: 23,
- &#39;Kwanzaa&#39;: 13,
- &#39;Freezer Food&#39;: 3,
- &#39;Sparkling Wine&#39;: 54,
- &#39;Entertaining&#39;: 8,
- &#39;South Carolina&#39;: 10,
- &#39;Rhode Island&#39;: 8,
- &#39;Rhubarb&#39;: 80,
- &#39;Stock&#39;: 3,
- &#39;Drinks&#39;: 11,
- &#39;Ramekin&#39;: 34,
- &#39;Skewer&#39;: 7,
- &#39;Pie&#39;: 21,
- &#39;Cupcake&#39;: 3,
- &#39;Squid&#39;: 46,
- &#39;Minnesota&#39;: 11,
- &#39;Buffalo&#39;: 8,
- &#39;Missouri&#39;: 14,
- &#39;Brooklyn&#39;: 7,
- &#39;Chicago&#39;: 4,
- &#39;Illinois&#39;: 8,
- &#39;Ice Cream&#39;: 12,
- &#39;Yuca&#39;: 6,
- &#39;Purim&#39;: 13,
- &#39;Kahlúa&#39;: 25,
- &#39;Chartreuse&#39;: 18,
- &#39;Créme de Cacao&#39;: 21,
- &#39;#CAKEWEEK&#39;: 6,
- &#39;Tapioca&#39;: 14,
- &#39;New Mexico&#39;: 15,
- &#39;Kiwi&#39;: 34,
- &#39;Sandwich Theory&#39;: 13,
- &#39;Hollywood&#39;: 1,
- &#39;Diwali&#39;: 25,
- &#39;New Jersey&#39;: 25,
- &#39;Dip&#39;: 20,
- &#39;Persian New Year&#39;: 4,
- &#39;Okra&#39;: 27,
- &#39;3-Ingredient Recipes&#39;: 27,
- &#39;Rabbit&#39;: 7,
- &#39;Smoker&#39;: 7,
- &#39;Tamarind&#39;: 21,
- &#39;Indiana&#39;: 5,
- &#39;New Orleans&#39;: 2,
- &#39;Louisiana&#39;: 4,
- &#39;Kitchen Olympics&#39;: 1,
- &#39;Pickles&#39;: 16,
- &#39;Tennessee&#39;: 2,
- &#39;Wild Rice&#39;: 18,
- &#39;Oatmeal&#39;: 12,
- &#39;Flat Bread&#39;: 4,
- &#39;Bon App��tit&#39;: 10,
- &#39;Tart&#39;: 8,
- &#39;Sangria&#39;: 17,
- &#39;Mandoline&#39;: 10,
- &#39;Canada&#39;: 9,
- &#39;Pot Pie&#39;: 2,
- &#39;Chile&#39;: 13,
- &#39;Columbus&#39;: 3,
- &#39;Marscarpone&#39;: 6,
- &#39;Boston&#39;: 5,
- &#39;Italy&#39;: 6,
- &#39;Taco&#39;: 8,
- &#39;Granola&#39;: 5,
- &#39;Haiti&#39;: 1,
- &#39;Semolina&#39;: 15,
- &#39;Costa Mesa&#39;: 1,
- &#39;Japan&#39;: 2,
- &#39;Persimmon&#39;: 11,
- &#39;Sardine&#39;: 4,
- &#39;Lasagna&#39;: 3,
- &#39;Virginia&#39;: 11,
- &#39;Yonkers&#39;: 1,
- &#39;Maryland&#39;: 12,
- &#39;Grappa&#39;: 4,
- &#39;Juicer&#39;: 6,
- &#39;St. Louis&#39;: 7,
- &#39;France&#39;: 13,
- &#39;Miami&#39;: 2,
- &#39;Orzo&#39;: 2,
- &#39;Dominican Republic&#39;: 2,
- &#39;Paris&#39;: 4,
- &#39;Oklahoma&#39;: 4,
- &#39;Colorado&#39;: 16,
- &#39;Custard&#39;: 2,
- &#39;Octopus&#39;: 7,
- &#39;Pizza&#39;: 10,
- &#39;Muffin&#39;: 5,
- &#39;Meatball&#39;: 8,
- &#39;Tested &amp; Improved&#39;: 1,
- &#39;Georgia&#39;: 20,
- &#39;Tilapia&#39;: 12,
- &#39;Arizona&#39;: 8,
- &#39;Atlanta&#39;: 7,
- &#39;Cobbler/Crumble&#39;: 6,
- &#39;Long Beach&#39;: 2,
- &#39;Peru&#39;: 2,
- &#39;Lancaster&#39;: 4,
- &#39;Cambridge&#39;: 4,
- &#39;Iced Tea&#39;: 18,
- &#39;Pasta Maker&#39;: 12,
- &#39;Louisville&#39;: 2,
- &#39;Kentucky&#39;: 3,
- &#39;Grand Marnier&#39;: 1,
- &#39;leftovers&#39;: 7,
- &#39;Cranberry Sauce&#39;: 4,
- &#39;Aspen&#39;: 1,
- &#39;Biscuit&#39;: 7,
- &#39;Pomegranate Juice&#39;: 7,
- &#39;Waffle&#39;: 1,
- &#39;Lingonberry&#39;: 5,
- &#39;Cookbook Critic&#39;: 3,
- &#39;Brownie&#39;: 3,
- &#39;Alabama&#39;: 3,
- &#39;Vermouth&#39;: 11,
- &#39;Eau de Vie&#39;: 9,
- &#39;Hummus&#39;: 2,
- &#39;Israel&#39;: 2,
- &#39;Hawaii&#39;: 4,
- &#39;Caviar&#39;: 1,
- &#39;Mortar and Pestle&#39;: 2,
- &#39;Maine&#39;: 5,
- &#39;Suzanne Goin&#39;: 1,
- &#39;Iowa&#39;: 1,
- &#39;Digestif&#39;: 5,
- &#39;Sorbet&#39;: 1,
- &#39;Cr��me de Cacao&#39;: 1,
- &#39;Martini&#39;: 7,
- &#39;Philippines&#39;: 5,
- &#39;Minneapolis&#39;: 2,
- &#39;Vermont&#39;: 5,
- &#39;Idaho&#39;: 1,
- &#39;Salsa&#39;: 6,
- &#39;Westwood&#39;: 1,
- &#39;Spritzer&#39;: 7,
- &#39;Providence&#39;: 1,
- &#39;Nebraska&#39;: 3,
- &#39;#WasteLess&#39;: 1,
- &#39;Epi Loves the Microwave&#39;: 2,
- &#39;London&#39;: 1,
- &#39;England&#39;: 1,
- &#39;Nancy Silverton&#39;: 1,
- &#39;Dorie Greenspan&#39;: 1,
- &#39;Frankenrecipe&#39;: 1,
- &#39;Emeril Lagasse&#39;: 1,
- &#39;Soufflé/Meringue&#39;: 3,
- &#39;Beverly Hills&#39;: 1,
- &#39;Healdsburg&#39;: 2,
- &#39;West Virginia&#39;: 1,
- &#39;Kansas City&#39;: 2,
- &#39;Frittata&#39;: 2,
- &#39;Mezcal&#39;: 1,
- &#39;Windsor&#39;: 1,
- &#39;Rub&#39;: 3,
- &#39;Jamaica&#39;: 1,
- &#39;Burrito&#39;: 1,
- &#39;Las Vegas&#39;: 1,
- &#39;Bulgaria&#39;: 1,
- &#39;Cuba&#39;: 3,
- &#39;Camping&#39;: 1,
- &#39;Midori&#39;: 6,
- &#39;Meatloaf&#39;: 2,
- &#39;Epi + USHG&#39;: 2,
- &#39;Fritter&#39;: 1,
- &#39;Egypt&#39;: 1,
- &#39;Iced Coffee&#39;: 2,
- &#39;Switzerland&#39;: 4,
- &#39;Houston&#39;: 1,
- &#39;Germany&#39;: 1,
- &#39;Quiche&#39;: 1,
- &#39;Anthony Bourdain&#39;: 2,
- &#39;Marinade&#39;: 1,
- &#39;Pacific Palisades&#39;: 1,
- &#39;Alaska&#39;: 2,
- &#39;Mississippi&#39;: 1,
- &#39;Crêpe&#39;: 1,
- &#39;New Hampshire&#39;: 1,
- &#39;Sourdough&#39;: 1}</pre>
+<pre>577</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sorted_countbycategoriesDict</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">getNumbersOfRecipeByCategories</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dFrame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sorted_ingredientsDict</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Categorie&#39;</span><span class="p">,</span><span class="s1">&#39;Frequency&#39;</span><span class="p">])</span>
+<span class="n">dFrame</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[21]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Categorie</th>
+      <th>Frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Bon Appétit</td>
+      <td>9355</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Peanut Free</td>
+      <td>8390</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Soy Free</td>
+      <td>8088</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Tree Nut Free</td>
+      <td>7044</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vegetarian</td>
+      <td>6846</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -14044,7 +13456,7 @@ Les jeux de données doivent contenir des catégories de recette pertinente tel 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La liste ci-dessus nous donne le nombre de recettes par catégories dans le désordre. On peut voir des catégories qui sont moins pertinentes tel que des ingrédients comme "Onion","Tomato"... ou qui possède très peu de résultats (&lt;200).</p>
+<p>La liste ci-dessus nous donne les 5 catégories ayant le plus de recettes. Il existe des catégories qui sont moins pertinentes tel que des ingrédients comme "Onion","Tomato"... ou qui possède très peu de résultats (&lt;200).</p>
 <hr>
 <p>Pour obtenir la catégorie contenant le plus de recettes:</p>
 
@@ -14053,7 +13465,7 @@ Les jeux de données doivent contenir des catégories de recette pertinente tel 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">operator</span>
@@ -14071,7 +13483,7 @@ Les jeux de données doivent contenir des catégories de recette pertinente tel 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -14096,7 +13508,7 @@ Les jeux de données doivent contenir des catégories de recette pertinente tel 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;images/categorie_bonappetit.png&quot;</span><span class="p">)</span>
@@ -14112,7 +13524,7 @@ Les jeux de données doivent contenir des catégories de recette pertinente tel 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -14141,7 +13553,7 @@ Les jeux de données doivent contenir des catégories de recette pertinente tel 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ordre decroissant</span>
@@ -14149,7 +13561,8 @@ Les jeux de données doivent contenir des catégories de recette pertinente tel 
 
 <span class="c1"># Ordre croissant</span>
 <span class="n">sorted_recipeCategCount</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">recipeCategCount</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">sorted_recipeCategCount</span>
+<span class="n">dFrame2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sorted_recipeCategCount</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Categorie&#39;</span><span class="p">,</span><span class="s1">&#39;Frequency&#39;</span><span class="p">])</span>
+<span class="n">dFrame2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> 
 </pre></div>
 
     </div>
@@ -14162,686 +13575,62 @@ Les jeux de données doivent contenir des catégories de recette pertinente tel 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="output_text output_subarea output_execute_result">
-<pre>[(&#39;Bon Appétit&#39;, 9355),
- (&#39;Peanut Free&#39;, 8390),
- (&#39;Soy Free&#39;, 8088),
- (&#39;Tree Nut Free&#39;, 7044),
- (&#39;Vegetarian&#39;, 6846),
- (&#39;Gourmet&#39;, 6648),
- (&#39;Kosher&#39;, 6175),
- (&#39;Pescatarian&#39;, 6042),
- (&#39;Quick &amp; Easy&#39;, 5372),
- (&#39;Wheat/Gluten-Free&#39;, 4906),
- (&#39;Bake&#39;, 4413),
- (&#39;Summer&#39;, 4151),
- (&#39;Dessert&#39;, 3573),
- (&#39;Dairy Free&#39;, 3206),
- (&#39;Side&#39;, 3151),
- (&#39;No Sugar Added&#39;, 3132),
- (&#39;Winter&#39;, 3099),
- (&#39;Fall&#39;, 3015),
- (&#39;Dinner&#39;, 2705),
- (&#39;Sugar Conscious&#39;, 2466),
- (&#39;Healthy&#39;, 2351),
- (&#39;Kidney Friendly&#39;, 2313),
- (&#39;Onion&#39;, 2238),
- (&#39;Tomato&#39;, 2140),
- (&#39;Vegetable&#39;, 2087),
- (&#39;Sauté&#39;, 2044),
- (&#39;Milk/Cream&#39;, 1995),
- (&#39;Fruit&#39;, 1958),
- (&#39;Vegan&#39;, 1851),
- (&#39;Kid-Friendly&#39;, 1791),
- (&#39;Egg&#39;, 1768),
- (&#39;Spring&#39;, 1715),
- (&#39;Herb&#39;, 1681),
- (&#39;Garlic&#39;, 1643),
- (&#39;Salad&#39;, 1516),
- (&#39;Dairy&#39;, 1496),
- (&#39;Thanksgiving&#39;, 1458),
- (&#39;Appetizer&#39;, 1372),
- (&#39;Lunch&#39;, 1359),
- (&#39;Cheese&#39;, 1355),
- (&#39;Chicken&#39;, 1344),
- (&#39;Roast&#39;, 1320),
- (&#39;No-Cook&#39;, 1251),
- (&#39;Soup/Stew&#39;, 1164),
- (&#39;Cocktail Party&#39;, 1154),
- (&#39;Ginger&#39;, 1146),
- (&#39;Potato&#39;, 1128),
- (&#39;Chill&#39;, 1126),
- (&#39;Lemon&#39;, 1104),
- (&#39;Grill/Barbecue&#39;, 1104),
- (&#39;Drink&#39;, 1087),
- (&#39;Sauce&#39;, 1065),
- (&#39;Low Cal&#39;, 1049),
- (&#39;Christmas&#39;, 1039),
- (&#39;High Fiber&#39;, 1013),
- (&#39;Food Processor&#39;, 973),
- (&#39;Pasta&#39;, 968),
- (&#39;Backyard BBQ&#39;, 938),
- (&#39;Fish&#39;, 936),
- (&#39;Low Fat&#39;, 929),
- (&#39;Pork&#39;, 928),
- (&#39;Condiment/Spread&#39;, 924),
- (&#39;Nut&#39;, 905),
- (&#39;Leafy Green&#39;, 903),
- (&#39;Party&#39;, 892),
- (&#39;Simmer&#39;, 890),
- (&#39;Citrus&#39;, 863),
- (&#39;Chocolate&#39;, 855),
- (&#39;Mushroom&#39;, 843),
- (&#39;Orange&#39;, 837),
- (&#39;Alcoholic&#39;, 835),
- (&#39;Brunch&#39;, 833),
- (&#39;Beef&#39;, 811),
- (&#39;Paleo&#39;, 779),
- (&#39;Bell Pepper&#39;, 767),
- (&#39;Cake&#39;, 720),
- (&#39;Breakfast&#39;, 712),
- (&#39;Carrot&#39;, 701),
- (&#39;Spice&#39;, 680),
- (&#39;Apple&#39;, 666),
- (&#39;Vinegar&#39;, 658),
- (&#39;Parmesan&#39;, 644),
- (&#39;Mixer&#39;, 630),
- (&#39;Poultry&#39;, 620),
- (&#39;Blender&#39;, 618),
- (&#39;Mint&#39;, 616),
- (&#39;Pepper&#39;, 612),
- (&#39;Cilantro&#39;, 607),
- (&#39;Marinate&#39;, 601),
- (&#39;Mustard&#39;, 600),
- (&#39;Bacon&#39;, 587),
- (&#39;Almond&#39;, 584),
- (&#39;Bean&#39;, 577),
- (&#39;Basil&#39;, 565),
- (&#39;Grill&#39;, 564),
- (&#39;Shellfish&#39;, 560),
- (&#39;Olive&#39;, 556),
- (&#39;Lime&#39;, 546),
- (&#39;Rice&#39;, 538),
- (&#39;Yogurt&#39;, 528),
- (&#39;Picnic&#39;, 519),
- (&#39;Parsley&#39;, 514),
- (&#39;Shrimp&#39;, 505),
- (&#39;Bread&#39;, 499),
- (&#39;Broil&#39;, 489),
- (&#39;Fruit Juice&#39;, 488),
- (&#39;White Wine&#39;, 487),
- (&#39;Hot Pepper&#39;, 487),
- (&#39;Potluck&#39;, 485),
- (&#39;Berry&#39;, 465),
- (&#39;Cinnamon&#39;, 464),
- (&#39;House &amp; Garden&#39;, 459),
- (&#39;turkey&#39;, 456),
- (&#39;Boil&#39;, 445),
- (&#39;Low Cholesterol&#39;, 445),
- (&#39;Fry&#39;, 430),
- (&#39;Sandwich&#39;, 428),
- (&#39;Walnut&#39;, 425),
- (&#39;Freeze/Chill&#39;, 417),
- (&#39;Sour Cream&#39;, 404),
- (&#39;Honey&#39;, 401),
- (&#39;Seafood&#39;, 401),
- (&#39;Low Sodium&#39;, 389),
- (&#39;Sausage&#39;, 384),
- (&#39;Cocktail&#39;, 380),
- (&#39;Cucumber&#39;, 379),
- (&#39;Mayonnaise&#39;, 378),
- (&#39;Spinach&#39;, 377),
- (&#39;Fourth of July&#39;, 376),
- (&#39;Fat Free&#39;, 376),
- (&#39;Cream Cheese&#39;, 375),
- (&#39;Fennel&#39;, 371),
- (&#39;Rosemary&#39;, 371),
- (&#39;Corn&#39;, 371),
- (&#39;Cranberry&#39;, 370),
- (&#39;Coconut&#39;, 365),
- (&#39;Low Carb&#39;, 363),
- (&#39;Jalapeño&#39;, 361),
- (&#39;Lamb&#39;, 359),
- (&#39;Frozen Dessert&#39;, 354),
- (&#39;Shallot&#39;, 353),
- (&#39;Celery&#39;, 341),
- (&#39;Raspberry&#39;, 340),
- (&#39;Raisin&#39;, 340),
- (&#39;Thyme&#39;, 333),
- (&#39;Pecan&#39;, 331),
- (&#39;Christmas Eve&#39;, 331),
- (&#39;Rum&#39;, 331),
- (&#39;Braise&#39;, 330),
- (&#39;Shower&#39;, 327),
- (&#39;Liqueur&#39;, 317),
- (&#39;Family Reunion&#39;, 316),
- (&#39;Salmon&#39;, 315),
- (&#39;Self&#39;, 312),
- (&#39;Super Bowl&#39;, 311),
- (&#39;Strawberry&#39;, 308),
- (&#39;Goat Cheese&#39;, 307),
- (&#39;Cabbage&#39;, 307),
- (&#39;Zucchini&#39;, 298),
- (&#34;Father&#39;s Day&#34;, 295),
- (&#39;Soy Sauce&#39;, 293),
- (&#39;Sweet Potato/Yam&#39;, 286),
- (&#39;Meat&#39;, 285),
- (&#39;Low/No Sugar&#39;, 282),
- (&#39;Pear&#39;, 279),
- (&#39;Arugula&#39;, 278),
- (&#39;Avocado&#39;, 273),
- (&#39;Curry&#39;, 273),
- (&#39;Cookies&#39;, 273),
- (&#39;Cornmeal&#39;, 271),
- (&#39;Dill&#39;, 271),
- (&#39;Red Wine&#39;, 271),
- (&#39;Brandy&#39;, 270),
- (&#39;Apricot&#39;, 269),
- (&#39;Vanilla&#39;, 267),
- (&#39;Leek&#39;, 266),
- (&#39;Pineapple&#39;, 264),
- (&#39;Cheddar&#39;, 257),
- (&#39;Chive&#39;, 251),
- (&#39;Pan-Fry&#39;, 249),
- (&#39;Cherry&#39;, 244),
- (&#39;Mango&#39;, 244),
- (&#39;Steak&#39;, 243),
- (&#39;Tarragon&#39;, 240),
- (&#39;Chile Pepper&#39;, 237),
- (&#39;Blue Cheese&#39;, 235),
- (&#39;Easter&#39;, 234),
- (&#34;Valentine&#39;s Day&#34;, 233),
- (&#39;Feta&#39;, 229),
- (&#39;Pine Nut&#39;, 228),
- (&#39;Stir-Fry&#39;, 227),
- (&#39;Green Bean&#39;, 226),
- (&#39;Gin&#39;, 226),
- (&#39;Lettuce&#39;, 225),
- (&#39;Steam&#39;, 225),
- (&#39;Ham&#39;, 222),
- (&#39;Eggplant&#39;, 219),
- (&#39;Spirit&#39;, 219),
- (&#39;Non-Alcoholic&#39;, 218),
- (&#39;Pea&#39;, 211),
- (&#39;Beet&#39;, 210),
- (&#39;Radish&#39;, 208),
- (&#39;Asparagus&#39;, 207),
- (&#39;Dried Fruit&#39;, 206),
- (&#39;Back to School&#39;, 202),
- (&#39;Casserole/Gratin&#39;, 199),
- (&#39;Butter&#39;, 195),
- (&#39;Peach&#39;, 194),
- (&#39;Birthday&#39;, 193),
- (&#39;Clove&#39;, 193),
- (&#39;Wine&#39;, 191),
- (&#39;Mozzarella&#39;, 190),
- (&#39;Coffee&#39;, 190),
- (&#39;Root Vegetable&#39;, 188),
- (&#39;Capers&#39;, 185),
- (&#39;Engagement Party&#39;, 184),
- (&#39;Passover&#39;, 183),
- (&#39;Butternut Squash&#39;, 182),
- (&#39;Sage&#39;, 182),
- (&#39;Hazelnut&#39;, 182),
- (&#39;Blueberry&#39;, 180),
- (&#39;Cinco de Mayo&#39;, 179),
- (&#39;Salad Dressing&#39;, 178),
- (&#39;Stew&#39;, 178),
- (&#39;Banana&#39;, 177),
- (&#39;Pistachio&#39;, 176),
- (&#39;Scallop&#39;, 170),
- (&#39;Horseradish&#39;, 166),
- (&#34;New Year&#39;s Eve&#34;, 165),
- (&#34;Mother&#39;s Day&#34;, 165),
- (&#39;Noodle&#39;, 162),
- (&#39;Chickpea&#39;, 162),
- (&#39;Ice Cream Machine&#39;, 162),
- (&#39;Ricotta&#39;, 160),
- (&#39;Jam or Jelly&#39;, 159),
- (&#39;Tortillas&#39;, 158),
- (&#39;Crab&#39;, 156),
- (&#39;Prosciutto&#39;, 155),
- (&#39;Fig&#39;, 154),
- (&#39;Lemon Juice&#39;, 154),
- (&#39;Artichoke&#39;, 153),
- (&#39;Peanut&#39;, 153),
- (&#39;Squash&#39;, 151),
- (&#39;Seed&#39;, 150),
- (&#39;Sesame&#39;, 147),
- (&#39;California&#39;, 146),
- (&#39;Maple Syrup&#39;, 146),
- (&#39;Kale&#39;, 145),
- (&#39;Blackberry&#39;, 144),
- (&#39;Parade&#39;, 143),
- (&#39;Parsnip&#39;, 140),
- (&#39;Watercress&#39;, 138),
- (&#39;Stuffing/Dressing&#39;, 138),
- (&#39;Oat&#39;, 137),
- (&#39;Poker/Game Night&#39;, 135),
- (&#39;Poach&#39;, 135),
- (&#39;Tuna&#39;, 134),
- (&#39;Clam&#39;, 134),
- (&#39;Lime Juice&#39;, 133),
- (&#39;Buffet&#39;, 132),
- (&#39;Coriander&#39;, 131),
- (&#39;Tailgating&#39;, 129),
- (&#39;Bitters&#39;, 127),
- (&#39;Mussel&#39;, 127),
- (&#39;Phyllo/Puff Pastry Dough&#39;, 126),
- (&#39;Bourbon&#39;, 125),
- (&#39;Vodka&#39;, 125),
- (&#39;Sherry&#39;, 125),
- (&#39;Veal&#39;, 123),
- (&#39;Date&#39;, 123),
- (&#39;Broccoli&#39;, 122),
- (&#39;HarperCollins&#39;, 121),
- (&#39;Grapefruit&#39;, 120),
- (&#39;Cauliflower&#39;, 120),
- (&#39;Pork Tenderloin&#39;, 120),
- (&#39;Edible Gift&#39;, 120),
- (&#39;Pumpkin&#39;, 118),
- (&#39;Hanukkah&#39;, 118),
- (&#39;Anise&#39;, 116),
- (&#39;Green Onion/Scallion&#39;, 116),
- (&#39;Plum&#39;, 114),
- (&#39;Saffron&#39;, 113),
- (&#39;Endive&#39;, 112),
- (&#39;Oscars&#39;, 112),
- (&#39;Molasses&#39;, 112),
- (&#39;Beer&#39;, 112),
- (&#39;Wedding&#39;, 112),
- (&#39;Anniversary&#39;, 111),
- (&#39;Soy&#39;, 111),
- (&#39;Port&#39;, 110),
- (&#39;Tea&#39;, 110),
- (&#39;Advance Prep Required&#39;, 109),
- (&#39;Nutmeg&#39;, 108),
- (&#39;Prune&#39;, 108),
- (&#39;Currant&#39;, 108),
- (&#39;Tree Nut&#39;, 107),
- (&#39;Champagne&#39;, 106),
- (&#39;Wok&#39;, 102),
- (&#39;Oregano&#39;, 101),
- (&#39;Pastry&#39;, 99),
- (&#39;Duck&#39;, 99),
- (&#39;Lentil&#39;, 98),
- (&#39;Condiment&#39;, 96),
- (&#39;Pork Chop&#39;, 93),
- (&#39;Cumin&#39;, 93),
- (&#39;Couscous&#39;, 93),
- (&#39;Deep-Fry&#39;, 92),
- (&#39;Tofu&#39;, 92),
- (&#39;Turnip&#39;, 92),
- (&#39;Cognac/Armagnac&#39;, 91),
- (&#39;Ground Beef&#39;, 90),
- (&#39;Bass&#39;, 90),
- (&#39;Halibut&#39;, 89),
- (&#39;Tequila&#39;, 89),
- (&#39;Graduation&#39;, 89),
- (&#39;Chard&#39;, 85),
- (&#39;Lemongrass&#39;, 84),
- (&#39;Hominy/Cornmeal/Masa&#39;, 84),
- (&#39;Lobster&#39;, 83),
- (&#34;New Year&#39;s Day&#34;, 82),
- (&#39;Tomatillo&#39;, 82),
- (&#39;Triple Sec&#39;, 80),
- (&#39;Rhubarb&#39;, 80),
- (&#39;Raw&#39;, 78),
- (&#39;Sugar Snap Pea&#39;, 77),
- (&#39;Pomegranate&#39;, 77),
- (&#39;Cod&#39;, 76),
- (&#39;Fortified Wine&#39;, 76),
- (&#39;Candy&#39;, 75),
- (&#39;Swiss Cheese&#39;, 74),
- (&#39;Chestnut&#39;, 74),
- (&#39;Buttermilk&#39;, 73),
- (&#39;Punch&#39;, 73),
- (&#39;Beef Tenderloin&#39;, 72),
- (&#39;Watermelon&#39;, 72),
- (&#39;Grape&#39;, 70),
- (&#39;Cookie&#39;, 69),
- (&#39;Legume&#39;, 69),
- (&#39;Cashew&#39;, 68),
- (&#39;Rosh Hashanah/Yom Kippur&#39;, 68),
- (&#39;Candy Thermometer&#39;, 66),
- (&#39;Quick and Healthy&#39;, 65),
- (&#39;Tropical Fruit&#39;, 62),
- (&#39;Melon&#39;, 62),
- (&#39;Nectarine&#39;, 60),
- (&#39;Bok Choy&#39;, 59),
- (&#39;Snapper&#39;, 59),
- (&#39;Mardi Gras&#39;, 59),
- (&#39;Papaya&#39;, 58),
- (&#39;Whiskey&#39;, 57),
- (&#39;Pork Rib&#39;, 57),
- (&#39;Beef Rib&#39;, 56),
- (&#39;Brussel Sprout&#39;, 56),
- (&#39;Breadcrumbs&#39;, 55),
- (&#34;St. Patrick&#39;s Day&#34;, 55),
- (&#39;Paprika&#39;, 55),
- (&#39;Lima Bean&#39;, 55),
- (&#39;Trout&#39;, 54),
- (&#39;Pernod&#39;, 54),
- (&#39;Sparkling Wine&#39;, 54),
- (&#39;Orange Juice&#39;, 52),
- (&#39;Quinoa&#39;, 51),
- (&#39;Cantaloupe&#39;, 51),
- (&#39;Monterey Jack&#39;, 50),
- (&#39;Macadamia Nut&#39;, 50),
- (&#39;Barley&#39;, 50),
- (&#39;New York&#39;, 49),
- (&#39;Broccoli Rabe&#39;, 48),
- (&#39;Massachusetts&#39;, 47),
- (&#39;Lunar New Year&#39;, 46),
- (&#39;Squid&#39;, 46),
- (&#39;Lamb Chop&#39;, 45),
- (&#39;Anchovy&#39;, 45),
- (&#39;Passion Fruit&#39;, 44),
- (&#39;Rutabaga&#39;, 44),
- (&#39;Cardamom&#39;, 44),
- (&#39;Kumquat&#39;, 43),
- (&#39;Escarole&#39;, 43),
- (&#39;Florida&#39;, 43),
- (&#39;Halloween&#39;, 42),
- (&#39;Smoothie&#39;, 42),
- (&#39;Sesame Oil&#39;, 42),
- (&#39;Fontina&#39;, 40),
- (&#39;Kentucky Derby&#39;, 40),
- (&#39;Honeydew&#39;, 40),
- (&#39;Ramadan&#39;, 39),
- (&#39;Amaretto&#39;, 39),
- (&#39;Brisket&#39;, 38),
- (&#39;Oyster&#39;, 38),
- (&#39;Microwave&#39;, 37),
- (&#39;Oktoberfest&#39;, 37),
- (&#39;Hot Drink&#39;, 37),
- (&#39;Cottage Cheese&#39;, 37),
- (&#39;Jícama&#39;, 36),
- (&#39;Mustard Greens&#39;, 36),
- (&#39;Brine&#39;, 36),
- (&#39;Game&#39;, 36),
- (&#39;Tangerine&#39;, 36),
- (&#39;Marsala&#39;, 36),
- (&#39;Ground Lamb&#39;, 35),
- (&#39;Pennsylvania&#39;, 34),
- (&#39;Ramekin&#39;, 34),
- (&#39;Kiwi&#39;, 34),
- (&#39;Weelicious&#39;, 33),
- (&#39;Peanut Butter&#39;, 32),
- (&#39;Double Boiler&#39;, 32),
- (&#39;Collard Greens&#39;, 31),
- (&#39;Quince&#39;, 31),
- (&#39;Kosher for Passover&#39;, 31),
- (&#39;Kirsch&#39;, 31),
- (&#39;Bastille Day&#39;, 30),
- (&#39;Bulgur&#39;, 30),
- (&#39;Whole Wheat&#39;, 30),
- (&#39;Caraway&#39;, 29),
- (&#39;Rack of Lamb&#39;, 29),
- (&#39;snack&#39;, 28),
- (&#39;Okra&#39;, 27),
- (&#39;3-Ingredient Recipes&#39;, 27),
- (&#39;Washington&#39;, 26),
- (&#39;Yellow Squash&#39;, 25),
- (&#39;Slow Cooker&#39;, 25),
- (&#39;Kahlúa&#39;, 25),
- (&#39;Diwali&#39;, 25),
- (&#39;New Jersey&#39;, 25),
- (&#39;Michigan&#39;, 24),
- (&#39;Wasabi&#39;, 23),
- (&#39;Texas&#39;, 23),
- (&#39;Frangelico&#39;, 23),
- (&#39;Poultry Sausage&#39;, 23),
- (&#39;Brown Rice&#39;, 23),
- (&#39;Scotch&#39;, 22),
- (&#39;Guava&#39;, 21),
- (&#39;Shavuot&#39;, 21),
- (&#39;Plantain&#39;, 21),
- (&#39;Los Angeles&#39;, 21),
- (&#39;Sake&#39;, 21),
- (&#39;Pie&#39;, 21),
- (&#39;Créme de Cacao&#39;, 21),
- (&#39;Tamarind&#39;, 21),
- (&#39;Asian Pear&#39;, 20),
- (&#39;Calvados&#39;, 20),
- (&#39;Margarita&#39;, 20),
- (&#39;Poppy&#39;, 20),
- (&#39;Dip&#39;, 20),
- (&#39;Georgia&#39;, 20),
- (&#39;Rye&#39;, 19),
- (&#39;Oregon&#39;, 19),
- (&#39;Campari&#39;, 19),
- (&#39;snack week&#39;, 19),
- (&#39;Jerusalem Artichoke&#39;, 19),
- (&#39;Lamb Shank&#39;, 18),
- (&#39;Radicchio&#39;, 18),
- (&#39;Chartreuse&#39;, 18),
- (&#39;Wild Rice&#39;, 18),
- (&#39;Iced Tea&#39;, 18),
- (&#39;Coffee Grinder&#39;, 17),
- (&#39;22-Minute Meals&#39;, 17),
- (&#34;Hors D&#39;Oeuvre&#34;, 17),
- (&#39;North Carolina&#39;, 17),
- (&#39;Sangria&#39;, 17),
- (&#39;Swordfish&#39;, 16),
- (&#39;Goose&#39;, 16),
- (&#39;Pickles&#39;, 16),
- (&#39;Colorado&#39;, 16),
- (&#39;Portland&#39;, 15),
- (&#39;Quail&#39;, 15),
- (&#39;Chambord&#39;, 15),
- (&#39;New Mexico&#39;, 15),
- (&#39;Semolina&#39;, 15),
- (&#39;Low Sugar&#39;, 14),
- (&#39;Sukkot&#39;, 14),
- (&#39;Beef Shank&#39;, 14),
- (&#39;Ireland&#39;, 14),
- (&#39;Missouri&#39;, 14),
- (&#39;Tapioca&#39;, 14),
- (&#39;Ohio&#39;, 13),
- (&#39;Kwanzaa&#39;, 13),
- (&#39;Purim&#39;, 13),
- (&#39;Sandwich Theory&#39;, 13),
- (&#39;Chile&#39;, 13),
- (&#39;France&#39;, 13),
- (&#39;Butterscotch/Caramel&#39;, 12),
- (&#39;Pittsburgh&#39;, 12),
- (&#39;Aperitif&#39;, 12),
- (&#39;Pasadena&#39;, 12),
- (&#39;Brie&#39;, 12),
- (&#39;Flaming Hot Summer&#39;, 12),
- (&#39;Ice Cream&#39;, 12),
- (&#39;Oatmeal&#39;, 12),
- (&#39;Maryland&#39;, 12),
- (&#39;Tilapia&#39;, 12),
- (&#39;Pasta Maker&#39;, 12),
- (&#39;One-Pot Meal&#39;, 11),
- (&#39;Connecticut&#39;, 11),
- (&#39;Drinks&#39;, 11),
- (&#39;Minnesota&#39;, 11),
- (&#39;Persimmon&#39;, 11),
- (&#39;Virginia&#39;, 11),
- (&#39;Vermouth&#39;, 11),
- (&#39;Santa Monica&#39;, 10),
- (&#39;Gouda&#39;, 10),
- (&#39;Seattle&#39;, 10),
- (&#39;Washington, D.C.&#39;, 10),
- (&#39;South Carolina&#39;, 10),
- (&#39;Bon App��tit&#39;, 10),
- (&#39;Mandoline&#39;, 10),
- (&#39;Pizza&#39;, 10),
- (&#39;Grains&#39;, 9),
- (&#39;Egg Nog&#39;, 9),
- (&#39;Friendsgiving&#39;, 9),
- (&#39;Marshmallow&#39;, 9),
- (&#39;Venison&#39;, 9),
- (&#39;Labor Day&#39;, 9),
- (&#39;Canada&#39;, 9),
- (&#39;Eau de Vie&#39;, 9),
- (&#39;San Francisco&#39;, 8),
- (&#39;Pressure Cooker&#39;, 8),
- (&#39;Lychee&#39;, 8),
- (&#39;Entertaining&#39;, 8),
- (&#39;Rhode Island&#39;, 8),
- (&#39;Buffalo&#39;, 8),
- (&#39;Illinois&#39;, 8),
- (&#39;Tart&#39;, 8),
- (&#39;Taco&#39;, 8),
- (&#39;Meatball&#39;, 8),
- (&#39;Arizona&#39;, 8),
- (&#39;Australia&#39;, 7),
- (&#39;30 Days of Groceries&#39;, 7),
- (&#39;Poblano&#39;, 7),
- (&#39;Organic&#39;, 7),
- (&#39;Skewer&#39;, 7),
- (&#39;Brooklyn&#39;, 7),
- (&#39;Rabbit&#39;, 7),
- (&#39;Smoker&#39;, 7),
- (&#39;St. Louis&#39;, 7),
- (&#39;Octopus&#39;, 7),
- (&#39;Atlanta&#39;, 7),
- (&#39;leftovers&#39;, 7),
- (&#39;Biscuit&#39;, 7),
- (&#39;Pomegranate Juice&#39;, 7),
- (&#39;Martini&#39;, 7),
- (&#39;Spritzer&#39;, 7),
- (&#39;Apple Juice&#39;, 6),
- (&#39;No Meat, No Problem&#39;, 6),
- (&#39;House Cocktail&#39;, 6),
- (&#39;Yuca&#39;, 6),
- (&#39;#CAKEWEEK&#39;, 6),
- (&#39;Marscarpone&#39;, 6),
- (&#39;Italy&#39;, 6),
- (&#39;Juicer&#39;, 6),
- (&#39;Cobbler/Crumble&#39;, 6),
- (&#39;Salsa&#39;, 6),
- (&#39;Midori&#39;, 6),
- (&#39;Dallas&#39;, 5),
- (&#39;Pancake&#39;, 5),
- (&#39;Mexico&#39;, 5),
- (&#39;Indiana&#39;, 5),
- (&#39;Boston&#39;, 5),
- (&#39;Granola&#39;, 5),
- (&#39;Muffin&#39;, 5),
- (&#39;Lingonberry&#39;, 5),
- (&#39;Maine&#39;, 5),
- (&#39;Digestif&#39;, 5),
- (&#39;Philippines&#39;, 5),
- (&#39;Vermont&#39;, 5),
- (&#39;Hamburger&#39;, 4),
- (&#39;Wisconsin&#39;, 4),
- (&#39;Rosé&#39;, 4),
- (&#39;Cook Like a Diner&#39;, 4),
- (&#39;Chicago&#39;, 4),
- (&#39;Persian New Year&#39;, 4),
- (&#39;Louisiana&#39;, 4),
- (&#39;Flat Bread&#39;, 4),
- (&#39;Sardine&#39;, 4),
- (&#39;Grappa&#39;, 4),
- (&#39;Paris&#39;, 4),
- (&#39;Oklahoma&#39;, 4),
- (&#39;Lancaster&#39;, 4),
- (&#39;Cambridge&#39;, 4),
- (&#39;Cranberry Sauce&#39;, 4),
- (&#39;Hawaii&#39;, 4),
- (&#39;Switzerland&#39;, 4),
- (&#39;Kansas&#39;, 3),
- (&#39;Bran&#39;, 3),
- (&#39;Chili&#39;, 3),
- (&#39;cookbooks&#39;, 3),
- (&#39;Macaroni and Cheese&#39;, 3),
- (&#39;Denver&#39;, 3),
- (&#39;Utah&#39;, 3),
- (&#39;Freezer Food&#39;, 3),
- (&#39;Stock&#39;, 3),
- (&#39;Cupcake&#39;, 3),
- (&#39;Columbus&#39;, 3),
- (&#39;Lasagna&#39;, 3),
- (&#39;Kentucky&#39;, 3),
- (&#39;Cookbook Critic&#39;, 3),
- (&#39;Brownie&#39;, 3),
- (&#39;Alabama&#39;, 3),
- (&#39;Nebraska&#39;, 3),
- (&#39;Soufflé/Meringue&#39;, 3),
- (&#39;Rub&#39;, 3),
- (&#39;Cuba&#39;, 3),
- (&#39;Spain&#39;, 2),
- (&#39;Omelet&#39;, 2),
- (&#39;Potato Salad&#39;, 2),
- (&#39;New Orleans&#39;, 2),
- (&#39;Tennessee&#39;, 2),
- (&#39;Pot Pie&#39;, 2),
- (&#39;Japan&#39;, 2),
- (&#39;Miami&#39;, 2),
- (&#39;Orzo&#39;, 2),
- (&#39;Dominican Republic&#39;, 2),
- (&#39;Custard&#39;, 2),
- (&#39;Long Beach&#39;, 2),
- (&#39;Peru&#39;, 2),
- (&#39;Louisville&#39;, 2),
- (&#39;Hummus&#39;, 2),
- (&#39;Israel&#39;, 2),
- (&#39;Mortar and Pestle&#39;, 2),
- (&#39;Minneapolis&#39;, 2),
- (&#39;Epi Loves the Microwave&#39;, 2),
- (&#39;Healdsburg&#39;, 2),
- (&#39;Kansas City&#39;, 2),
- (&#39;Frittata&#39;, 2),
- (&#39;Meatloaf&#39;, 2),
- (&#39;Epi + USHG&#39;, 2),
- (&#39;Iced Coffee&#39;, 2),
- (&#39;Anthony Bourdain&#39;, 2),
- (&#39;Alaska&#39;, 2),
- (&#39;Guam&#39;, 1),
- (&#39;Hollywood&#39;, 1),
- (&#39;Kitchen Olympics&#39;, 1),
- (&#39;Haiti&#39;, 1),
- (&#39;Costa Mesa&#39;, 1),
- (&#39;Yonkers&#39;, 1),
- (&#39;Tested &amp; Improved&#39;, 1),
- (&#39;Grand Marnier&#39;, 1),
- (&#39;Aspen&#39;, 1),
- (&#39;Waffle&#39;, 1),
- (&#39;Caviar&#39;, 1),
- (&#39;Suzanne Goin&#39;, 1),
- (&#39;Iowa&#39;, 1),
- (&#39;Sorbet&#39;, 1),
- (&#39;Cr��me de Cacao&#39;, 1),
- (&#39;Idaho&#39;, 1),
- (&#39;Westwood&#39;, 1),
- (&#39;Providence&#39;, 1),
- (&#39;#WasteLess&#39;, 1),
- (&#39;London&#39;, 1),
- (&#39;England&#39;, 1),
- (&#39;Nancy Silverton&#39;, 1),
- (&#39;Dorie Greenspan&#39;, 1),
- (&#39;Frankenrecipe&#39;, 1),
- (&#39;Emeril Lagasse&#39;, 1),
- (&#39;Beverly Hills&#39;, 1),
- (&#39;West Virginia&#39;, 1),
- (&#39;Mezcal&#39;, 1),
- (&#39;Windsor&#39;, 1),
- (&#39;Jamaica&#39;, 1),
- (&#39;Burrito&#39;, 1),
- (&#39;Las Vegas&#39;, 1),
- (&#39;Bulgaria&#39;, 1),
- (&#39;Camping&#39;, 1),
- (&#39;Fritter&#39;, 1),
- (&#39;Egypt&#39;, 1),
- (&#39;Houston&#39;, 1),
- (&#39;Germany&#39;, 1),
- (&#39;Quiche&#39;, 1),
- (&#39;Marinade&#39;, 1),
- (&#39;Pacific Palisades&#39;, 1),
- (&#39;Mississippi&#39;, 1),
- (&#39;Crêpe&#39;, 1),
- (&#39;New Hampshire&#39;, 1),
- (&#39;Sourdough&#39;, 1)]</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Categorie</th>
+      <th>Frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Bon Appétit</td>
+      <td>9355</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Peanut Free</td>
+      <td>8390</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Soy Free</td>
+      <td>8088</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Tree Nut Free</td>
+      <td>7044</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vegetarian</td>
+      <td>6846</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -14868,7 +13657,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">keepCategorie</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">categorie</span><span class="p">):</span>
@@ -14897,7 +13686,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># On veut garder seulement les pasta</span>
@@ -14905,9 +13694,8 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 
 <span class="c1"># Avec le reset_index(drop=True) on reinitialise les index à partir de 0.</span>
 <span class="n">df_pasta</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="s1">&#39;Pasta.json&#39;</span><span class="p">,</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;records&#39;</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s2">&quot;Pasta.json&quot;</span><span class="p">)</span>
-<span class="c1">#head_pasta = pd.read_json(&quot;Pasta.json&quot;)</span>
-<span class="c1">#head_pasta.head()</span>
+<span class="n">pasta</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s2">&quot;Pasta.json&quot;</span><span class="p">)</span>
+<span class="n">pasta</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -14920,7 +13708,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -15027,793 +13815,8 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
       <td>637.0</td>
       <td>Roasted Butternut Squash, Rosemary, and Garlic...</td>
     </tr>
-    <tr>
-      <th>5</th>
-      <td>209.0</td>
-      <td>[Garlic, Olive, Pasta, Side, Quick &amp; Easy, Gou...</td>
-      <td>2008-05-12 19:57:03</td>
-      <td>Small pasta like acini di pepe and orzo make w...</td>
-      <td>[Cook acini di pepe in a pasta pot of boiling ...</td>
-      <td>8.0</td>
-      <td>[1/2 pound acini di pepe or orzo (1 1/4 cups),...</td>
-      <td>5.0</td>
-      <td>4.375</td>
-      <td>77.0</td>
-      <td>Acini di Pepe Pasta with Garlic and Olives</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>NaN</td>
-      <td>[Pasta, Tomato, Bake, Cod, Bell Pepper, Chard,...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>None</td>
-      <td>[Preheat the oven to 350°F. Spread the tomato ...</td>
-      <td>NaN</td>
-      <td>[2 cups Spicy Tomato Sauce, 3 tablespoons unsa...</td>
-      <td>NaN</td>
-      <td>2.500</td>
-      <td>NaN</td>
-      <td>Cod Cannelloni with Swiss Chard and Roasted Pe...</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>724.0</td>
-      <td>[Ginger, Herb, Nut, Pasta, Soy, Sauté, Vegetar...</td>
-      <td>2007-05-30 17:42:36</td>
-      <td>This simple vegetarian pasta is perfect for a ...</td>
-      <td>[Heat peanut oil in small skillet over medium ...</td>
-      <td>28.0</td>
-      <td>[1 tablespoon peanut oil, 2 tablespoons minced...</td>
-      <td>21.0</td>
-      <td>4.375</td>
-      <td>1130.0</td>
-      <td>Spicy Sesame Noodles with Chopped Peanuts and ...</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>NaN</td>
-      <td>[Olive, Pasta, Tomato, Vegetarian, Quick &amp; Eas...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>Gnocchi al Pomodoro, Basilico, ed Olive</td>
-      <td>[In a large, deep skillet, heat the butter ove...</td>
-      <td>NaN</td>
-      <td>[2 tablespoons unsalted butter, 1/2 cup pitted...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Gnocchi with Tomato, Basil, and Olives</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>NaN</td>
-      <td>[Onion, Pasta, Sauté, Low Fat, Quick &amp; Easy, R...</td>
-      <td>2005-08-17 16:41:31</td>
-      <td>None</td>
-      <td>[Toss shrimp with 1 tbsp oil, rosemary, parsle...</td>
-      <td>NaN</td>
-      <td>[3/4 lb large shrimp (about 30 pieces), peeled...</td>
-      <td>NaN</td>
-      <td>3.125</td>
-      <td>NaN</td>
-      <td>Potato Gnocchi with Shrimp and Peas</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>NaN</td>
-      <td>[Garlic, Pasta, Sauté, Vegetarian, Kid-Friendl...</td>
-      <td>2009-12-21 04:00:00</td>
-      <td>None</td>
-      <td>[Cook linguine in large pot of boiling salted ...</td>
-      <td>NaN</td>
-      <td>[1/2 pound linguine, 3 tablespoons extra-virgi...</td>
-      <td>NaN</td>
-      <td>3.125</td>
-      <td>NaN</td>
-      <td>Lemon-Parsley Linguine</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>303.0</td>
-      <td>[Garlic, Ginger, Nut, Pasta, Vegetable, Sauté,...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>Noodles-which are staples in Thailand, Indones...</td>
-      <td>[Cut carrots, zucchini and green onions into m...</td>
-      <td>26.0</td>
-      <td>[2 carrots, peeled, 1 large zucchini, 3 green ...</td>
-      <td>8.0</td>
-      <td>3.125</td>
-      <td>202.0</td>
-      <td>Spicy Noodles with Ginger and Fresh Vegetables</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>375.0</td>
-      <td>[Beef, Mushroom, Onion, Pasta, Tomato, Sauté, ...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>Shullie Neumark of Rancho Palos Verdes, Califo...</td>
-      <td>[Sprinkle meat with thyme and salt and pepper....</td>
-      <td>26.0</td>
-      <td>[1 1 1/2-pound top sirloin steak, halved lengt...</td>
-      <td>27.0</td>
-      <td>3.750</td>
-      <td>110.0</td>
-      <td>Beef Stroganoff with Tomatoes</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>200.0</td>
-      <td>[Pasta, Side, Quick &amp; Easy, Lunch, Lemon, Lime...</td>
-      <td>2006-05-16 20:12:55</td>
-      <td>_(Hiyashi Udon)</td>
-      <td>[Place the stock, soy sauce, and sugar in a sm...</td>
-      <td>3.0</td>
-      <td>[3/4 cup Sanuki Sea Stock, 3 tablespoons soy s...</td>
-      <td>8.0</td>
-      <td>4.375</td>
-      <td>486.0</td>
-      <td>Cold Noodle Salad with Ponzu Sauce</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>272.0</td>
-      <td>[Soup/Stew, Pasta, Quick &amp; Easy, Lunch, Boil, ...</td>
-      <td>2006-05-16 20:13:00</td>
-      <td>_Editor's note: This recipe was adapted by Jap...</td>
-      <td>[In large stockpot, bring 4 gallons water to r...</td>
-      <td>3.0</td>
-      <td>[10 ounces dried or semidried (slightly flexib...</td>
-      <td>10.0</td>
-      <td>4.375</td>
-      <td>15.0</td>
-      <td>To Cook Dried Udon Noodles</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>787.0</td>
-      <td>[Milk/Cream, Dairy, Mushroom, Pasta, Pork, Sau...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>None</td>
-      <td>[Sauté sausage in heavy large skillet over med...</td>
-      <td>26.0</td>
-      <td>[1 pound sweet Italian sausages, casings remov...</td>
-      <td>45.0</td>
-      <td>3.750</td>
-      <td>1006.0</td>
-      <td>Linguine with Sausage, Mushroom and Cream Sauce</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>NaN</td>
-      <td>[Bean, Pasta, Low Fat, High Fiber, Spinach, Ch...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>None</td>
-      <td>[Heat 1 teaspoon oil in heavy large nonstick s...</td>
-      <td>NaN</td>
-      <td>[3 teaspoons olive oil, 1 large onion, chopped...</td>
-      <td>NaN</td>
-      <td>3.125</td>
-      <td>NaN</td>
-      <td>Farfalle with Spinach and Garbanzo Beans</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>1370.0</td>
-      <td>[Nut, Pasta, Pepper, Sauté, Vegetarian, Pine N...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>On a weekday, accompany this main course with ...</td>
-      <td>[Heat oil in heavy large skillet over medium-h...</td>
-      <td>88.0</td>
-      <td>[1 tablespoon olive oil, 2 red bell peppers, c...</td>
-      <td>31.0</td>
-      <td>3.750</td>
-      <td>270.0</td>
-      <td>Linguine with Red Peppers, Green Onions and Pi...</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>414.0</td>
-      <td>[Egg, Pasta, Brunch, Bake, Vegetarian, Quick &amp;...</td>
-      <td>2006-11-16 15:05:59</td>
-      <td>A savory take on noodle kugel, this beautiful ...</td>
-      <td>[Put oven rack in middle position and preheat ...</td>
-      <td>29.0</td>
-      <td>[1/4 cup olive oil, 2 pounds green Swiss chard...</td>
-      <td>20.0</td>
-      <td>4.375</td>
-      <td>998.0</td>
-      <td>Egg Noodle, Chard, and Fontina Torte</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>910.0</td>
-      <td>[Garlic, Pasta, Sauté, Vegetarian, Quick &amp; Eas...</td>
-      <td>2008-10-16 04:00:00</td>
-      <td>Executive food editor Kemp Minifie brought the...</td>
-      <td>[Heat oil in a 12-inch heavy skillet over medi...</td>
-      <td>37.0</td>
-      <td>[1/3 cup extra-virgin olive oil, 1 head garlic...</td>
-      <td>31.0</td>
-      <td>4.375</td>
-      <td>1018.0</td>
-      <td>Spaghetti and Swiss Chard With Garlic Chips</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>394.0</td>
-      <td>[Citrus, Nut, Pasta, Sauté, Vegetarian, Quick ...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>Can be prepared in 45 minutes or less</td>
-      <td>[Bring a large saucepan of salted water to a b...</td>
-      <td>20.0</td>
-      <td>[1/4 pound angel's hair pasta or capellini, 3/...</td>
-      <td>9.0</td>
-      <td>3.750</td>
-      <td>8.0</td>
-      <td>Angel's Hair Pasta with Lemon and Pine Nuts</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>487.0</td>
-      <td>[Salad, Pasta, Tomato, Side, Picnic, Vegetaria...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>Typical Provençal ingredients give this satisf...</td>
-      <td>[Cook pasta in large pot of boiling salted wat...</td>
-      <td>26.0</td>
-      <td>[1 pound cavatelli pasta or medium shell pasta...</td>
-      <td>14.0</td>
-      <td>3.750</td>
-      <td>148.0</td>
-      <td>Cavatelli Salad with Artichokes and Goat Cheese</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>NaN</td>
-      <td>[Cheese, Lamb, Pasta, Quick &amp; Easy, High Fiber...</td>
-      <td>2010-12-07 04:00:00</td>
-      <td>None</td>
-      <td>[Preheat oven to 450°F. Toss squash with 1 1/2...</td>
-      <td>NaN</td>
-      <td>[4 8-ounce packages fresh peeled cubed buttern...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Multi-Grain Pasta with Butternut Squash, Groun...</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>NaN</td>
-      <td>[Chicken, Leafy Green, Mushroom, Pasta, Poultr...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>None</td>
-      <td>[Heat oil in large deep nonstick skillet over ...</td>
-      <td>NaN</td>
-      <td>[2 tablespoons extra-virgin olive oil, 1 cup s...</td>
-      <td>NaN</td>
-      <td>3.750</td>
-      <td>NaN</td>
-      <td>Pasta Shells with Chicken, Mushrooms, Escarole...</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>603.0</td>
-      <td>[Pasta, Tomato, Kid-Friendly, Dinner, Lunch, S...</td>
-      <td>2015-02-18 04:00:00</td>
-      <td>No nduja? Just add an extra glug of olive oil ...</td>
-      <td>[Peel and devein shrimp, saving heads and/or s...</td>
-      <td>22.0</td>
-      <td>[1 pound large head-on or shell-on shrimp, 3 t...</td>
-      <td>31.0</td>
-      <td>5.000</td>
-      <td>867.0</td>
-      <td>Squid Ink Pasta with Shrimp, Nduja, and Tomato</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>537.0</td>
-      <td>[Milk/Cream, Pasta, Christmas, Vegetarian, Qui...</td>
-      <td>2007-11-16 15:35:24</td>
-      <td>The zing of fresh lemon enhances both the peas...</td>
-      <td>[Simmer peas with cream, red-pepper flakes, ga...</td>
-      <td>10.0</td>
-      <td>[1 cup frozen baby peas (not thawed), 1/2 cup ...</td>
-      <td>20.0</td>
-      <td>4.375</td>
-      <td>246.0</td>
-      <td>Lemon Gnocchi with Spinach and Peas</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>353.0</td>
-      <td>[Milk/Cream, Dairy, Herb, Mushroom, Pasta, Sau...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>Serve with: Tossed green salad. Dessert: Choco...</td>
-      <td>[Cook pasta in pot of boiling salted water acc...</td>
-      <td>26.0</td>
-      <td>[2 packages (about 9 ounces each) mushroom and...</td>
-      <td>14.0</td>
-      <td>4.375</td>
-      <td>260.0</td>
-      <td>Tortelloni with Mushroom-Sage Sauce</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>333.0</td>
-      <td>[Salad, Pasta, Pepper, Appetizer, Side, Super ...</td>
-      <td>2012-01-23 04:00:00</td>
-      <td>Orzo is the Italian word for barley, and the s...</td>
-      <td>[Preheat oven to 350°F with rack in middle., R...</td>
-      <td>18.0</td>
-      <td>[1/2 cup pine nuts, 1 pound orzo, 1/4 cup fres...</td>
-      <td>11.0</td>
-      <td>4.375</td>
-      <td>131.0</td>
-      <td>Orzo Salad</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>NaN</td>
-      <td>[Soup/Stew, Wine, Egg, Ginger, Pasta, Quick &amp; ...</td>
-      <td>2006-05-16 20:13:00</td>
-      <td>_(Tamago Toji Udon)</td>
-      <td>[In a medium stockpot, combine the stock, soy ...</td>
-      <td>NaN</td>
-      <td>[1 quart Sanuki Sea Stock, 2 tablespoons light...</td>
-      <td>NaN</td>
-      <td>3.750</td>
-      <td>NaN</td>
-      <td>Thick White Noodles in Soup, Topped with Eggs ...</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>1699.0</td>
-      <td>[Milk/Cream, Chicken, Pasta, Braise, High Fibe...</td>
-      <td>2010-08-11 04:00:00</td>
-      <td>None</td>
-      <td>[Sprinkle chicken with salt and pepper. Heat o...</td>
-      <td>107.0</td>
-      <td>[2 1/2 to 2 3/4 pounds chicken thighs with ski...</td>
-      <td>72.0</td>
-      <td>4.375</td>
-      <td>332.0</td>
-      <td>Paccheri Pasta with Braised Chicken and Saffro...</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>938</th>
-      <td>NaN</td>
-      <td>[Milk/Cream, Fish, Pasta, Easter, Quick &amp; Easy...</td>
-      <td>2011-03-14 04:00:00</td>
-      <td>This dish only looks indulgent: A serving has ...</td>
-      <td>[Heat broiler to low. Coat a baking sheet with...</td>
-      <td>NaN</td>
-      <td>[Vegetable oil cooking spray, 1 pound salmon f...</td>
-      <td>NaN</td>
-      <td>3.750</td>
-      <td>NaN</td>
-      <td>Creamy Farfalle with Salmon and Peas</td>
-    </tr>
-    <tr>
-      <th>939</th>
-      <td>60.0</td>
-      <td>[Milk/Cream, Dairy, Pasta, Side, Bake, Vegetar...</td>
-      <td>2007-08-16 04:02:48</td>
-      <td>None</td>
-      <td>[1. Preheat oven to 350°F., 2. Cook the macaro...</td>
-      <td>2.0</td>
-      <td>[8 ounces small elbow macaroni, Olive oil, 1 1...</td>
-      <td>2.0</td>
-      <td>3.125</td>
-      <td>90.0</td>
-      <td>Mac &amp; Cheese Cupcakes</td>
-    </tr>
-    <tr>
-      <th>940</th>
-      <td>NaN</td>
-      <td>[Cheese, Chicken, Dairy, Leafy Green, Nut, Pas...</td>
-      <td>2006-12-07 19:53:29</td>
-      <td>None</td>
-      <td>[Cook pasta in large pot of boiling salted wat...</td>
-      <td>NaN</td>
-      <td>[1 pound gnocchi-shaped pasta (such as cavatel...</td>
-      <td>NaN</td>
-      <td>3.125</td>
-      <td>NaN</td>
-      <td>Pasta with Chicken, Curly Endive, and Blue Che...</td>
-    </tr>
-    <tr>
-      <th>941</th>
-      <td>1058.0</td>
-      <td>[Chicken, Dairy, Pasta, Poultry, Vegetable, Ki...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>None</td>
-      <td>[Steam broccoli florets until just tender, abo...</td>
-      <td>45.0</td>
-      <td>[4 to 5 cups broccoli florets (from about 1 la...</td>
-      <td>87.0</td>
-      <td>4.375</td>
-      <td>819.0</td>
-      <td>Chicken and Broccoli Alfredo</td>
-    </tr>
-    <tr>
-      <th>942</th>
-      <td>520.0</td>
-      <td>[Cheese, Herb, Nut, Pasta, Sauté, Vegetarian, ...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>Mafalde, similar to dried lasagne noodles but ...</td>
-      <td>[Stir together ricotta, Parmigiano-Reggiano, h...</td>
-      <td>21.0</td>
-      <td>[1 (15-oz) container whole-milk or part-skim r...</td>
-      <td>21.0</td>
-      <td>3.125</td>
-      <td>357.0</td>
-      <td>Ruffled Pasta with Herbed Ricotta and Pine Nut...</td>
-    </tr>
-    <tr>
-      <th>943</th>
-      <td>NaN</td>
-      <td>[Salad, Mushroom, Pasta, Vegetable, Low Fat, V...</td>
-      <td>2004-08-20 12:48:48</td>
-      <td>None</td>
-      <td>[In a small saucepan stir together all dressin...</td>
-      <td>NaN</td>
-      <td>[1/2 cup soy sauce, 1/3 cup water, 1 tablespoo...</td>
-      <td>NaN</td>
-      <td>3.125</td>
-      <td>NaN</td>
-      <td>Bean-Thread Noodle and Vegetable Salad</td>
-    </tr>
-    <tr>
-      <th>944</th>
-      <td>726.0</td>
-      <td>[Cheese, Pasta, Vegetable, Spring, Prosciutto,...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>This lemony pasta dish is great with sesame br...</td>
-      <td>[Cook pasta in large pot of boiling salted wat...</td>
-      <td>17.0</td>
-      <td>[1/2 pound angel hair pasta, 1/3 cup whipping ...</td>
-      <td>39.0</td>
-      <td>3.750</td>
-      <td>1750.0</td>
-      <td>Angel Hair Pasta with Peas, Prosciutto, and Le...</td>
-    </tr>
-    <tr>
-      <th>945</th>
-      <td>567.0</td>
-      <td>[3-Ingredient Recipes, Pasta, Dinner, Pumpkin,...</td>
-      <td>2016-09-01 14:53:00</td>
-      <td>In Epi's 3-Ingredient Recipes series, we show ...</td>
-      <td>[Cook pasta in a large pot of boiling salted w...</td>
-      <td>16.0</td>
-      <td>[1 pound whole wheat short pasta (such as penn...</td>
-      <td>16.0</td>
-      <td>0.000</td>
-      <td>501.0</td>
-      <td>3-Ingredient Creamy Pumpkin Pasta</td>
-    </tr>
-    <tr>
-      <th>946</th>
-      <td>434.0</td>
-      <td>[Salad, Olive, Pasta, Quick &amp; Easy, Buffet, Mo...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>Active time: 15 min Start to finish: 30 min</td>
-      <td>[Whisk together red-wine vinegar and olive oil...</td>
-      <td>37.0</td>
-      <td>[2 tablespoons red-wine vinegar, 1/4 cup extra...</td>
-      <td>19.0</td>
-      <td>4.375</td>
-      <td>1232.0</td>
-      <td>Antipasto Pasta Salad</td>
-    </tr>
-    <tr>
-      <th>947</th>
-      <td>589.0</td>
-      <td>[Dairy, Leafy Green, Pasta, Sauté, Quick &amp; Eas...</td>
-      <td>2004-08-20 12:48:48</td>
-      <td>Can be prepared in 45 minutes or less.</td>
-      <td>[Fill a 4-quart kettle three-fourths full with...</td>
-      <td>21.0</td>
-      <td>[6 ounces penne or other tubular pasta, 1 1/2 ...</td>
-      <td>23.0</td>
-      <td>3.750</td>
-      <td>938.0</td>
-      <td>Penne with Swiss Chard</td>
-    </tr>
-    <tr>
-      <th>948</th>
-      <td>396.0</td>
-      <td>[Soup/Stew, Pasta, Shellfish, Tomato, Sauté, C...</td>
-      <td>2004-09-21 20:28:11</td>
-      <td>This tomato-based chowder tastes a bit like Cr...</td>
-      <td>[Heat oil in heavy large pot over medium-heat....</td>
-      <td>13.0</td>
-      <td>[3 tablespoons olive oil, 1/2 cup chopped onio...</td>
-      <td>47.0</td>
-      <td>4.375</td>
-      <td>2133.0</td>
-      <td>Ann Pachett's Spicy Seafood Chowder</td>
-    </tr>
-    <tr>
-      <th>949</th>
-      <td>689.0</td>
-      <td>[Milk/Cream, Mushroom, Onion, Pasta, Bake, Cas...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>My mother came from a long line of New England...</td>
-      <td>[Put oven rack in middle position and preheat ...</td>
-      <td>35.0</td>
-      <td>[1 medium onion, finely chopped, 4 1/2 tablesp...</td>
-      <td>36.0</td>
-      <td>4.375</td>
-      <td>839.0</td>
-      <td>Tuna Noodle Casserole</td>
-    </tr>
-    <tr>
-      <th>950</th>
-      <td>291.0</td>
-      <td>[Milk/Cream, Fish, Pasta, Potato, Bake, Cod, F...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>None</td>
-      <td>[In a large bowl cover salt cod with cold wate...</td>
-      <td>11.0</td>
-      <td>[1/2 pound skinless boneless salt cod (prefera...</td>
-      <td>19.0</td>
-      <td>3.125</td>
-      <td>1393.0</td>
-      <td>Salt Cod, Fennel, and Potato Cannelloni</td>
-    </tr>
-    <tr>
-      <th>951</th>
-      <td>338.0</td>
-      <td>[Salad, Cheese, Citrus, Pasta, Tomato, Quick &amp;...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>Carey Paquette of Arlington, Virginia, writes:...</td>
-      <td>[Whisk oil, lemon juice, mustard, garlic, and ...</td>
-      <td>19.0</td>
-      <td>[7 tablespoons extra-virgin olive oil, 4 table...</td>
-      <td>10.0</td>
-      <td>4.375</td>
-      <td>334.0</td>
-      <td>Lemon Pasta Salad with Tomatoes and Feta</td>
-    </tr>
-    <tr>
-      <th>952</th>
-      <td>NaN</td>
-      <td>[Pasta, Dinner, Lunch, Broccoli Rabe, Bon Appé...</td>
-      <td>2014-12-29 04:00:00</td>
-      <td>Why is it that in the dead of winter, everythi...</td>
-      <td>[Mash anchovies into butter in a medium bowl; ...</td>
-      <td>NaN</td>
-      <td>[1 3.5–ounces jar oil-packed anchovies, draine...</td>
-      <td>NaN</td>
-      <td>5.000</td>
-      <td>NaN</td>
-      <td>Pasta with Anchovy Butter and Broccoli Rabe</td>
-    </tr>
-    <tr>
-      <th>953</th>
-      <td>139.0</td>
-      <td>[Soup/Stew, Pasta, Tomato, turkey, Lunch, Fall...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>None</td>
-      <td>[In a large kettle or stockpot combine the car...</td>
-      <td>2.0</td>
-      <td>[the carcass of 1 turkey, broken into large pi...</td>
-      <td>7.0</td>
-      <td>4.375</td>
-      <td>50.0</td>
-      <td>Turkey Noodle Soup with Tomatoes</td>
-    </tr>
-    <tr>
-      <th>954</th>
-      <td>3842.0</td>
-      <td>[Pasta, Tomato, Bake, Kid-Friendly, Dinner, Mo...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>None</td>
-      <td>[Heat oil in heavy large saucepan over medium ...</td>
-      <td>115.0</td>
-      <td>[1 tablespoon olive oil, 1 cup chopped onion, ...</td>
-      <td>189.0</td>
-      <td>4.375</td>
-      <td>2912.0</td>
-      <td>Three-Cheese Lasagna with Italian Sausage</td>
-    </tr>
-    <tr>
-      <th>955</th>
-      <td>NaN</td>
-      <td>[Cheese, Pasta, Shellfish, Sauté, Valentine's ...</td>
-      <td>2008-09-29 04:00:00</td>
-      <td>Neal Fraser, Executive Chef and co-owner of Gr...</td>
-      <td>[In 10- to 12-quart pot, bring salted water to...</td>
-      <td>NaN</td>
-      <td>[5 (1 1/4- to 1 1/2-pound) live lobsters or 2 ...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Cavatelli Pasta with Lobster, Spring Peas, and...</td>
-    </tr>
-    <tr>
-      <th>956</th>
-      <td>NaN</td>
-      <td>[Herb, Pasta, Side, Vegetarian, Peanut, Bon Ap...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>Inspired by Vietnamese cuisine, this combinati...</td>
-      <td>[Whisk vinegar and sugar in medium bowl to ble...</td>
-      <td>NaN</td>
-      <td>[1/4 cup rice vinegar, 1 tablespoon sugar, 1/2...</td>
-      <td>NaN</td>
-      <td>3.750</td>
-      <td>NaN</td>
-      <td>Rice Noodles with Cilantro, Mint and Peanuts</td>
-    </tr>
-    <tr>
-      <th>957</th>
-      <td>498.0</td>
-      <td>[Salad, Fish, Pasta, Quick &amp; Easy, Tuna, Chill...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>None</td>
-      <td>[Cook green beans in large pot of boiling salt...</td>
-      <td>25.0</td>
-      <td>[1/2 pound green beans, trimmed, cut into 1-in...</td>
-      <td>20.0</td>
-      <td>4.375</td>
-      <td>394.0</td>
-      <td>Tuna Pasta Salad</td>
-    </tr>
-    <tr>
-      <th>958</th>
-      <td>537.0</td>
-      <td>[Dairy, Pasta, Side, Bake, Vegetarian, Cassero...</td>
-      <td>2006-11-28 15:31:30</td>
-      <td>None</td>
-      <td>[Cook pasta until tender but still firm to bit...</td>
-      <td>25.0</td>
-      <td>[1 pound fresh linguine, 2 tablespoons olive o...</td>
-      <td>14.0</td>
-      <td>3.125</td>
-      <td>128.0</td>
-      <td>Pasta and White Truffle Gratin</td>
-    </tr>
-    <tr>
-      <th>959</th>
-      <td>566.0</td>
-      <td>[Soup/Stew, Bean, Pasta, Tomato, Sauté, Parmes...</td>
-      <td>2004-10-07 21:37:43</td>
-      <td>None</td>
-      <td>[Heat oil in heavy large pot over medium-high ...</td>
-      <td>37.0</td>
-      <td>[2 tablespoons olive oil, 1 large onion, diced...</td>
-      <td>30.0</td>
-      <td>4.375</td>
-      <td>844.0</td>
-      <td>Pasta, Sausage, and Bean Ragoût</td>
-    </tr>
-    <tr>
-      <th>960</th>
-      <td>659.0</td>
-      <td>[Pasta, Tomato, Quick &amp; Easy, Basil, Tuna, Sum...</td>
-      <td>2004-08-20 12:48:48</td>
-      <td>Serve this simple-to-prepare pasta with crusty...</td>
-      <td>[Gently mix first 6 ingredients in large bowl....</td>
-      <td>25.0</td>
-      <td>[2 pounds tomatoes, halved, seeded, very thinl...</td>
-      <td>31.0</td>
-      <td>3.750</td>
-      <td>480.0</td>
-      <td>Spaghetti with Tuna, Tomatoes, Capers, and Basil</td>
-    </tr>
-    <tr>
-      <th>961</th>
-      <td>727.0</td>
-      <td>[Garlic, Pasta, Kid-Friendly, Quick &amp; Easy, Di...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>This recipe can be prepared in 45 minutes or l...</td>
-      <td>[Fill a 6-quart pasta pot three fourths full w...</td>
-      <td>28.0</td>
-      <td>[1 pound dried gemelli or fusilli, 2 large gar...</td>
-      <td>29.0</td>
-      <td>3.750</td>
-      <td>374.0</td>
-      <td>Gemelli with Garlic, Herbs, and Bocconcini Moz...</td>
-    </tr>
-    <tr>
-      <th>962</th>
-      <td>666.0</td>
-      <td>[Pasta, Quick &amp; Easy, Parmesan, Lemon, Arugula...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>None</td>
-      <td>[Cook pasta in an 8-quart pot of boiling salte...</td>
-      <td>21.0</td>
-      <td>[1 lb penne (preferably ridged), 1/4 lb thinly...</td>
-      <td>29.0</td>
-      <td>3.750</td>
-      <td>948.0</td>
-      <td>Pasta with Arugula and Prosciutto</td>
-    </tr>
-    <tr>
-      <th>963</th>
-      <td>1127.0</td>
-      <td>[Pasta, Pork, Tomato, Kid-Friendly, Dinner, Gr...</td>
-      <td>2015-06-18 04:00:00</td>
-      <td>None</td>
-      <td>[Heat oil in a large stockpot over medium. Add...</td>
-      <td>48.0</td>
-      <td>[1/4 cup olive oil, 1 large onion, chopped, 1 ...</td>
-      <td>62.0</td>
-      <td>0.000</td>
-      <td>3217.0</td>
-      <td>Gramma Pandolfi's Pasta Sauce with Meatballs</td>
-    </tr>
-    <tr>
-      <th>964</th>
-      <td>750.0</td>
-      <td>[Citrus, Fish, Garlic, Herb, Pasta, Pepper, Ve...</td>
-      <td>2007-03-29 20:49:23</td>
-      <td>None</td>
-      <td>[Cook pasta in large pot of boiling salted wat...</td>
-      <td>29.0</td>
-      <td>[8 ounces linguine, 3 tablespoons olive oil, 2...</td>
-      <td>25.0</td>
-      <td>3.750</td>
-      <td>252.0</td>
-      <td>Linguine with Shrimp, Asparagus, and Basil</td>
-    </tr>
-    <tr>
-      <th>965</th>
-      <td>878.0</td>
-      <td>[Chicken, Mushroom, Pasta, Bake, Super Bowl, K...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>We used grocery rotisserie chickens for this r...</td>
-      <td>[Bring chicken bones, broth, carrot, onion, ce...</td>
-      <td>46.0</td>
-      <td>[1 to 1 1/2 pound chicken bones (from 2 cooked...</td>
-      <td>75.0</td>
-      <td>4.375</td>
-      <td>559.0</td>
-      <td>Chicken Tetrazzini</td>
-    </tr>
-    <tr>
-      <th>966</th>
-      <td>NaN</td>
-      <td>[Pasta, Sauté, Quick &amp; Easy, Parmesan, Sausage...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>Can be prepared in 45 minutes or less.</td>
-      <td>[In a large saucepan of boiling salted water c...</td>
-      <td>NaN</td>
-      <td>[1/4 pound spaghetti, 1/3 cup finely chopped s...</td>
-      <td>NaN</td>
-      <td>3.750</td>
-      <td>NaN</td>
-      <td>Pepperoni Spaghetti Cakes</td>
-    </tr>
-    <tr>
-      <th>967</th>
-      <td>631.0</td>
-      <td>[Milk/Cream, Citrus, Dairy, Fish, Garlic, Past...</td>
-      <td>2004-08-20 04:00:00</td>
-      <td>Sharon Hooykaas of Los Alamitos, California, w...</td>
-      <td>[Heat 2 tablespoons oil in heavy medium skille...</td>
-      <td>24.0</td>
-      <td>[4 tablespoons olive oil, 4 shallots, thinly s...</td>
-      <td>45.0</td>
-      <td>4.375</td>
-      <td>517.0</td>
-      <td>Snapper on Angel Hair with Citrus Cream</td>
-    </tr>
   </tbody>
 </table>
-<p>968 rows × 11 columns</p>
 </div>
 </div>
 
@@ -15832,15 +13835,14 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># On veut garder seulement les sandwich</span>
 <span class="n">df_sw</span> <span class="o">=</span> <span class="n">keepCategorie</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;Sandwich&#39;</span><span class="p">)</span>
 <span class="n">df_sw</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="s1">&#39;Sandwich.json&#39;</span><span class="p">,</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;records&#39;</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s2">&quot;Sandwich.json&quot;</span><span class="p">)</span>
-<span class="c1">#head_sw = pd.read_json(&quot;Sandwich.json&quot;)</span>
-<span class="c1">#head_sw.head()</span>
+<span class="n">sw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s2">&quot;Sandwich.json&quot;</span><span class="p">)</span>
+<span class="n">sw</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -15853,7 +13855,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -15960,793 +13962,8 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
       <td>1541.0</td>
       <td>Chickpea Salad Sandwich With Creamy Carrot-Rad...</td>
     </tr>
-    <tr>
-      <th>5</th>
-      <td>352.0</td>
-      <td>[Salad, Sandwich, Vegetarian, Kid-Friendly, Qu...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>This looks and tastes like egg salad, even tho...</td>
-      <td>[Finely mash tofu with a fork in a bowl, then ...</td>
-      <td>31.0</td>
-      <td>[1 (14-oz) package firm tofu, rinsed and drain...</td>
-      <td>16.0</td>
-      <td>3.125</td>
-      <td>488.0</td>
-      <td>Creamy Tofu Salad</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>374.0</td>
-      <td>[Sandwich, Bean, Egg, Kid-Friendly, Quick &amp; Ea...</td>
-      <td>2013-05-09 04:00:00.000</td>
-      <td>"As a kid, I loved frenched green beans drench...</td>
-      <td>[Whisk 1/2 cup crumbled feta, 3 tablespoons fr...</td>
-      <td>19.0</td>
-      <td>[1/2 cup crumbled feta, 3 tablespoons fresh le...</td>
-      <td>16.0</td>
-      <td>0.000</td>
-      <td>590.0</td>
-      <td>Egg Sandwich with Green Bean Slaw</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>245.0</td>
-      <td>[Sandwich, Beef, Dinner, Lunch, Meat, Ground B...</td>
-      <td>2014-09-16 04:00:00.000</td>
-      <td>None</td>
-      <td>[Heat 2 tablespoons vegetable oil in a medium ...</td>
-      <td>15.0</td>
-      <td>[3 tablespoons vegetable oil, 2 thinly sliced ...</td>
-      <td>17.0</td>
-      <td>4.375</td>
-      <td>405.0</td>
-      <td>The BA Patty Melt</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>NaN</td>
-      <td>[Sandwich, No-Cook, Kid-Friendly, Back to Scho...</td>
-      <td>2009-04-20 04:00:00.000</td>
-      <td>Peanut butter goes well with more than just ja...</td>
-      <td>[Lay the bread slices on a work surface. Sprea...</td>
-      <td>NaN</td>
-      <td>[2 slices whole-wheat bread or Banana Bread, 1...</td>
-      <td>NaN</td>
-      <td>3.750</td>
-      <td>NaN</td>
-      <td>Peanut Butter Berry–Wich</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>NaN</td>
-      <td>[Sandwich, Garlic, Onion, turkey, Summer, Gril...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[In a large bowl stir together scallion, garli...</td>
-      <td>NaN</td>
-      <td>[1 cup chopped scallion (about 1 bunch), 3 lar...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Grilled Turkey Burgers</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>752.0</td>
-      <td>[Sandwich, Bourbon, Pork, Sauté, Super Bowl, D...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Celery and jicama sticks with ranch dip and sw...</td>
-      <td>[Sprinkle pork strips with salt and pepper. He...</td>
-      <td>31.0</td>
-      <td>[8 ounces boneless pork loin chops, cut crossw...</td>
-      <td>32.0</td>
-      <td>3.750</td>
-      <td>1065.0</td>
-      <td>Pork on a Bun with Bourbon-Barbecue Sauce</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>654.0</td>
-      <td>[Sandwich, Ginger, Onion, Tomato, turkey, Back...</td>
-      <td>2006-07-10 22:22:53.000</td>
-      <td>As culinary director for Balducci's, Katy Spar...</td>
-      <td>[Heat oil in heavy medium saucepan over medium...</td>
-      <td>25.0</td>
-      <td>[2 tablespoons canola oil, 1 tablespoon minced...</td>
-      <td>39.0</td>
-      <td>3.750</td>
-      <td>1146.0</td>
-      <td>Tamarind-Glazed Turkey Burgers</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>1145.0</td>
-      <td>[Sandwich, Cheese, Onion, Vegetarian, Quick &amp; ...</td>
-      <td>2008-01-15 15:36:03.000</td>
-      <td>None</td>
-      <td>[Brush 1 side of bread slices with oil and arr...</td>
-      <td>81.0</td>
-      <td>[4 (1/2-inch-thick) center slices sourdough br...</td>
-      <td>63.0</td>
-      <td>3.750</td>
-      <td>1939.0</td>
-      <td>Grilled Cheese with Onion Jam, Taleggio, and E...</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>NaN</td>
-      <td>[Sandwich, Onion, Pepper, Pork, Sausage, Bell ...</td>
-      <td>2004-08-20 12:48:48.000</td>
-      <td>None</td>
-      <td>[In a large skillet sauté the bell peppers, th...</td>
-      <td>NaN</td>
-      <td>[3 bell peppers of assorted colors, sliced thi...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Sausage, Bell Pepper, and Onion Focaccia Sandw...</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>NaN</td>
-      <td>[Sandwich, Onion, Tuna, Bell Pepper, Summer, T...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[If using tuna steaks, prepare grill., Season ...</td>
-      <td>NaN</td>
-      <td>[2 pounds 1/2-inch-thick tuna steaks or four 6...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Grilled Tuna and Roasted Pepper Sandwiches on ...</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>144.0</td>
-      <td>[Sandwich, No-Cook, Vegetarian, Quick &amp; Easy, ...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Can be prepared in 45 minutes or less.</td>
-      <td>[In a bowl stir together chutney, Cheddar, sou...</td>
-      <td>8.0</td>
-      <td>[a 9-ounce jar Major Grey's chutney (about 1/2...</td>
-      <td>4.0</td>
-      <td>3.125</td>
-      <td>165.0</td>
-      <td>Cheddar Chutney Tea Sandwiches</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>1080.0</td>
-      <td>[Sandwich, Beef, Egg, Brie, Bell Pepper, Summe...</td>
-      <td>2005-08-01 16:01:17.000</td>
-      <td>None</td>
-      <td>[Char peppers over gas flame or in broiler unt...</td>
-      <td>59.0</td>
-      <td>[3 large red bell peppers, 1 2-pound beef tend...</td>
-      <td>55.0</td>
-      <td>3.750</td>
-      <td>1168.0</td>
-      <td>Grilled Steak Sandwiches with Brie, Roasted Pe...</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>1405.0</td>
-      <td>[Sandwich, Blender, Food Processor, Onion, tur...</td>
-      <td>2006-11-16 19:23:08.000</td>
-      <td>Epicurious asked chef Tom Colicchio for this r...</td>
-      <td>[In heavy medium pot, combine onions and enoug...</td>
-      <td>87.0</td>
-      <td>[2 yellow onions, thinly sliced, 1/4 cup dark ...</td>
-      <td>55.0</td>
-      <td>5.000</td>
-      <td>1336.0</td>
-      <td>'Wichcraft's Roasted Turkey, Avocado, Bacon, O...</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>194.0</td>
-      <td>[Sandwich, Tomato, Appetizer, Kid-Friendly, Qu...</td>
-      <td>2015-07-13 04:00:00.000</td>
-      <td>Let the flavors of perfect summer tomatoes shi...</td>
-      <td>[Combine mayonnaise and 2 Tbsp. chives in a sm...</td>
-      <td>12.0</td>
-      <td>[6 tablespoons mayonnaise, 1/4 cup coarsely ch...</td>
-      <td>4.0</td>
-      <td>5.000</td>
-      <td>713.0</td>
-      <td>Classic Tomato Toast with Mayonnaise and Chives</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>538.0</td>
-      <td>[Sandwich, Herb, Lamb, Quick &amp; Easy, Yogurt, S...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Serve with bowls of diced tomato, sliced romai...</td>
-      <td>[Gently mix first 5 ingredients in medium bowl...</td>
-      <td>30.0</td>
-      <td>[8 ounces ground lamb, 2 tablespoons finely ch...</td>
-      <td>28.0</td>
-      <td>3.750</td>
-      <td>384.0</td>
-      <td>Herbed Lamb Burgers</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>555.0</td>
-      <td>[Sandwich, Milk/Cream, Tomato, turkey, Kentuck...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[In a small saucepan cook the onion in the but...</td>
-      <td>38.0</td>
-      <td>[1 1/2 teaspoons finely chopped onion, 1 1/2 t...</td>
-      <td>29.0</td>
-      <td>4.375</td>
-      <td>688.0</td>
-      <td>Hot Browns</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>NaN</td>
-      <td>[Sandwich, Cheese, Egg, Brunch, Quick &amp; Easy, ...</td>
-      <td>2011-03-14 04:00:00.000</td>
-      <td>None</td>
-      <td>[Cook pancetta in large nonstick skillet over ...</td>
-      <td>NaN</td>
-      <td>[12 slices pancetta (Italian bacon), 2 tablesp...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Grilled Cheese and Fried Egg Sandwiches</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>54.0</td>
-      <td>[Bread, Sandwich, Bake, Vegetarian, Basil, Rad...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[In a small bowl whisk together the flour, the...</td>
-      <td>3.0</td>
-      <td>[1 1/4 cup all-purpose flour, 3/4 teaspoon sal...</td>
-      <td>1.0</td>
-      <td>4.375</td>
-      <td>124.0</td>
-      <td>Radish Sandwiches on Zucchini Basil Muffins</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>681.0</td>
-      <td>[Sandwich, Fish, Ginger, Vegetable, Cocktail P...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[Flavored mayonnaise is easy to make, and it l...</td>
-      <td>37.0</td>
-      <td>[1/2 cup mayonnaise, 3 tablespoons finely chop...</td>
-      <td>49.0</td>
-      <td>4.375</td>
-      <td>643.0</td>
-      <td>Cal-Asian Seared Tuna Sandwiches</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>NaN</td>
-      <td>[Sandwich, No-Cook, Vegetarian, Kid-Friendly, ...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[Lightly toast pita breads; cut each in half c...</td>
-      <td>NaN</td>
-      <td>[2 whole wheat pita breads, 8 tablespoons chun...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Peanut Butter, Banana and Date Sandwiches</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>576.0</td>
-      <td>[Sandwich, Beef, Quick &amp; Easy, Lunch, Ground B...</td>
-      <td>2004-08-20 12:48:48.000</td>
-      <td>Can be prepared in 45 minutes or less.</td>
-      <td>[In a bowl gently combine beef and thyme and f...</td>
-      <td>38.0</td>
-      <td>[3/4 pound ground beef, 1 teaspoon minced fres...</td>
-      <td>34.0</td>
-      <td>4.375</td>
-      <td>325.0</td>
-      <td>Herbed Hamburgers with Arugula</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>646.0</td>
-      <td>[Sandwich, Fruit, Garlic, Leafy Green, Pork, T...</td>
-      <td>2006-07-31 14:54:15.000</td>
-      <td>If you can't find green garlic, just blanch a ...</td>
-      <td>[**For aioli:**Blend olive oil, garlic, and 1/...</td>
-      <td>47.0</td>
-      <td>[1/4 cup extra-virgin olive oil, 2 tablespoons...</td>
-      <td>12.0</td>
-      <td>3.750</td>
-      <td>744.0</td>
-      <td>Pancetta, Mizuna, and Tomato Sandwiches with G...</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>NaN</td>
-      <td>[Sandwich, Onion, Quick &amp; Easy, High Fiber, Lu...</td>
-      <td>2007-10-30 14:39:58.000</td>
-      <td>Served with a green salad, this would be a gre...</td>
-      <td>[Heat 2 tablespoons oil in large nonstick skil...</td>
-      <td>NaN</td>
-      <td>[4 tablespoons olive oil, divided, 4 cups thin...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Open-Face Prosciutto, Fresh Ricotta, and Red-O...</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>NaN</td>
-      <td>[Sandwich, Berry, Citrus, Onion, Poultry, turk...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[Mix onion, apple cider vinegar, dill and suga...</td>
-      <td>NaN</td>
-      <td>[1 medium-size sweet onion (such as Maui), thi...</td>
-      <td>NaN</td>
-      <td>2.500</td>
-      <td>NaN</td>
-      <td>Smoked Turkey Sandwiches with Orange Cranberry...</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>96.0</td>
-      <td>[Sandwich, Tomato, Cocktail Party, Kid-Friendl...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Can be prepared in 45 minutes or less.</td>
-      <td>[In a large heavy skillet cook the bacon over ...</td>
-      <td>6.0</td>
-      <td>[8 slices of bacon, chopped, 1 1/2 cups mayonn...</td>
-      <td>2.0</td>
-      <td>4.375</td>
-      <td>141.0</td>
-      <td>Tomato Bacon Sandwiches</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>398</th>
-      <td>596.0</td>
-      <td>[Sandwich, Cheese, Mustard, turkey, Quick &amp; Ea...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Can be prepared in 45 minutes or less.</td>
-      <td>[Thinly slice mozzarella. Pit, peel, and thinl...</td>
-      <td>35.0</td>
-      <td>[3 ounces whole-milk mozzarella, 1/2 firm-ripe...</td>
-      <td>35.0</td>
-      <td>3.750</td>
-      <td>831.0</td>
-      <td>Grilled Cheese with Smoked Turkey and Avocado</td>
-    </tr>
-    <tr>
-      <th>399</th>
-      <td>NaN</td>
-      <td>[Sandwich, turkey, Vegetable, Quick &amp; Easy, Mi...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>This recipe can be prepared in 45 minutes or l...</td>
-      <td>[In a bowl stir together vinegar and sugar unt...</td>
-      <td>NaN</td>
-      <td>[1/3 cup seasoned rice vinegar, 1 tablespoon s...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Southeast Asian Style Turkey Burgers with Pick...</td>
-    </tr>
-    <tr>
-      <th>400</th>
-      <td>378.0</td>
-      <td>[Sandwich, Food Processor, Vegetarian, Rosemar...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[In a colander rinse and drain chick-peas. In ...</td>
-      <td>14.0</td>
-      <td>[a 19-ounce can chick-peas, 2 garlic cloves, 1...</td>
-      <td>13.0</td>
-      <td>3.750</td>
-      <td>580.0</td>
-      <td>Chick-Pea Walnut Burgers</td>
-    </tr>
-    <tr>
-      <th>401</th>
-      <td>97.0</td>
-      <td>[Bon Appétit, Thanksgiving, turkey, Cornmeal, ...</td>
-      <td>2016-11-22 22:28:10.478</td>
-      <td>These pillowy steamed buns are delicious in al...</td>
-      <td>[Stir sugar and yeast into 2/3 cup warm (100°)...</td>
-      <td>2.0</td>
-      <td>[2 tablespoons sugar, 1 (1/4-ounce) envelope a...</td>
-      <td>2.0</td>
-      <td>0.000</td>
-      <td>656.0</td>
-      <td>Cornmeal Bao With Turkey and Black Pepper Sauce</td>
-    </tr>
-    <tr>
-      <th>402</th>
-      <td>NaN</td>
-      <td>[Sandwich, Beef, Cheese, Dairy, Kid-Friendly, ...</td>
-      <td>2008-04-14 19:12:37.000</td>
-      <td>Editor's note: The recipe and introductory tex...</td>
-      <td>[Grilling Method: Direct/Medium Heat, Mix the ...</td>
-      <td>NaN</td>
-      <td>[1 pound ground sirloin, 1 pound ground chuck,...</td>
-      <td>NaN</td>
-      <td>3.750</td>
-      <td>NaN</td>
-      <td>Bacon Cheeseburgers for a Crowd</td>
-    </tr>
-    <tr>
-      <th>403</th>
-      <td>2168.0</td>
-      <td>[Sandwich, Chicken, Dairy, Herb, Poultry, Mari...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[In a bowl whisk together the yogurt, the lemo...</td>
-      <td>158.0</td>
-      <td>[1 cup plain yogurt, 1/2 cup fresh lemon juice...</td>
-      <td>156.0</td>
-      <td>4.375</td>
-      <td>907.0</td>
-      <td>Middle Eastern Grilled Chicken Pita Sandwiches...</td>
-    </tr>
-    <tr>
-      <th>404</th>
-      <td>857.0</td>
-      <td>[Sandwich, Beef, Leafy Green, Herb, Vegetable,...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[Quarter lavash and spread 1 side of each quar...</td>
-      <td>7.0</td>
-      <td>[a 16- to18-inch round, very thin, pliable lav...</td>
-      <td>29.0</td>
-      <td>4.375</td>
-      <td>1405.0</td>
-      <td>Roast Beef, Basil, and Spicy Tomato Chutney La...</td>
-    </tr>
-    <tr>
-      <th>405</th>
-      <td>NaN</td>
-      <td>[Sandwich, turkey, Kid-Friendly, Low Cal, Dinn...</td>
-      <td>2013-09-23 04:00:00.000</td>
-      <td>Tart, fruity pomegranate molasses brightens up...</td>
-      <td>[In a bowl, combine ketchup and molasses; seas...</td>
-      <td>NaN</td>
-      <td>[1/4 cup ketchup, 1 1/2 tablespoons pomegranat...</td>
-      <td>NaN</td>
-      <td>0.000</td>
-      <td>NaN</td>
-      <td>Avocado-Alfalfa Turkey Burger</td>
-    </tr>
-    <tr>
-      <th>406</th>
-      <td>623.0</td>
-      <td>[Sandwich, Mustard, Broil, Quick &amp; Easy, Lunch...</td>
-      <td>2004-10-07 21:36:42.000</td>
-      <td>Thinly sliced roast turkey can be used instead...</td>
-      <td>[Brush cut side of ciabatta rolls with oil. Pl...</td>
-      <td>32.0</td>
-      <td>[3 ciabatta rolls, halved horizontally, or 6 1...</td>
-      <td>34.0</td>
-      <td>4.375</td>
-      <td>1825.0</td>
-      <td>Open-Face Ham, Cheddar, and Apple Butter Sandw...</td>
-    </tr>
-    <tr>
-      <th>407</th>
-      <td>NaN</td>
-      <td>[Sandwich, Tea, Chicken, Poultry, Back to Scho...</td>
-      <td>2011-07-14 04:00:00.000</td>
-      <td>None</td>
-      <td>[In a bowl, mix chicken with celery, yogurt, r...</td>
-      <td>NaN</td>
-      <td>[1/2 cup diced grilled boneless, skinless chic...</td>
-      <td>NaN</td>
-      <td>1.250</td>
-      <td>NaN</td>
-      <td>Curried Chicken Salad Sandwich</td>
-    </tr>
-    <tr>
-      <th>408</th>
-      <td>785.0</td>
-      <td>[Sandwich, Shellfish, Picnic, Quick &amp; Easy, Di...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Creamy lobster salad heaped onto a buttered, t...</td>
-      <td>[Whisk together mayonnaise, lemon juice, lemon...</td>
-      <td>50.0</td>
-      <td>[6 tablespoons mayonnaise, 1 tablespoon fresh ...</td>
-      <td>39.0</td>
-      <td>4.375</td>
-      <td>1634.0</td>
-      <td>New England Crab Rolls</td>
-    </tr>
-    <tr>
-      <th>409</th>
-      <td>678.0</td>
-      <td>[Sandwich, Pork, Fourth of July, Summer, Grill...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Fill your plate with corn on the cob, sweet-po...</td>
-      <td>[Gently mix sausage and green bell pepper in m...</td>
-      <td>31.0</td>
-      <td>[8 ounces pork sausage (preferably hot breakfa...</td>
-      <td>23.0</td>
-      <td>4.375</td>
-      <td>2039.0</td>
-      <td>Maple-Barbecued Pork Burgers</td>
-    </tr>
-    <tr>
-      <th>410</th>
-      <td>NaN</td>
-      <td>[Sandwich, Onion, Tomato, turkey, Kid-Friendly...</td>
-      <td>2007-11-01 15:38:03.000</td>
-      <td>Broiling the tomatoes adds rich flavor to the ...</td>
-      <td>[1. Prepare the meatballs: Combine all the ing...</td>
-      <td>NaN</td>
-      <td>[2 pounds ground turkey, 1 onion, grated, 1 ta...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Turkey Meatball Grinder</td>
-    </tr>
-    <tr>
-      <th>411</th>
-      <td>NaN</td>
-      <td>[Bread, Sandwich, Tomato, Picnic, Vegetarian, ...</td>
-      <td>2012-07-10 04:00:00.000</td>
-      <td>This simple sandwich's flavor is amped-up with...</td>
-      <td>[Lightly toast thick slices of white bread (a ...</td>
-      <td>NaN</td>
-      <td>[Thick slices of white bread (Pullman loaf is ...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Tomato-Feta Open-Face Sandwich</td>
-    </tr>
-    <tr>
-      <th>412</th>
-      <td>536.0</td>
-      <td>[Sandwich, Cheese, Super Bowl, Kid-Friendly, Q...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[Mix first 4 ingredients in bowl. Season with ...</td>
-      <td>33.0</td>
-      <td>[1/4 cup (1/2 stick) butter, room temperature,...</td>
-      <td>26.0</td>
-      <td>4.375</td>
-      <td>961.0</td>
-      <td>Grilled Cheddar Cheese and Ham Sandwiches</td>
-    </tr>
-    <tr>
-      <th>413</th>
-      <td>1444.0</td>
-      <td>[Sandwich, Food Processor, Bean, Herb, Fry, Sa...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Can be prepared in 45 minutes or less.</td>
-      <td>[In a food processor purée the chick-peas with...</td>
-      <td>31.0</td>
-      <td>[a 19-ounce can chick-peas, rinsed well and pa...</td>
-      <td>55.0</td>
-      <td>3.750</td>
-      <td>3777.0</td>
-      <td>Fried Chick-Pea Sandwiches with Coriander Yogurt</td>
-    </tr>
-    <tr>
-      <th>414</th>
-      <td>821.0</td>
-      <td>[Sandwich, Vegetable, Broil, Quick &amp; Easy, Lun...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Eggplant, zucchini, bell pepper and arugula sh...</td>
-      <td>[Preheat broiler. Combine 3/4 cup oil and next...</td>
-      <td>51.0</td>
-      <td>[3/4 cup plus 2 tablespoons olive oil, 3 table...</td>
-      <td>38.0</td>
-      <td>0.000</td>
-      <td>377.0</td>
-      <td>Tuna Steak and Vegetable Sandwiches</td>
-    </tr>
-    <tr>
-      <th>415</th>
-      <td>793.0</td>
-      <td>[Grill/Barbecue, Cabbage, Vegan, Flaming Hot S...</td>
-      <td>2016-06-21 21:34:27.147</td>
-      <td>Beer-Can Chicken, step aside. Cabbage becomes ...</td>
-      <td>[Prepare a grill for medium-high heat. Cut a 3...</td>
-      <td>35.0</td>
-      <td>[1 large purple cabbage (about 3 1/2 pounds), ...</td>
-      <td>24.0</td>
-      <td>3.750</td>
-      <td>1959.0</td>
-      <td>Beer-Can Cabbage Sandwiches</td>
-    </tr>
-    <tr>
-      <th>416</th>
-      <td>NaN</td>
-      <td>[Sandwich, Cheese, Olive, Pork, Lunch, Celery,...</td>
-      <td>2007-10-31 22:24:58.000</td>
-      <td>None</td>
-      <td>[1. Prepare the Olive Salad ahead of time: Com...</td>
-      <td>NaN</td>
-      <td>[1 cup each pitted green and black olives, coa...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Muffuletta Sandwich</td>
-    </tr>
-    <tr>
-      <th>417</th>
-      <td>301.0</td>
-      <td>[Sandwich, Citrus, Dairy, Quick &amp; Easy, Lemon,...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[Mix first 4 ingredients in small bowl until w...</td>
-      <td>19.0</td>
-      <td>[6 tablespoons (3/4 stick) butter, room temper...</td>
-      <td>8.0</td>
-      <td>1.250</td>
-      <td>275.0</td>
-      <td>Watercress Sandwiches with Chili-Lemon Butter</td>
-    </tr>
-    <tr>
-      <th>418</th>
-      <td>403.0</td>
-      <td>[Sandwich, Fish, Leafy Green, No-Cook, Picnic,...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Complete this one with cherry tomatoes, potato...</td>
-      <td>[Mix tuna, 1/4 cup mayonnaise, and next 6 ingr...</td>
-      <td>25.0</td>
-      <td>[2 6-ounce packages albacore tuna packed in wa...</td>
-      <td>19.0</td>
-      <td>4.375</td>
-      <td>703.0</td>
-      <td>Tuna Salad on Olive Bread with Arugula</td>
-    </tr>
-    <tr>
-      <th>419</th>
-      <td>NaN</td>
-      <td>[Sandwich, Cheese, Egg, Breakfast, Brunch, Kid...</td>
-      <td>2015-08-21 04:00:00.000</td>
-      <td>A knife-and-fork situation, with plenty of cru...</td>
-      <td>[Preheat oven to 300°F. Heat a large skillet, ...</td>
-      <td>NaN</td>
-      <td>[2 tablespoons unsalted butter, plus more, roo...</td>
-      <td>NaN</td>
-      <td>0.000</td>
-      <td>NaN</td>
-      <td>Fancy Grilled Cheese With A Fried Egg</td>
-    </tr>
-    <tr>
-      <th>420</th>
-      <td>1094.0</td>
-      <td>[Sandwich, Kid-Friendly, Quick &amp; Easy, Apple, ...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Can be prepared in 45 minutes or less.</td>
-      <td>[Spread peanut butter evenly on bread slices. ...</td>
-      <td>82.0</td>
-      <td>[1/2 cup creamy or chunky peanut butter, 4 lar...</td>
-      <td>39.0</td>
-      <td>4.375</td>
-      <td>1111.0</td>
-      <td>Peanut Butter, Apple, and Bacon Sandwiches</td>
-    </tr>
-    <tr>
-      <th>421</th>
-      <td>NaN</td>
-      <td>[Sandwich, turkey, Low Fat, Grill/Barbecue, Self]</td>
-      <td>2006-05-16 20:08:24.000</td>
-      <td>Turkey's tryptophan spurs your brain to produc...</td>
-      <td>[In a large bowl, combine egg white, cheese, t...</td>
-      <td>NaN</td>
-      <td>[1 egg white, lightly beaten, 1/3 cup cheddar ...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Southwestern Turkey Burger</td>
-    </tr>
-    <tr>
-      <th>422</th>
-      <td>100.0</td>
-      <td>[Sandwich, Beef, Ground Beef, Summer, House &amp; ...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[If you are serving hamburgers on buns, make t...</td>
-      <td>6.0</td>
-      <td>[Buy lean ground beef with no more than 25 to ...</td>
-      <td>11.0</td>
-      <td>4.375</td>
-      <td>37.0</td>
-      <td>Plain Hamburgers</td>
-    </tr>
-    <tr>
-      <th>423</th>
-      <td>NaN</td>
-      <td>[Sandwich, Wine, Lamb, Tomato, Fourth of July,...</td>
-      <td>2009-10-15 04:00:00.000</td>
-      <td>None</td>
-      <td>[1. Prepare a medium-hot fire in a charcoal gr...</td>
-      <td>NaN</td>
-      <td>[4 cups ripe tomatoes, peeled, cored, and roug...</td>
-      <td>NaN</td>
-      <td>5.000</td>
-      <td>NaN</td>
-      <td>Peppered Lamb Burgers with "Hot Tomato" Jam</td>
-    </tr>
-    <tr>
-      <th>424</th>
-      <td>443.0</td>
-      <td>[Sandwich, Broil, Ham, Swiss Cheese, Sour Crea...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Can be prepared in 45 minutes or less.</td>
-      <td>[In a bowl stir together 1 cup Gruyère, the so...</td>
-      <td>27.0</td>
-      <td>[1 cup finely grated Gruyère plus 2 tablespoon...</td>
-      <td>20.0</td>
-      <td>4.375</td>
-      <td>847.0</td>
-      <td>Croques-Monsieur</td>
-    </tr>
-    <tr>
-      <th>425</th>
-      <td>367.0</td>
-      <td>[Sandwich, Egg, Vegetable, Quick &amp; Easy, Fall,...</td>
-      <td>2004-08-20 12:48:48.000</td>
-      <td>Can be prepared in 45 minutes or less.</td>
-      <td>[In a small saucepan of boiling salted water c...</td>
-      <td>21.0</td>
-      <td>[16 green beans, trimmed, 6 hard-cooked large ...</td>
-      <td>17.0</td>
-      <td>2.500</td>
-      <td>450.0</td>
-      <td>Egg Salad and Green Bean Sandwiches</td>
-    </tr>
-    <tr>
-      <th>426</th>
-      <td>529.0</td>
-      <td>[Sandwich, Onion, Steak, Bell Pepper, Summer, ...</td>
-      <td>2004-08-20 12:48:48.000</td>
-      <td>None</td>
-      <td>[Combine first 7 ingredients in large bowl. Di...</td>
-      <td>29.0</td>
-      <td>[3 cups dry red wine, 3 cups chopped onions, 2...</td>
-      <td>42.0</td>
-      <td>5.000</td>
-      <td>2745.0</td>
-      <td>Grilled Flank Steak, Onion and Bell Pepper San...</td>
-    </tr>
-    <tr>
-      <th>427</th>
-      <td>NaN</td>
-      <td>[Sandwich, Herb, Vegetable, Roast, Picnic, Veg...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[Preheat oven to 400°F. Spray 2 large baking s...</td>
-      <td>NaN</td>
-      <td>[Nonstick vegetable oil spray, 2 medium zucchi...</td>
-      <td>NaN</td>
-      <td>3.750</td>
-      <td>NaN</td>
-      <td>Herbed Goat Cheese and Roasted-Vegetable Sandw...</td>
-    </tr>
   </tbody>
 </table>
-<p>428 rows × 11 columns</p>
 </div>
 </div>
 
@@ -16765,13 +13982,14 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># On veut garder seulement les cookies</span>
 <span class="n">df_cookie</span> <span class="o">=</span> <span class="n">keepCategorie</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;Cookies&#39;</span><span class="p">)</span>
 <span class="n">df_cookie</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="s1">&#39;Cookies.json&#39;</span><span class="p">,</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;records&#39;</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s2">&quot;Cookies.json&quot;</span><span class="p">)</span>
+<span class="n">cookie</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s2">&quot;Cookies.json&quot;</span><span class="p">)</span>
+<span class="n">cookie</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -16784,7 +14002,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -16825,7 +14043,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
       <th>0</th>
       <td>129.0</td>
       <td>[Cookies, Rum, Cheese, Dairy, Fruit, Dessert, ...</td>
-      <td>2004-08-20 12:48:48.000</td>
+      <td>2004-08-20 12:48:48</td>
       <td>To bake these puffs all at once, you will need...</td>
       <td>[Cut butter into 1/4-inch slices. In a large b...</td>
       <td>9.0</td>
@@ -16839,7 +14057,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
       <th>1</th>
       <td>105.0</td>
       <td>[Cookies, Food Processor, Fruit, Dessert, Bake...</td>
-      <td>2004-08-20 04:00:00.000</td>
+      <td>2004-08-20 04:00:00</td>
       <td>These cookies are perfect with a cup of tea.</td>
       <td>[Combine first 3 ingredients in processor; ble...</td>
       <td>7.0</td>
@@ -16853,7 +14071,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
       <th>2</th>
       <td>87.0</td>
       <td>[Cookies, Dessert, Bake, Christmas, Kid-Friend...</td>
-      <td>2011-12-22 04:00:00.000</td>
+      <td>2011-12-22 04:00:00</td>
       <td>When it comes right down to it, the simplest h...</td>
       <td>[Beat together butter, sugar, and salt in a la...</td>
       <td>4.0</td>
@@ -16867,7 +14085,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
       <th>3</th>
       <td>92.0</td>
       <td>[Cookies, Nut, Dessert, Bake, Christmas, Kid-F...</td>
-      <td>2013-11-06 04:00:00.000</td>
+      <td>2013-11-06 04:00:00</td>
       <td>Hand off this dough to the kids—or anyone with...</td>
       <td>[Place racks in lower and upper thirds of oven...</td>
       <td>6.0</td>
@@ -16881,7 +14099,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
       <th>4</th>
       <td>76.0</td>
       <td>[Bon Appétit, Bake, Cookies, Almond, Lemon, De...</td>
-      <td>2016-07-01 18:35:00.000</td>
+      <td>2016-07-01 18:35:00</td>
       <td>These traditional almond cookies hail from Tus...</td>
       <td>[Preheat oven to 350°F. Toast almonds on a rim...</td>
       <td>5.0</td>
@@ -16891,793 +14109,8 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
       <td>15.0</td>
       <td>Tuscan Almond Cookies (Ricciarelli)</td>
     </tr>
-    <tr>
-      <th>5</th>
-      <td>305.0</td>
-      <td>[Cookies, Cheese, Dairy, Fruit, Nut, Dessert, ...</td>
-      <td>2004-08-20 12:48:48.000</td>
-      <td>None</td>
-      <td>[In a food processor blend butter and cream ch...</td>
-      <td>17.0</td>
-      <td>[2 sticks (1 cup) unsalted butter, softened, 8...</td>
-      <td>4.0</td>
-      <td>4.375</td>
-      <td>127.0</td>
-      <td>Date Walnut Rugelach</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>123.0</td>
-      <td>[Cookies, Passover, Kosher for Passover, Almon...</td>
-      <td>2016-04-06 14:05:00.631</td>
-      <td>Both cardamom and pistachios are essential ing...</td>
-      <td>[Using an electric mixer on medium speed, crea...</td>
-      <td>8.0</td>
-      <td>[1 cup sugar, 1/3 cup virgin coconut oil, soft...</td>
-      <td>2.0</td>
-      <td>5.000</td>
-      <td>19.0</td>
-      <td>Flourless Almond Cookies With Cardamom, Orange...</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>300.0</td>
-      <td>[Cookies, Mixer, Dessert, Freeze/Chill, Christ...</td>
-      <td>2006-11-07 20:58:36.000</td>
-      <td>You can freeze the dough flavored or unflavore...</td>
-      <td>[1. In the bowl of a mixer, combine butter, su...</td>
-      <td>16.0</td>
-      <td>[1 1/2 cups (3 sticks) unsalted butter, at roo...</td>
-      <td>3.0</td>
-      <td>4.375</td>
-      <td>216.0</td>
-      <td>Butter Shortbread Cookies</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>13.0</td>
-      <td>[Cookies, Mixer, Dessert, Bake, Freeze/Chill, ...</td>
-      <td>2006-11-08 20:44:59.000</td>
-      <td>Editor's note: This recipe is from Ming Tsai's...</td>
-      <td>[1. Preheat the oven to 325°F. In a small bowl...</td>
-      <td>0.0</td>
-      <td>[2 teaspoons ground ginger, 2 teaspoons ground...</td>
-      <td>0.0</td>
-      <td>4.375</td>
-      <td>1.0</td>
-      <td>Five-Spice Shortbread</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>223.0</td>
-      <td>[Cookies, Food Processor, Mixer, Dairy, Nut, D...</td>
-      <td>2006-11-08 21:07:18.000</td>
-      <td>Editor's note: This recipe is from Ming Tsai's...</td>
-      <td>[1. Preheat the oven to 325°F. Grease a baking...</td>
-      <td>19.0</td>
-      <td>[1 cup sugar, 1 cup heavy cream, 1 pound macad...</td>
-      <td>2.0</td>
-      <td>1.250</td>
-      <td>4.0</td>
-      <td>Caramel Macadamia Nut Crunch</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>297.0</td>
-      <td>[Cookies, Mixer, Nut, Vegetable, Dessert, Bake...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[Put oven racks in upper and lower thirds of o...</td>
-      <td>18.0</td>
-      <td>[1 1/8 cups all-purpose flour, 1 teaspoon cinn...</td>
-      <td>4.0</td>
-      <td>4.375</td>
-      <td>216.0</td>
-      <td>Inside-Out Carrot Cake Cookies</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>18.0</td>
-      <td>[Cookies, Food Processor, Mixer, Nut, Bake, Ch...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>This dough can also be formed into crescent sh...</td>
-      <td>[Halve 1 cup almonds and reserve., In a food p...</td>
-      <td>1.0</td>
-      <td>[2 2/3 cups blanched almonds (about 3/4 pound)...</td>
-      <td>1.0</td>
-      <td>4.375</td>
-      <td>5.0</td>
-      <td>Almond Butter Crisps</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>136.0</td>
-      <td>[Cookies, Dessert, Bake, Christmas, Edible Gif...</td>
-      <td>2013-01-03 04:00:00.000</td>
-      <td>Just reading the words "salted brown butter" i...</td>
-      <td>[Melt butter in a 1- to 2-quart heavy saucepan...</td>
-      <td>4.0</td>
-      <td>[1 1/2 sticks (3/4 cup) unsalted butter, cut i...</td>
-      <td>1.0</td>
-      <td>5.000</td>
-      <td>55.0</td>
-      <td>Salted Brown Butter Cookies</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>52.0</td>
-      <td>[Cookies, Egg, Dessert, Bake, Lime, Spice, Gou...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>This recipe is an accompaniment for Kaffir Lim...</td>
-      <td>[Bring sugar, butter, and corn syrup to a boil...</td>
-      <td>2.0</td>
-      <td>[1/2 cup sugar, 5 tablespoons unsalted butter,...</td>
-      <td>0.0</td>
-      <td>3.750</td>
-      <td>5.0</td>
-      <td>Chile Lime Tuiles</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>135.0</td>
-      <td>[Cookies, Mixer, Dessert, Bake, Kid-Friendly, ...</td>
-      <td>2006-06-01 04:00:00.000</td>
-      <td>None</td>
-      <td>[Using electric mixer, beat butter, brown suga...</td>
-      <td>6.0</td>
-      <td>[1/2 cup (1 stick) unsalted butter, room tempe...</td>
-      <td>2.0</td>
-      <td>2.500</td>
-      <td>71.0</td>
-      <td>Cornmeal Thumbprint Cookies with Summer Strawb...</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>88.0</td>
-      <td>[Cookies, Mixer, Dessert, Bake, Kid-Friendly, ...</td>
-      <td>2008-12-12 04:00:00.000</td>
-      <td>This recipe is for baking at sea level. Howeve...</td>
-      <td>[Divide oven into thirds and preheat to 350°F....</td>
-      <td>4.0</td>
-      <td>[1 1/2 cups all-purpose flour, 1/2 teaspoon ba...</td>
-      <td>1.0</td>
-      <td>4.375</td>
-      <td>57.0</td>
-      <td>Trout Dale Oatmeal-Raisin Cookies</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>223.0</td>
-      <td>[Cookies, Food Processor, Mixer, Dairy, Nut, D...</td>
-      <td>2006-11-08 21:07:18.000</td>
-      <td>Editor's note: This recipe is from Ming Tsai's...</td>
-      <td>[1. Preheat the oven to 325°F. Grease a baking...</td>
-      <td>19.0</td>
-      <td>[1 cup sugar, 1 cup heavy cream, 1 pound macad...</td>
-      <td>2.0</td>
-      <td>1.250</td>
-      <td>4.0</td>
-      <td>Caramel Macadamia Nut Crunch</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>312.0</td>
-      <td>[Bon Appétit, Cookies, Bake, Chocolate, Coconu...</td>
-      <td>2016-05-19 17:42:56.460</td>
-      <td>One of those dreamy cookies elicits a silent r...</td>
-      <td>[Preheat oven to 350°F. Toast sunflower seeds ...</td>
-      <td>19.0</td>
-      <td>[1/2 cup raw sunflower seeds, 8 ounces bitters...</td>
-      <td>4.0</td>
-      <td>5.000</td>
-      <td>214.0</td>
-      <td>Double and By Double I Mean Triple Chocolate C...</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>50.0</td>
-      <td>[Cookies, Mixer, Egg, Ginger, Dessert, Bake, C...</td>
-      <td>2010-12-17 04:00:00.000</td>
-      <td>None</td>
-      <td>[Preheat oven to 350°F. Line 2 rimmed baking s...</td>
-      <td>2.0</td>
-      <td>[2 cups all purpose flour, 2 teaspoons baking ...</td>
-      <td>1.0</td>
-      <td>4.375</td>
-      <td>45.0</td>
-      <td>Triple-Ginger Cookies</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>228.0</td>
-      <td>[Cookies, Chocolate, Ginger, Dessert, Bake, Su...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[Beat first 3 ingredients in large bowl until ...</td>
-      <td>14.0</td>
-      <td>[3/4 cup (1 1/2 sticks) unsalted butter, room ...</td>
-      <td>3.0</td>
-      <td>4.375</td>
-      <td>130.0</td>
-      <td>Spiced Chocolate Chunk Walnut Cookies</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>81.0</td>
-      <td>[Cookies, Coffee, Blender, Chocolate, Bake, Ea...</td>
-      <td>2011-03-16 04:00:00.000</td>
-      <td>None</td>
-      <td>[Preheat oven to 300°F. Line heavy large bakin...</td>
-      <td>5.0</td>
-      <td>[1/3 cup (packed) golden brown sugar, 1 tables...</td>
-      <td>1.0</td>
-      <td>3.750</td>
-      <td>36.0</td>
-      <td>Pecan-Mocha Meringues</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>86.0</td>
-      <td>[Cookies, Bake, Lemon, Almond, Gourmet, Minnes...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[In a bowl with an electric mixer cream togeth...</td>
-      <td>5.0</td>
-      <td>[1 1/2 sticks (3/4 cup) unsalted butter, softe...</td>
-      <td>1.0</td>
-      <td>4.375</td>
-      <td>3.0</td>
-      <td>Old-Fashioned Lemon Almond Cookies Bruber</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>162.0</td>
-      <td>[Cookies, Chocolate, Fruit, Nut, Bake, Christm...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Freezing the rugelach before baking helps the ...</td>
-      <td>[Blend first 3 ingredients in processor. Add b...</td>
-      <td>10.0</td>
-      <td>[2 cups all purpose flour, 2 tablespoons sugar...</td>
-      <td>2.0</td>
-      <td>4.375</td>
-      <td>42.0</td>
-      <td>Chocolate Chip, Cherry and Walnut Rugelach</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>93.0</td>
-      <td>[Cookies, Dessert, Bake, Orange, Shower, Honey...</td>
-      <td>2011-09-15 04:00:00.000</td>
-      <td>These little citrus-scented cakes cook in just...</td>
-      <td>[Sift flour, baking powder, and salt into a me...</td>
-      <td>5.0</td>
-      <td>[3/4 cup all-purpose flour, 1/2 teaspoon bakin...</td>
-      <td>1.0</td>
-      <td>5.000</td>
-      <td>39.0</td>
-      <td>Orange-Blossom-Honey Madeleines</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>302.0</td>
-      <td>[Cookies, Coffee, Mixer, Egg, Dessert, Bake, C...</td>
-      <td>2010-04-30 04:00:00.000</td>
-      <td>None</td>
-      <td>[Preheat oven to 350°F., Place the cookies in ...</td>
-      <td>24.0</td>
-      <td>[2 cups chocolate wafer cookies or Oreos, proc...</td>
-      <td>4.0</td>
-      <td>1.875</td>
-      <td>202.0</td>
-      <td>Espresso Cheesecake</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>134.0</td>
-      <td>[Cookies, Chocolate, Citrus, Ginger, Dessert, ...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Chewy, candy-like caramel cookies enhanced wit...</td>
-      <td>[Remove peel from oranges (orange part only) i...</td>
-      <td>6.0</td>
-      <td>[3 oranges, 1/2 cup plus 4 tablespoons sugar, ...</td>
-      <td>1.0</td>
-      <td>4.375</td>
-      <td>4.0</td>
-      <td>Chocolate-Dipped Orange and Ginger Florentines</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>NaN</td>
-      <td>[Cookies, Chocolate, No-Cook, Christmas, Parade]</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Carole McCallum, Sammamish, Wash.\n"Instead of...</td>
-      <td>[1. Melt the chocolate chips in evaporated mil...</td>
-      <td>NaN</td>
-      <td>[1 cup semi-sweet chocolate chips, 1 can (5 ou...</td>
-      <td>NaN</td>
-      <td>3.125</td>
-      <td>NaN</td>
-      <td>No-Bake Chocolate Kahlua Christmas Balls</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>106.0</td>
-      <td>[Cookies, Fruit, Nut, Dessert, Christmas, Drie...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[Preheat oven to 400°F. Line cookie sheets wit...</td>
-      <td>6.0</td>
-      <td>[1 pound pitted dates, chopped, 8 ounces candi...</td>
-      <td>2.0</td>
-      <td>4.375</td>
-      <td>49.0</td>
-      <td>Holiday Date-Nut Cookies</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>NaN</td>
-      <td>[Cookies, Nut, Bake, Christmas, Tree Nut, Almo...</td>
-      <td>2011-12-22 04:00:00.000</td>
-      <td>The Linzer cookie, thought to have originated ...</td>
-      <td>[Heat oven to 350°F with rack in middle. Line ...</td>
-      <td>NaN</td>
-      <td>[1/2 cup whole natural almonds (with skins), B...</td>
-      <td>NaN</td>
-      <td>3.125</td>
-      <td>NaN</td>
-      <td>Raspberry-Almond Linzer Cookies</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>69.0</td>
-      <td>[Cookies, Fruit Juice, Liqueur, Citrus, Nut, B...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[Pulse pistachios and sugar together in a food...</td>
-      <td>4.0</td>
-      <td>[1 1/4 cups salted shelled pistachios (not dye...</td>
-      <td>1.0</td>
-      <td>3.750</td>
-      <td>0.0</td>
-      <td>Pistachio Orange Lace Cookies</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>243</th>
-      <td>93.0</td>
-      <td>[Cookies, Food Processor, Nut, Dessert, Bake, ...</td>
-      <td>2008-01-15 14:58:57.000</td>
-      <td>Ultra-thin and wonderfully crisp, these cookie...</td>
-      <td>[Preheat oven to 350°F with rack in middle., B...</td>
-      <td>6.0</td>
-      <td>[2 large egg whites, at room temperature 30 mi...</td>
-      <td>2.0</td>
-      <td>0.000</td>
-      <td>26.0</td>
-      <td>Toasted-Almond Cookies</td>
-    </tr>
-    <tr>
-      <th>244</th>
-      <td>139.0</td>
-      <td>[Dessert, Chocolate, Sesame, Cinnamon, Orange,...</td>
-      <td>2016-12-10 16:36:09.502</td>
-      <td>The perfect party treat, these two-bite truffl...</td>
-      <td>[Heat tahini, chocolate, honey, salt, cinnamon...</td>
-      <td>10.0</td>
-      <td>[1 cup tahini, 6 ounces bittersweet chocolate,...</td>
-      <td>3.0</td>
-      <td>0.000</td>
-      <td>158.0</td>
-      <td>Chocolate, Pistachio, and Tahini Truffles</td>
-    </tr>
-    <tr>
-      <th>245</th>
-      <td>NaN</td>
-      <td>[Cookies, Nut, Bake, Christmas, Tree Nut, Almo...</td>
-      <td>2011-12-22 04:00:00.000</td>
-      <td>The Linzer cookie, thought to have originated ...</td>
-      <td>[Heat oven to 350°F with rack in middle. Line ...</td>
-      <td>NaN</td>
-      <td>[1/2 cup whole natural almonds (with skins), B...</td>
-      <td>NaN</td>
-      <td>3.125</td>
-      <td>NaN</td>
-      <td>Raspberry-Almond Linzer Cookies</td>
-    </tr>
-    <tr>
-      <th>246</th>
-      <td>97.0</td>
-      <td>[Cookies, Blender, Mixer, Dessert, Bake, Date,...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[In a blender puree figs and dates with water ...</td>
-      <td>4.0</td>
-      <td>[1 cup firmly packed dried figs (as soft as po...</td>
-      <td>1.0</td>
-      <td>3.750</td>
-      <td>40.0</td>
-      <td>Anise-Scented Fig and Date Swirls</td>
-    </tr>
-    <tr>
-      <th>247</th>
-      <td>NaN</td>
-      <td>[Cookies, Food Processor, Mixer, Chocolate, Da...</td>
-      <td>2006-11-16 13:24:35.000</td>
-      <td>These classic rich, chewy cookies crack — or, ...</td>
-      <td>[Put oven rack in middle position and preheat ...</td>
-      <td>NaN</td>
-      <td>[2/3 cup hazelnuts, 2 tablespoons granulated s...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Chocolate Hazelnut Crinkle Cookies</td>
-    </tr>
-    <tr>
-      <th>248</th>
-      <td>77.0</td>
-      <td>[Cookies, Ginger, Dessert, Bake, Christmas, Ve...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>The cookie dough needs to chill overnight, so ...</td>
-      <td>[Mix flour, cinnamon, ginger, baking soda, sal...</td>
-      <td>4.0</td>
-      <td>[1 1/4 cups all purpose flour, 1 teaspoon grou...</td>
-      <td>1.0</td>
-      <td>4.375</td>
-      <td>48.0</td>
-      <td>Ginger-Spice Cookies</td>
-    </tr>
-    <tr>
-      <th>249</th>
-      <td>NaN</td>
-      <td>[Cookies, Chocolate, Nut, Dessert, Bake, Chris...</td>
-      <td>2011-12-22 04:00:00.000</td>
-      <td>Although the origins of spritz cookies are fuz...</td>
-      <td>[Heat oven to 350°F with rack in middle., Make...</td>
-      <td>NaN</td>
-      <td>[Buttery Sugar Cookie dough recipe with substi...</td>
-      <td>NaN</td>
-      <td>5.000</td>
-      <td>NaN</td>
-      <td>Chocolate-Dipped Spritz Washboards with Pistac...</td>
-    </tr>
-    <tr>
-      <th>250</th>
-      <td>199.0</td>
-      <td>[Cookies, Dessert, Bake, Cherry, Oat, Kidney F...</td>
-      <td>2013-02-12 04:00:00.000</td>
-      <td>That's right, schmaltz oatmeal cookies. We had...</td>
-      <td>[1. Preheat your oven to 350°F/180°C., 2. Cut ...</td>
-      <td>10.0</td>
-      <td>[3/4 cup/180 grams schmaltz, well chilled or f...</td>
-      <td>4.0</td>
-      <td>2.500</td>
-      <td>132.0</td>
-      <td>Oatmeal Cookies with Dried Cherries</td>
-    </tr>
-    <tr>
-      <th>251</th>
-      <td>300.0</td>
-      <td>[Cookies, Mixer, Dessert, Freeze/Chill, Christ...</td>
-      <td>2006-11-07 20:58:36.000</td>
-      <td>You can freeze the dough flavored or unflavore...</td>
-      <td>[1. In the bowl of a mixer, combine butter, su...</td>
-      <td>16.0</td>
-      <td>[1 1/2 cups (3 sticks) unsalted butter, at roo...</td>
-      <td>3.0</td>
-      <td>4.375</td>
-      <td>216.0</td>
-      <td>Butter Shortbread Cookies</td>
-    </tr>
-    <tr>
-      <th>252</th>
-      <td>92.0</td>
-      <td>[Cookies, Egg, Nut, Dessert, Bake, Lemon, Almo...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>The honey makes these delicate cookies light a...</td>
-      <td>[Whisk first 4 ingredients in medium bowl to b...</td>
-      <td>5.0</td>
-      <td>[2 cups all purpose flour, 1 teaspoon baking p...</td>
-      <td>2.0</td>
-      <td>3.750</td>
-      <td>48.0</td>
-      <td>Honey, Anise and Almond Biscotti</td>
-    </tr>
-    <tr>
-      <th>253</th>
-      <td>219.0</td>
-      <td>[Cookies, Mixer, Cheese, Bake, Freeze/Chill, C...</td>
-      <td>2006-11-16 18:46:02.000</td>
-      <td>•Look for a sharp, white Cheddar that is on th...</td>
-      <td>[Using electric mixer fitted with whisk attach...</td>
-      <td>17.0</td>
-      <td>[1/2 cup (1 stick) unsalted butter, at room te...</td>
-      <td>7.0</td>
-      <td>4.375</td>
-      <td>239.0</td>
-      <td>Scottish Sharp-Cheddar Shortbread</td>
-    </tr>
-    <tr>
-      <th>254</th>
-      <td>NaN</td>
-      <td>[Cookies, Mixer, Fruit, Nut, Bake, Christmas, ...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Inspired by the famous Austrian Linzertorte.</td>
-      <td>[Combine hazelnuts and 1 tablespoon sugar in p...</td>
-      <td>NaN</td>
-      <td>[1cuphazelnuts, toasted, husked, 1 tablespoon ...</td>
-      <td>NaN</td>
-      <td>3.750</td>
-      <td>NaN</td>
-      <td>Hazelnut-Apricot Windows</td>
-    </tr>
-    <tr>
-      <th>255</th>
-      <td>250.0</td>
-      <td>[Cookies, Food Processor, Dessert, Bake, Freez...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[In a food processor pulse almonds with granul...</td>
-      <td>13.0</td>
-      <td>[1 1/2 cups blanched almonds, toasted and cool...</td>
-      <td>4.0</td>
-      <td>4.375</td>
-      <td>86.0</td>
-      <td>Strawberry and Apricot Linzertorte Hearts</td>
-    </tr>
-    <tr>
-      <th>256</th>
-      <td>NaN</td>
-      <td>[Cookies, Berry, Dessert, Bake, Christmas, Win...</td>
-      <td>2004-08-20 12:48:48.000</td>
-      <td>None</td>
-      <td>[Preheat oven to 350°F., Form level teaspoons ...</td>
-      <td>NaN</td>
-      <td>[1/2 preparedBasic Butter Cookie Dough at room...</td>
-      <td>NaN</td>
-      <td>4.375</td>
-      <td>NaN</td>
-      <td>Jelly Bowl Cookies</td>
-    </tr>
-    <tr>
-      <th>257</th>
-      <td>NaN</td>
-      <td>[Cookies, Mixer, Egg, Breakfast, Bake, Brandy,...</td>
-      <td>2010-03-29 04:00:00.000</td>
-      <td>Biscochitos are the best thing to get with you...</td>
-      <td>[Put the flour, baking powder, salt, the 1 1/2...</td>
-      <td>NaN</td>
-      <td>[6 cups well-sifted flour, 3 teaspoons baking ...</td>
-      <td>NaN</td>
-      <td>3.750</td>
-      <td>NaN</td>
-      <td>Mi Tierra Biscochitos</td>
-    </tr>
-    <tr>
-      <th>258</th>
-      <td>58.0</td>
-      <td>[Cookies, Mixer, Chocolate, Egg, Dessert, Bake...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>As these little chocolate-dipped cookies bake,...</td>
-      <td>[Preheat oven to 225°F. and line 2 large bakin...</td>
-      <td>4.0</td>
-      <td>[3 large egg whites, 1/4 teaspoon cream of tar...</td>
-      <td>1.0</td>
-      <td>4.375</td>
-      <td>18.0</td>
-      <td>Hazelnut Meringue Kisses</td>
-    </tr>
-    <tr>
-      <th>259</th>
-      <td>86.0</td>
-      <td>[Cookies, Mixer, Dessert, Bake, Kid-Friendly, ...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[In a small heatproof bowl let the golden rais...</td>
-      <td>3.0</td>
-      <td>[1 cup golden raisins, 3 cups dark raisins, 1 ...</td>
-      <td>1.0</td>
-      <td>3.125</td>
-      <td>59.0</td>
-      <td>Oatmeal Raisin Cookies</td>
-    </tr>
-    <tr>
-      <th>260</th>
-      <td>310.0</td>
-      <td>[Cookies, Dessert, Butter, Bon Appétit]</td>
-      <td>2014-08-19 04:00:00.000</td>
-      <td>The caramelized milk jam makes for a decadent ...</td>
-      <td>[Using an electric mixer on high speed, beat b...</td>
-      <td>18.0</td>
-      <td>[1 1/2 cups (3 sticks) unsalted butter, room t...</td>
-      <td>4.0</td>
-      <td>0.000</td>
-      <td>295.0</td>
-      <td>Nana's Butter Cookies with Milk-Jam Filling</td>
-    </tr>
-    <tr>
-      <th>261</th>
-      <td>14.0</td>
-      <td>[Cookies, Ginger, Bake, Christmas, Almond, Win...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Active time: 35 min Start to finish: 5 hr (inc...</td>
-      <td>[Follow recipe for basic butter cookies and, w...</td>
-      <td>1.0</td>
-      <td>[Ingredients for basic butter cookies, 1 1/2 t...</td>
-      <td>1.0</td>
-      <td>4.375</td>
-      <td>0.0</td>
-      <td>Almond Spice Cookies</td>
-    </tr>
-    <tr>
-      <th>262</th>
-      <td>83.0</td>
-      <td>[Cookies, Chocolate, Bake, Wheat/Gluten-Free, ...</td>
-      <td>2014-11-24 04:00:00.000</td>
-      <td>You'll never believe these buttery, crisp cook...</td>
-      <td>[Arrange the racks in the upper and lower rung...</td>
-      <td>4.0</td>
-      <td>[1/4 cup heavy cream, 1 tablespoon brown rice ...</td>
-      <td>1.0</td>
-      <td>3.750</td>
-      <td>18.0</td>
-      <td>Gluten-Free Lacy Oat Sandwich Cookies</td>
-    </tr>
-    <tr>
-      <th>263</th>
-      <td>64.0</td>
-      <td>[Cookies, Chocolate, Dairy, Ginger, Dessert, B...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>Thin and delicate, these chocolate chip cookie...</td>
-      <td>[Preheat oven to 350°F., In a bowl whisk toget...</td>
-      <td>4.0</td>
-      <td>[1 1/2 cups all-purpose flour, 3/4 teaspoon ba...</td>
-      <td>1.0</td>
-      <td>3.750</td>
-      <td>24.0</td>
-      <td>Chocolate Chip Ginger Crisps</td>
-    </tr>
-    <tr>
-      <th>264</th>
-      <td>106.0</td>
-      <td>[Cookies, Cheese, Dairy, Fruit, Tomato, Bake, ...</td>
-      <td>2013-01-23 04:00:00.000</td>
-      <td>This harkens to those beloved jam-filled cooki...</td>
-      <td>[To make the jam, heat the olive oil in a smal...</td>
-      <td>7.0</td>
-      <td>[1 tablespoon olive oil, 3 tablespoons minced ...</td>
-      <td>3.0</td>
-      <td>4.375</td>
-      <td>127.0</td>
-      <td>Parmesan Thumbprint Cookies with Tomato-Tart C...</td>
-    </tr>
-    <tr>
-      <th>265</th>
-      <td>43.0</td>
-      <td>[Cookies, Chocolate, Dessert, Bake, Christmas,...</td>
-      <td>2013-01-03 04:00:00.000</td>
-      <td>The icebox has gone the way of the horse and b...</td>
-      <td>[Beat together butter and sugars in a large bo...</td>
-      <td>2.0</td>
-      <td>[2 sticks (1 cup) unsalted butter, softened, 1...</td>
-      <td>1.0</td>
-      <td>5.000</td>
-      <td>13.0</td>
-      <td>Pistachio Cranberry Oatmeal Icebox Cookies</td>
-    </tr>
-    <tr>
-      <th>266</th>
-      <td>38.0</td>
-      <td>[Cookies, Mixer, Chocolate, Dessert, Bake, Ora...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>This recipe was created to prepare &lt;epi:recipe...</td>
-      <td>[Preheat oven to 350°F. and butter a large bak...</td>
-      <td>2.0</td>
-      <td>[1 cup all-purpose flour, 1/4 cup unsweetened ...</td>
-      <td>1.0</td>
-      <td>2.500</td>
-      <td>42.0</td>
-      <td>Chocolate Walnut Biscotti</td>
-    </tr>
-    <tr>
-      <th>267</th>
-      <td>77.0</td>
-      <td>[Cookies, Bake, Lemon, Hazelnut]</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[1. Preheat the oven to 350°F. Line 2 baking s...</td>
-      <td>3.0</td>
-      <td>[3 1/4 cups all-purpose flour, 1 teaspoon baki...</td>
-      <td>2.0</td>
-      <td>3.125</td>
-      <td>50.0</td>
-      <td>Hazelnut and Lemon Cookies</td>
-    </tr>
-    <tr>
-      <th>268</th>
-      <td>74.0</td>
-      <td>[Cookies, Mixer, Fruit, Nut, Dessert, Bake, Fr...</td>
-      <td>2006-11-16 13:30:56.000</td>
-      <td>With their ruby cranberries and glittering sug...</td>
-      <td>[Stir together flour, cinnamon, and salt in a ...</td>
-      <td>4.0</td>
-      <td>[1 1/2 cups all-purpose flour, 1/2 teaspoon ci...</td>
-      <td>1.0</td>
-      <td>4.375</td>
-      <td>19.0</td>
-      <td>Pistachio Cranberry Icebox Cookies</td>
-    </tr>
-    <tr>
-      <th>269</th>
-      <td>191.0</td>
-      <td>[Bon Appétit, Dessert, Christmas, Kid-Friendly...</td>
-      <td>2015-12-01 16:32:00.000</td>
-      <td>Our slice-and-bake technique is easier to mana...</td>
-      <td>[Pulse cocoa, brown sugar, kosher salt, baking...</td>
-      <td>14.0</td>
-      <td>[1/2 cup unsweetened cocoa powder, 1/4 cup (pa...</td>
-      <td>3.0</td>
-      <td>2.500</td>
-      <td>84.0</td>
-      <td>Chocolate-Nut Rugelach</td>
-    </tr>
-    <tr>
-      <th>270</th>
-      <td>119.0</td>
-      <td>[Cookies, Fruit, Dessert, Bake, Vegetarian, Ki...</td>
-      <td>2004-08-20 12:48:48.000</td>
-      <td>This recipe can be prepared in 45 minutes or l...</td>
-      <td>[Preheat oven to 350°F., Coarsely chop dates. ...</td>
-      <td>4.0</td>
-      <td>[1 1/4 cups packed pitted dates (about 10 ounc...</td>
-      <td>2.0</td>
-      <td>3.750</td>
-      <td>117.0</td>
-      <td>Oatmeal Date Cookies</td>
-    </tr>
-    <tr>
-      <th>271</th>
-      <td>63.0</td>
-      <td>[Cookies, Chocolate, Nut, Dessert, Quick &amp; Eas...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>None</td>
-      <td>[Line a cookie sheet with waxed paper and set ...</td>
-      <td>2.0</td>
-      <td>[2 cups sugar, 1/2 cup whole milk, 3 tablespoo...</td>
-      <td>1.0</td>
-      <td>3.125</td>
-      <td>2.0</td>
-      <td>No-Bake Chocolate Cookies</td>
-    </tr>
-    <tr>
-      <th>272</th>
-      <td>108.0</td>
-      <td>[Cookies, Chocolate, Bake, Christmas, Cranberr...</td>
-      <td>2004-08-20 04:00:00.000</td>
-      <td>The pleasingly chewy biscotti are coated on on...</td>
-      <td>[Preheat oven to 325°F. Line 3 large baking sh...</td>
-      <td>5.0</td>
-      <td>[2 1/4 cups all purpose flour, 1 1/2 teaspoons...</td>
-      <td>2.0</td>
-      <td>4.375</td>
-      <td>72.0</td>
-      <td>Holiday Biscotti with Cranberries and Pistachios</td>
-    </tr>
   </tbody>
 </table>
-<p>273 rows × 11 columns</p>
 </div>
 </div>
 
@@ -17697,7 +14130,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Générer json avec 5 recettes</span>
@@ -17718,7 +14151,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -17847,7 +14280,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;images/ligne_roastedalmond.png&quot;</span><span class="p">)</span>
@@ -17863,7 +14296,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -17890,7 +14323,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;images/roasted_almond.png&quot;</span><span class="p">)</span>
@@ -17906,7 +14339,7 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -17927,23 +14360,10 @@ Nous allons donc ensuite générer les jeu de données en json pour ces 3 catég
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Il s'agit donc bien d'une recette de biscuit de type "cookie".
-Notre prochain travail serait donc de séparer les quantités et les ingrédients de la colonne "ingredients" afin de pouvoir exploiter ces données numériques et les afficher dans des graphiques afin de représenter les similtudes et/ou les différences.</p>
+Notre prochain travail serait donc de séparer les quantités et les ingrédients de la colonne "ingredients" afin de pouvoir exploiter ces données numériques et les afficher dans des graphiques afin de r</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
