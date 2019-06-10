@@ -47,7 +47,7 @@ window.onload = function() {
                 // selectiontext+="<br></br>"
 
                 /*     FILTRE SELECTION   */
-                selectiontext+="<form><select  size=\"15\" name=\"ingredients\" multiple>"
+                selectiontext+="<form><select  id= \"ingredients\" size=\"15\" name=\"ingredients\" multiple>"
                 $.each(data, function (index, value) { 
                     $.each(data[index].ingredients, function (ingredientsName, quantite) 
                         { 
@@ -61,7 +61,7 @@ window.onload = function() {
                     selectiontext+= ingredientsList[j];
                     selectiontext+="</option>";
                 }
-                selectiontext+='</select></form>'
+                selectiontext+="</select></form>"
                 // range
                 // selectiontext+="<br><br>"
                 selectiontext+="<form class=\"slidecontainer\">"
@@ -76,7 +76,6 @@ window.onload = function() {
                 // slider.oninput = function() {
                 //     output.innerHTML = this.value;
                 // }
-
 
                 document.getElementById("leftColonne").innerHTML = selectiontext;
             }
@@ -96,6 +95,11 @@ window.onload = function() {
                         this.pruneaux2 = this.person * this.quantitePerPerson;
                         this.pruneaux3 = this.person * this.quantitePerPerson;
                         this.pruneaux4 = this.person * this.quantitePerPerson;
+                        this.pruneaux5 = this.person * this.quantitePerPerson;
+                        this.pruneaux6 = this.person * this.quantitePerPerson;
+                        this.pruneaux7 = this.person * this.quantitePerPerson;
+                        this.pruneaux8 = this.person * this.quantitePerPerson;
+                        this.pruneaux9 = this.person * this.quantitePerPerson;
                     }
                 });
             }
