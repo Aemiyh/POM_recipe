@@ -13422,19 +13422,8 @@ Dans notre cas, nous voudrions montrer des similitudes de recette graphiquement 
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">recipeCategCount</span> <span class="o">=</span> <span class="n">getNumbersOfRecipeByCategories</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 <span class="n">sorted_recipeCategCount</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">recipeCategCount</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sorted_recipeCategCount</span>
+<span class="n">dFrame1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sorted_recipeCategCount</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Categorie&#39;</span><span class="p">,</span><span class="s1">&#39;Frequency&#39;</span><span class="p">])</span>
+<span class="n">dFrame1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13447,686 +13436,62 @@ Dans notre cas, nous voudrions montrer des similitudes de recette graphiquement 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="output_text output_subarea output_execute_result">
-<pre>[(&#39;Bon Appétit&#39;, 9355),
- (&#39;Peanut Free&#39;, 8390),
- (&#39;Soy Free&#39;, 8088),
- (&#39;Tree Nut Free&#39;, 7044),
- (&#39;Vegetarian&#39;, 6846),
- (&#39;Gourmet&#39;, 6648),
- (&#39;Kosher&#39;, 6175),
- (&#39;Pescatarian&#39;, 6042),
- (&#39;Quick &amp; Easy&#39;, 5372),
- (&#39;Wheat/Gluten-Free&#39;, 4906),
- (&#39;Bake&#39;, 4413),
- (&#39;Summer&#39;, 4151),
- (&#39;Dessert&#39;, 3573),
- (&#39;Dairy Free&#39;, 3206),
- (&#39;Side&#39;, 3151),
- (&#39;No Sugar Added&#39;, 3132),
- (&#39;Winter&#39;, 3099),
- (&#39;Fall&#39;, 3015),
- (&#39;Dinner&#39;, 2705),
- (&#39;Sugar Conscious&#39;, 2466),
- (&#39;Healthy&#39;, 2351),
- (&#39;Kidney Friendly&#39;, 2313),
- (&#39;Onion&#39;, 2238),
- (&#39;Tomato&#39;, 2140),
- (&#39;Vegetable&#39;, 2087),
- (&#39;Sauté&#39;, 2044),
- (&#39;Milk/Cream&#39;, 1995),
- (&#39;Fruit&#39;, 1958),
- (&#39;Vegan&#39;, 1851),
- (&#39;Kid-Friendly&#39;, 1791),
- (&#39;Egg&#39;, 1768),
- (&#39;Spring&#39;, 1715),
- (&#39;Herb&#39;, 1681),
- (&#39;Garlic&#39;, 1643),
- (&#39;Salad&#39;, 1516),
- (&#39;Dairy&#39;, 1496),
- (&#39;Thanksgiving&#39;, 1458),
- (&#39;Appetizer&#39;, 1372),
- (&#39;Lunch&#39;, 1359),
- (&#39;Cheese&#39;, 1355),
- (&#39;Chicken&#39;, 1344),
- (&#39;Roast&#39;, 1320),
- (&#39;No-Cook&#39;, 1251),
- (&#39;Soup/Stew&#39;, 1164),
- (&#39;Cocktail Party&#39;, 1154),
- (&#39;Ginger&#39;, 1146),
- (&#39;Potato&#39;, 1128),
- (&#39;Chill&#39;, 1126),
- (&#39;Lemon&#39;, 1104),
- (&#39;Grill/Barbecue&#39;, 1104),
- (&#39;Drink&#39;, 1087),
- (&#39;Sauce&#39;, 1065),
- (&#39;Low Cal&#39;, 1049),
- (&#39;Christmas&#39;, 1039),
- (&#39;High Fiber&#39;, 1013),
- (&#39;Food Processor&#39;, 973),
- (&#39;Pasta&#39;, 968),
- (&#39;Backyard BBQ&#39;, 938),
- (&#39;Fish&#39;, 936),
- (&#39;Low Fat&#39;, 929),
- (&#39;Pork&#39;, 928),
- (&#39;Condiment/Spread&#39;, 924),
- (&#39;Nut&#39;, 905),
- (&#39;Leafy Green&#39;, 903),
- (&#39;Party&#39;, 892),
- (&#39;Simmer&#39;, 890),
- (&#39;Citrus&#39;, 863),
- (&#39;Chocolate&#39;, 855),
- (&#39;Mushroom&#39;, 843),
- (&#39;Orange&#39;, 837),
- (&#39;Alcoholic&#39;, 835),
- (&#39;Brunch&#39;, 833),
- (&#39;Beef&#39;, 811),
- (&#39;Paleo&#39;, 779),
- (&#39;Bell Pepper&#39;, 767),
- (&#39;Cake&#39;, 720),
- (&#39;Breakfast&#39;, 712),
- (&#39;Carrot&#39;, 701),
- (&#39;Spice&#39;, 680),
- (&#39;Apple&#39;, 666),
- (&#39;Vinegar&#39;, 658),
- (&#39;Parmesan&#39;, 644),
- (&#39;Mixer&#39;, 630),
- (&#39;Poultry&#39;, 620),
- (&#39;Blender&#39;, 618),
- (&#39;Mint&#39;, 616),
- (&#39;Pepper&#39;, 612),
- (&#39;Cilantro&#39;, 607),
- (&#39;Marinate&#39;, 601),
- (&#39;Mustard&#39;, 600),
- (&#39;Bacon&#39;, 587),
- (&#39;Almond&#39;, 584),
- (&#39;Bean&#39;, 577),
- (&#39;Basil&#39;, 565),
- (&#39;Grill&#39;, 564),
- (&#39;Shellfish&#39;, 560),
- (&#39;Olive&#39;, 556),
- (&#39;Lime&#39;, 546),
- (&#39;Rice&#39;, 538),
- (&#39;Yogurt&#39;, 528),
- (&#39;Picnic&#39;, 519),
- (&#39;Parsley&#39;, 514),
- (&#39;Shrimp&#39;, 505),
- (&#39;Bread&#39;, 499),
- (&#39;Broil&#39;, 489),
- (&#39;Fruit Juice&#39;, 488),
- (&#39;White Wine&#39;, 487),
- (&#39;Hot Pepper&#39;, 487),
- (&#39;Potluck&#39;, 485),
- (&#39;Berry&#39;, 465),
- (&#39;Cinnamon&#39;, 464),
- (&#39;House &amp; Garden&#39;, 459),
- (&#39;turkey&#39;, 456),
- (&#39;Boil&#39;, 445),
- (&#39;Low Cholesterol&#39;, 445),
- (&#39;Fry&#39;, 430),
- (&#39;Sandwich&#39;, 428),
- (&#39;Walnut&#39;, 425),
- (&#39;Freeze/Chill&#39;, 417),
- (&#39;Sour Cream&#39;, 404),
- (&#39;Honey&#39;, 401),
- (&#39;Seafood&#39;, 401),
- (&#39;Low Sodium&#39;, 389),
- (&#39;Sausage&#39;, 384),
- (&#39;Cocktail&#39;, 380),
- (&#39;Cucumber&#39;, 379),
- (&#39;Mayonnaise&#39;, 378),
- (&#39;Spinach&#39;, 377),
- (&#39;Fourth of July&#39;, 376),
- (&#39;Fat Free&#39;, 376),
- (&#39;Cream Cheese&#39;, 375),
- (&#39;Fennel&#39;, 371),
- (&#39;Rosemary&#39;, 371),
- (&#39;Corn&#39;, 371),
- (&#39;Cranberry&#39;, 370),
- (&#39;Coconut&#39;, 365),
- (&#39;Low Carb&#39;, 363),
- (&#39;Jalapeño&#39;, 361),
- (&#39;Lamb&#39;, 359),
- (&#39;Frozen Dessert&#39;, 354),
- (&#39;Shallot&#39;, 353),
- (&#39;Celery&#39;, 341),
- (&#39;Raspberry&#39;, 340),
- (&#39;Raisin&#39;, 340),
- (&#39;Thyme&#39;, 333),
- (&#39;Pecan&#39;, 331),
- (&#39;Christmas Eve&#39;, 331),
- (&#39;Rum&#39;, 331),
- (&#39;Braise&#39;, 330),
- (&#39;Shower&#39;, 327),
- (&#39;Liqueur&#39;, 317),
- (&#39;Family Reunion&#39;, 316),
- (&#39;Salmon&#39;, 315),
- (&#39;Self&#39;, 312),
- (&#39;Super Bowl&#39;, 311),
- (&#39;Strawberry&#39;, 308),
- (&#39;Goat Cheese&#39;, 307),
- (&#39;Cabbage&#39;, 307),
- (&#39;Zucchini&#39;, 298),
- (&#34;Father&#39;s Day&#34;, 295),
- (&#39;Soy Sauce&#39;, 293),
- (&#39;Sweet Potato/Yam&#39;, 286),
- (&#39;Meat&#39;, 285),
- (&#39;Low/No Sugar&#39;, 282),
- (&#39;Pear&#39;, 279),
- (&#39;Arugula&#39;, 278),
- (&#39;Avocado&#39;, 273),
- (&#39;Curry&#39;, 273),
- (&#39;Cookies&#39;, 273),
- (&#39;Cornmeal&#39;, 271),
- (&#39;Dill&#39;, 271),
- (&#39;Red Wine&#39;, 271),
- (&#39;Brandy&#39;, 270),
- (&#39;Apricot&#39;, 269),
- (&#39;Vanilla&#39;, 267),
- (&#39;Leek&#39;, 266),
- (&#39;Pineapple&#39;, 264),
- (&#39;Cheddar&#39;, 257),
- (&#39;Chive&#39;, 251),
- (&#39;Pan-Fry&#39;, 249),
- (&#39;Cherry&#39;, 244),
- (&#39;Mango&#39;, 244),
- (&#39;Steak&#39;, 243),
- (&#39;Tarragon&#39;, 240),
- (&#39;Chile Pepper&#39;, 237),
- (&#39;Blue Cheese&#39;, 235),
- (&#39;Easter&#39;, 234),
- (&#34;Valentine&#39;s Day&#34;, 233),
- (&#39;Feta&#39;, 229),
- (&#39;Pine Nut&#39;, 228),
- (&#39;Stir-Fry&#39;, 227),
- (&#39;Green Bean&#39;, 226),
- (&#39;Gin&#39;, 226),
- (&#39;Lettuce&#39;, 225),
- (&#39;Steam&#39;, 225),
- (&#39;Ham&#39;, 222),
- (&#39;Eggplant&#39;, 219),
- (&#39;Spirit&#39;, 219),
- (&#39;Non-Alcoholic&#39;, 218),
- (&#39;Pea&#39;, 211),
- (&#39;Beet&#39;, 210),
- (&#39;Radish&#39;, 208),
- (&#39;Asparagus&#39;, 207),
- (&#39;Dried Fruit&#39;, 206),
- (&#39;Back to School&#39;, 202),
- (&#39;Casserole/Gratin&#39;, 199),
- (&#39;Butter&#39;, 195),
- (&#39;Peach&#39;, 194),
- (&#39;Birthday&#39;, 193),
- (&#39;Clove&#39;, 193),
- (&#39;Wine&#39;, 191),
- (&#39;Mozzarella&#39;, 190),
- (&#39;Coffee&#39;, 190),
- (&#39;Root Vegetable&#39;, 188),
- (&#39;Capers&#39;, 185),
- (&#39;Engagement Party&#39;, 184),
- (&#39;Passover&#39;, 183),
- (&#39;Butternut Squash&#39;, 182),
- (&#39;Sage&#39;, 182),
- (&#39;Hazelnut&#39;, 182),
- (&#39;Blueberry&#39;, 180),
- (&#39;Cinco de Mayo&#39;, 179),
- (&#39;Salad Dressing&#39;, 178),
- (&#39;Stew&#39;, 178),
- (&#39;Banana&#39;, 177),
- (&#39;Pistachio&#39;, 176),
- (&#39;Scallop&#39;, 170),
- (&#39;Horseradish&#39;, 166),
- (&#34;New Year&#39;s Eve&#34;, 165),
- (&#34;Mother&#39;s Day&#34;, 165),
- (&#39;Noodle&#39;, 162),
- (&#39;Chickpea&#39;, 162),
- (&#39;Ice Cream Machine&#39;, 162),
- (&#39;Ricotta&#39;, 160),
- (&#39;Jam or Jelly&#39;, 159),
- (&#39;Tortillas&#39;, 158),
- (&#39;Crab&#39;, 156),
- (&#39;Prosciutto&#39;, 155),
- (&#39;Fig&#39;, 154),
- (&#39;Lemon Juice&#39;, 154),
- (&#39;Artichoke&#39;, 153),
- (&#39;Peanut&#39;, 153),
- (&#39;Squash&#39;, 151),
- (&#39;Seed&#39;, 150),
- (&#39;Sesame&#39;, 147),
- (&#39;California&#39;, 146),
- (&#39;Maple Syrup&#39;, 146),
- (&#39;Kale&#39;, 145),
- (&#39;Blackberry&#39;, 144),
- (&#39;Parade&#39;, 143),
- (&#39;Parsnip&#39;, 140),
- (&#39;Watercress&#39;, 138),
- (&#39;Stuffing/Dressing&#39;, 138),
- (&#39;Oat&#39;, 137),
- (&#39;Poker/Game Night&#39;, 135),
- (&#39;Poach&#39;, 135),
- (&#39;Tuna&#39;, 134),
- (&#39;Clam&#39;, 134),
- (&#39;Lime Juice&#39;, 133),
- (&#39;Buffet&#39;, 132),
- (&#39;Coriander&#39;, 131),
- (&#39;Tailgating&#39;, 129),
- (&#39;Bitters&#39;, 127),
- (&#39;Mussel&#39;, 127),
- (&#39;Phyllo/Puff Pastry Dough&#39;, 126),
- (&#39;Bourbon&#39;, 125),
- (&#39;Vodka&#39;, 125),
- (&#39;Sherry&#39;, 125),
- (&#39;Veal&#39;, 123),
- (&#39;Date&#39;, 123),
- (&#39;Broccoli&#39;, 122),
- (&#39;HarperCollins&#39;, 121),
- (&#39;Grapefruit&#39;, 120),
- (&#39;Cauliflower&#39;, 120),
- (&#39;Pork Tenderloin&#39;, 120),
- (&#39;Edible Gift&#39;, 120),
- (&#39;Pumpkin&#39;, 118),
- (&#39;Hanukkah&#39;, 118),
- (&#39;Anise&#39;, 116),
- (&#39;Green Onion/Scallion&#39;, 116),
- (&#39;Plum&#39;, 114),
- (&#39;Saffron&#39;, 113),
- (&#39;Endive&#39;, 112),
- (&#39;Oscars&#39;, 112),
- (&#39;Molasses&#39;, 112),
- (&#39;Beer&#39;, 112),
- (&#39;Wedding&#39;, 112),
- (&#39;Anniversary&#39;, 111),
- (&#39;Soy&#39;, 111),
- (&#39;Port&#39;, 110),
- (&#39;Tea&#39;, 110),
- (&#39;Advance Prep Required&#39;, 109),
- (&#39;Nutmeg&#39;, 108),
- (&#39;Prune&#39;, 108),
- (&#39;Currant&#39;, 108),
- (&#39;Tree Nut&#39;, 107),
- (&#39;Champagne&#39;, 106),
- (&#39;Wok&#39;, 102),
- (&#39;Oregano&#39;, 101),
- (&#39;Pastry&#39;, 99),
- (&#39;Duck&#39;, 99),
- (&#39;Lentil&#39;, 98),
- (&#39;Condiment&#39;, 96),
- (&#39;Pork Chop&#39;, 93),
- (&#39;Cumin&#39;, 93),
- (&#39;Couscous&#39;, 93),
- (&#39;Deep-Fry&#39;, 92),
- (&#39;Tofu&#39;, 92),
- (&#39;Turnip&#39;, 92),
- (&#39;Cognac/Armagnac&#39;, 91),
- (&#39;Ground Beef&#39;, 90),
- (&#39;Bass&#39;, 90),
- (&#39;Halibut&#39;, 89),
- (&#39;Tequila&#39;, 89),
- (&#39;Graduation&#39;, 89),
- (&#39;Chard&#39;, 85),
- (&#39;Lemongrass&#39;, 84),
- (&#39;Hominy/Cornmeal/Masa&#39;, 84),
- (&#39;Lobster&#39;, 83),
- (&#34;New Year&#39;s Day&#34;, 82),
- (&#39;Tomatillo&#39;, 82),
- (&#39;Triple Sec&#39;, 80),
- (&#39;Rhubarb&#39;, 80),
- (&#39;Raw&#39;, 78),
- (&#39;Sugar Snap Pea&#39;, 77),
- (&#39;Pomegranate&#39;, 77),
- (&#39;Cod&#39;, 76),
- (&#39;Fortified Wine&#39;, 76),
- (&#39;Candy&#39;, 75),
- (&#39;Swiss Cheese&#39;, 74),
- (&#39;Chestnut&#39;, 74),
- (&#39;Buttermilk&#39;, 73),
- (&#39;Punch&#39;, 73),
- (&#39;Beef Tenderloin&#39;, 72),
- (&#39;Watermelon&#39;, 72),
- (&#39;Grape&#39;, 70),
- (&#39;Cookie&#39;, 69),
- (&#39;Legume&#39;, 69),
- (&#39;Cashew&#39;, 68),
- (&#39;Rosh Hashanah/Yom Kippur&#39;, 68),
- (&#39;Candy Thermometer&#39;, 66),
- (&#39;Quick and Healthy&#39;, 65),
- (&#39;Tropical Fruit&#39;, 62),
- (&#39;Melon&#39;, 62),
- (&#39;Nectarine&#39;, 60),
- (&#39;Bok Choy&#39;, 59),
- (&#39;Snapper&#39;, 59),
- (&#39;Mardi Gras&#39;, 59),
- (&#39;Papaya&#39;, 58),
- (&#39;Whiskey&#39;, 57),
- (&#39;Pork Rib&#39;, 57),
- (&#39;Beef Rib&#39;, 56),
- (&#39;Brussel Sprout&#39;, 56),
- (&#39;Breadcrumbs&#39;, 55),
- (&#34;St. Patrick&#39;s Day&#34;, 55),
- (&#39;Paprika&#39;, 55),
- (&#39;Lima Bean&#39;, 55),
- (&#39;Trout&#39;, 54),
- (&#39;Pernod&#39;, 54),
- (&#39;Sparkling Wine&#39;, 54),
- (&#39;Orange Juice&#39;, 52),
- (&#39;Quinoa&#39;, 51),
- (&#39;Cantaloupe&#39;, 51),
- (&#39;Monterey Jack&#39;, 50),
- (&#39;Macadamia Nut&#39;, 50),
- (&#39;Barley&#39;, 50),
- (&#39;New York&#39;, 49),
- (&#39;Broccoli Rabe&#39;, 48),
- (&#39;Massachusetts&#39;, 47),
- (&#39;Lunar New Year&#39;, 46),
- (&#39;Squid&#39;, 46),
- (&#39;Lamb Chop&#39;, 45),
- (&#39;Anchovy&#39;, 45),
- (&#39;Passion Fruit&#39;, 44),
- (&#39;Rutabaga&#39;, 44),
- (&#39;Cardamom&#39;, 44),
- (&#39;Kumquat&#39;, 43),
- (&#39;Escarole&#39;, 43),
- (&#39;Florida&#39;, 43),
- (&#39;Halloween&#39;, 42),
- (&#39;Smoothie&#39;, 42),
- (&#39;Sesame Oil&#39;, 42),
- (&#39;Fontina&#39;, 40),
- (&#39;Kentucky Derby&#39;, 40),
- (&#39;Honeydew&#39;, 40),
- (&#39;Ramadan&#39;, 39),
- (&#39;Amaretto&#39;, 39),
- (&#39;Brisket&#39;, 38),
- (&#39;Oyster&#39;, 38),
- (&#39;Microwave&#39;, 37),
- (&#39;Oktoberfest&#39;, 37),
- (&#39;Hot Drink&#39;, 37),
- (&#39;Cottage Cheese&#39;, 37),
- (&#39;Jícama&#39;, 36),
- (&#39;Mustard Greens&#39;, 36),
- (&#39;Brine&#39;, 36),
- (&#39;Game&#39;, 36),
- (&#39;Tangerine&#39;, 36),
- (&#39;Marsala&#39;, 36),
- (&#39;Ground Lamb&#39;, 35),
- (&#39;Pennsylvania&#39;, 34),
- (&#39;Ramekin&#39;, 34),
- (&#39;Kiwi&#39;, 34),
- (&#39;Weelicious&#39;, 33),
- (&#39;Peanut Butter&#39;, 32),
- (&#39;Double Boiler&#39;, 32),
- (&#39;Collard Greens&#39;, 31),
- (&#39;Quince&#39;, 31),
- (&#39;Kosher for Passover&#39;, 31),
- (&#39;Kirsch&#39;, 31),
- (&#39;Bastille Day&#39;, 30),
- (&#39;Bulgur&#39;, 30),
- (&#39;Whole Wheat&#39;, 30),
- (&#39;Caraway&#39;, 29),
- (&#39;Rack of Lamb&#39;, 29),
- (&#39;snack&#39;, 28),
- (&#39;Okra&#39;, 27),
- (&#39;3-Ingredient Recipes&#39;, 27),
- (&#39;Washington&#39;, 26),
- (&#39;Yellow Squash&#39;, 25),
- (&#39;Slow Cooker&#39;, 25),
- (&#39;Kahlúa&#39;, 25),
- (&#39;Diwali&#39;, 25),
- (&#39;New Jersey&#39;, 25),
- (&#39;Michigan&#39;, 24),
- (&#39;Wasabi&#39;, 23),
- (&#39;Texas&#39;, 23),
- (&#39;Frangelico&#39;, 23),
- (&#39;Poultry Sausage&#39;, 23),
- (&#39;Brown Rice&#39;, 23),
- (&#39;Scotch&#39;, 22),
- (&#39;Guava&#39;, 21),
- (&#39;Shavuot&#39;, 21),
- (&#39;Plantain&#39;, 21),
- (&#39;Los Angeles&#39;, 21),
- (&#39;Sake&#39;, 21),
- (&#39;Pie&#39;, 21),
- (&#39;Créme de Cacao&#39;, 21),
- (&#39;Tamarind&#39;, 21),
- (&#39;Asian Pear&#39;, 20),
- (&#39;Calvados&#39;, 20),
- (&#39;Margarita&#39;, 20),
- (&#39;Poppy&#39;, 20),
- (&#39;Dip&#39;, 20),
- (&#39;Georgia&#39;, 20),
- (&#39;Rye&#39;, 19),
- (&#39;Oregon&#39;, 19),
- (&#39;Campari&#39;, 19),
- (&#39;snack week&#39;, 19),
- (&#39;Jerusalem Artichoke&#39;, 19),
- (&#39;Lamb Shank&#39;, 18),
- (&#39;Radicchio&#39;, 18),
- (&#39;Chartreuse&#39;, 18),
- (&#39;Wild Rice&#39;, 18),
- (&#39;Iced Tea&#39;, 18),
- (&#39;Coffee Grinder&#39;, 17),
- (&#39;22-Minute Meals&#39;, 17),
- (&#34;Hors D&#39;Oeuvre&#34;, 17),
- (&#39;North Carolina&#39;, 17),
- (&#39;Sangria&#39;, 17),
- (&#39;Swordfish&#39;, 16),
- (&#39;Goose&#39;, 16),
- (&#39;Pickles&#39;, 16),
- (&#39;Colorado&#39;, 16),
- (&#39;Portland&#39;, 15),
- (&#39;Quail&#39;, 15),
- (&#39;Chambord&#39;, 15),
- (&#39;New Mexico&#39;, 15),
- (&#39;Semolina&#39;, 15),
- (&#39;Low Sugar&#39;, 14),
- (&#39;Sukkot&#39;, 14),
- (&#39;Beef Shank&#39;, 14),
- (&#39;Ireland&#39;, 14),
- (&#39;Missouri&#39;, 14),
- (&#39;Tapioca&#39;, 14),
- (&#39;Ohio&#39;, 13),
- (&#39;Kwanzaa&#39;, 13),
- (&#39;Purim&#39;, 13),
- (&#39;Sandwich Theory&#39;, 13),
- (&#39;Chile&#39;, 13),
- (&#39;France&#39;, 13),
- (&#39;Butterscotch/Caramel&#39;, 12),
- (&#39;Pittsburgh&#39;, 12),
- (&#39;Aperitif&#39;, 12),
- (&#39;Pasadena&#39;, 12),
- (&#39;Brie&#39;, 12),
- (&#39;Flaming Hot Summer&#39;, 12),
- (&#39;Ice Cream&#39;, 12),
- (&#39;Oatmeal&#39;, 12),
- (&#39;Maryland&#39;, 12),
- (&#39;Tilapia&#39;, 12),
- (&#39;Pasta Maker&#39;, 12),
- (&#39;One-Pot Meal&#39;, 11),
- (&#39;Connecticut&#39;, 11),
- (&#39;Drinks&#39;, 11),
- (&#39;Minnesota&#39;, 11),
- (&#39;Persimmon&#39;, 11),
- (&#39;Virginia&#39;, 11),
- (&#39;Vermouth&#39;, 11),
- (&#39;Santa Monica&#39;, 10),
- (&#39;Gouda&#39;, 10),
- (&#39;Seattle&#39;, 10),
- (&#39;Washington, D.C.&#39;, 10),
- (&#39;South Carolina&#39;, 10),
- (&#39;Bon App��tit&#39;, 10),
- (&#39;Mandoline&#39;, 10),
- (&#39;Pizza&#39;, 10),
- (&#39;Grains&#39;, 9),
- (&#39;Egg Nog&#39;, 9),
- (&#39;Friendsgiving&#39;, 9),
- (&#39;Marshmallow&#39;, 9),
- (&#39;Venison&#39;, 9),
- (&#39;Labor Day&#39;, 9),
- (&#39;Canada&#39;, 9),
- (&#39;Eau de Vie&#39;, 9),
- (&#39;San Francisco&#39;, 8),
- (&#39;Pressure Cooker&#39;, 8),
- (&#39;Lychee&#39;, 8),
- (&#39;Entertaining&#39;, 8),
- (&#39;Rhode Island&#39;, 8),
- (&#39;Buffalo&#39;, 8),
- (&#39;Illinois&#39;, 8),
- (&#39;Tart&#39;, 8),
- (&#39;Taco&#39;, 8),
- (&#39;Meatball&#39;, 8),
- (&#39;Arizona&#39;, 8),
- (&#39;Australia&#39;, 7),
- (&#39;30 Days of Groceries&#39;, 7),
- (&#39;Poblano&#39;, 7),
- (&#39;Organic&#39;, 7),
- (&#39;Skewer&#39;, 7),
- (&#39;Brooklyn&#39;, 7),
- (&#39;Rabbit&#39;, 7),
- (&#39;Smoker&#39;, 7),
- (&#39;St. Louis&#39;, 7),
- (&#39;Octopus&#39;, 7),
- (&#39;Atlanta&#39;, 7),
- (&#39;leftovers&#39;, 7),
- (&#39;Biscuit&#39;, 7),
- (&#39;Pomegranate Juice&#39;, 7),
- (&#39;Martini&#39;, 7),
- (&#39;Spritzer&#39;, 7),
- (&#39;Apple Juice&#39;, 6),
- (&#39;No Meat, No Problem&#39;, 6),
- (&#39;House Cocktail&#39;, 6),
- (&#39;Yuca&#39;, 6),
- (&#39;#CAKEWEEK&#39;, 6),
- (&#39;Marscarpone&#39;, 6),
- (&#39;Italy&#39;, 6),
- (&#39;Juicer&#39;, 6),
- (&#39;Cobbler/Crumble&#39;, 6),
- (&#39;Salsa&#39;, 6),
- (&#39;Midori&#39;, 6),
- (&#39;Dallas&#39;, 5),
- (&#39;Pancake&#39;, 5),
- (&#39;Mexico&#39;, 5),
- (&#39;Indiana&#39;, 5),
- (&#39;Boston&#39;, 5),
- (&#39;Granola&#39;, 5),
- (&#39;Muffin&#39;, 5),
- (&#39;Lingonberry&#39;, 5),
- (&#39;Maine&#39;, 5),
- (&#39;Digestif&#39;, 5),
- (&#39;Philippines&#39;, 5),
- (&#39;Vermont&#39;, 5),
- (&#39;Hamburger&#39;, 4),
- (&#39;Wisconsin&#39;, 4),
- (&#39;Rosé&#39;, 4),
- (&#39;Cook Like a Diner&#39;, 4),
- (&#39;Chicago&#39;, 4),
- (&#39;Persian New Year&#39;, 4),
- (&#39;Louisiana&#39;, 4),
- (&#39;Flat Bread&#39;, 4),
- (&#39;Sardine&#39;, 4),
- (&#39;Grappa&#39;, 4),
- (&#39;Paris&#39;, 4),
- (&#39;Oklahoma&#39;, 4),
- (&#39;Lancaster&#39;, 4),
- (&#39;Cambridge&#39;, 4),
- (&#39;Cranberry Sauce&#39;, 4),
- (&#39;Hawaii&#39;, 4),
- (&#39;Switzerland&#39;, 4),
- (&#39;Kansas&#39;, 3),
- (&#39;Bran&#39;, 3),
- (&#39;Chili&#39;, 3),
- (&#39;cookbooks&#39;, 3),
- (&#39;Macaroni and Cheese&#39;, 3),
- (&#39;Denver&#39;, 3),
- (&#39;Utah&#39;, 3),
- (&#39;Freezer Food&#39;, 3),
- (&#39;Stock&#39;, 3),
- (&#39;Cupcake&#39;, 3),
- (&#39;Columbus&#39;, 3),
- (&#39;Lasagna&#39;, 3),
- (&#39;Kentucky&#39;, 3),
- (&#39;Cookbook Critic&#39;, 3),
- (&#39;Brownie&#39;, 3),
- (&#39;Alabama&#39;, 3),
- (&#39;Nebraska&#39;, 3),
- (&#39;Soufflé/Meringue&#39;, 3),
- (&#39;Rub&#39;, 3),
- (&#39;Cuba&#39;, 3),
- (&#39;Spain&#39;, 2),
- (&#39;Omelet&#39;, 2),
- (&#39;Potato Salad&#39;, 2),
- (&#39;New Orleans&#39;, 2),
- (&#39;Tennessee&#39;, 2),
- (&#39;Pot Pie&#39;, 2),
- (&#39;Japan&#39;, 2),
- (&#39;Miami&#39;, 2),
- (&#39;Orzo&#39;, 2),
- (&#39;Dominican Republic&#39;, 2),
- (&#39;Custard&#39;, 2),
- (&#39;Long Beach&#39;, 2),
- (&#39;Peru&#39;, 2),
- (&#39;Louisville&#39;, 2),
- (&#39;Hummus&#39;, 2),
- (&#39;Israel&#39;, 2),
- (&#39;Mortar and Pestle&#39;, 2),
- (&#39;Minneapolis&#39;, 2),
- (&#39;Epi Loves the Microwave&#39;, 2),
- (&#39;Healdsburg&#39;, 2),
- (&#39;Kansas City&#39;, 2),
- (&#39;Frittata&#39;, 2),
- (&#39;Meatloaf&#39;, 2),
- (&#39;Epi + USHG&#39;, 2),
- (&#39;Iced Coffee&#39;, 2),
- (&#39;Anthony Bourdain&#39;, 2),
- (&#39;Alaska&#39;, 2),
- (&#39;Guam&#39;, 1),
- (&#39;Hollywood&#39;, 1),
- (&#39;Kitchen Olympics&#39;, 1),
- (&#39;Haiti&#39;, 1),
- (&#39;Costa Mesa&#39;, 1),
- (&#39;Yonkers&#39;, 1),
- (&#39;Tested &amp; Improved&#39;, 1),
- (&#39;Grand Marnier&#39;, 1),
- (&#39;Aspen&#39;, 1),
- (&#39;Waffle&#39;, 1),
- (&#39;Caviar&#39;, 1),
- (&#39;Suzanne Goin&#39;, 1),
- (&#39;Iowa&#39;, 1),
- (&#39;Sorbet&#39;, 1),
- (&#39;Cr��me de Cacao&#39;, 1),
- (&#39;Idaho&#39;, 1),
- (&#39;Westwood&#39;, 1),
- (&#39;Providence&#39;, 1),
- (&#39;#WasteLess&#39;, 1),
- (&#39;London&#39;, 1),
- (&#39;England&#39;, 1),
- (&#39;Nancy Silverton&#39;, 1),
- (&#39;Dorie Greenspan&#39;, 1),
- (&#39;Frankenrecipe&#39;, 1),
- (&#39;Emeril Lagasse&#39;, 1),
- (&#39;Beverly Hills&#39;, 1),
- (&#39;West Virginia&#39;, 1),
- (&#39;Mezcal&#39;, 1),
- (&#39;Windsor&#39;, 1),
- (&#39;Jamaica&#39;, 1),
- (&#39;Burrito&#39;, 1),
- (&#39;Las Vegas&#39;, 1),
- (&#39;Bulgaria&#39;, 1),
- (&#39;Camping&#39;, 1),
- (&#39;Fritter&#39;, 1),
- (&#39;Egypt&#39;, 1),
- (&#39;Houston&#39;, 1),
- (&#39;Germany&#39;, 1),
- (&#39;Quiche&#39;, 1),
- (&#39;Marinade&#39;, 1),
- (&#39;Pacific Palisades&#39;, 1),
- (&#39;Mississippi&#39;, 1),
- (&#39;Crêpe&#39;, 1),
- (&#39;New Hampshire&#39;, 1),
- (&#39;Sourdough&#39;, 1)]</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Categorie</th>
+      <th>Frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Bon Appétit</td>
+      <td>9355</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Peanut Free</td>
+      <td>8390</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Soy Free</td>
+      <td>8088</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Tree Nut Free</td>
+      <td>7044</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vegetarian</td>
+      <td>6846</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -14159,7 +13524,7 @@ Géneralement les items dans la liste des ingrédients se présentent ainsi :</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">updateDict</span><span class="p">(</span><span class="n">ingredientDict</span><span class="p">,</span> <span class="n">ingredient</span><span class="p">):</span>
@@ -14269,7 +13634,7 @@ Géneralement les items dans la liste des ingrédients se présentent ainsi :</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ingredientsDict</span> <span class="o">=</span> <span class="n">extractIngredient</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ingredients</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
@@ -14292,11 +13657,11 @@ Géneralement les items dans la liste des ingrédients se présentent ainsi :</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dFrame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sorted_ingredientsDict</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Ingredients&#39;</span><span class="p">,</span><span class="s1">&#39;Frequency&#39;</span><span class="p">])</span>
-<span class="n">dFrame</span>
+<span class="n">dFrame</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -14309,7 +13674,7 @@ Géneralement les items dans la liste des ingrédients se présentent ainsi :</p
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -14362,289 +13727,8 @@ Géneralement les items dans la liste des ingrédients se présentent ainsi :</p
       <td>water</td>
       <td>3240</td>
     </tr>
-    <tr>
-      <th>5</th>
-      <td>fresh lemon juice</td>
-      <td>2744</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>cloves</td>
-      <td>2625</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>eggs</td>
-      <td>2280</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>extra-virgin olive oil</td>
-      <td>1904</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>onion</td>
-      <td>1875</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>vegetable oil</td>
-      <td>1766</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>all-purpose flour</td>
-      <td>1620</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>butter</td>
-      <td>1603</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>kosher salt</td>
-      <td>1480</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>fresh lime juice</td>
-      <td>1257</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>all purpose flour</td>
-      <td>1193</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>onions</td>
-      <td>1107</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>vanilla extract</td>
-      <td>1088</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>dry white wine</td>
-      <td>1025</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>garlic cloves</td>
-      <td>966</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>taste</td>
-      <td>950</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>heavy cream</td>
-      <td>932</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>black pepper</td>
-      <td>899</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>ground black pepper</td>
-      <td>883</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>honey</td>
-      <td>876</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>ground cumin</td>
-      <td>858</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>egg</td>
-      <td>849</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>whole milk</td>
-      <td>833</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>dijon mustard</td>
-      <td>826</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>baking powder</td>
-      <td>819</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>24578</th>
-      <td>garlic skordalia</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24579</th>
-      <td>brine</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24580</th>
-      <td>(packed) thinly sliced red onion</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24581</th>
-      <td>thinly sliced seeded kumquats</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24582</th>
-      <td>packed fresh flat-leafed parsley sprigs</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24583</th>
-      <td>roasted-garlic oilepi:recipelink&lt;/epi:recipelink&gt;</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24584</th>
-      <td>loosely packed tender salad greens such as mâche</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24585</th>
-      <td>cubes trimmed pork shoulder</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24586</th>
-      <td>cans plum tomatoes in juice</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24587</th>
-      <td>small california avocados</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24588</th>
-      <td>finely chopped sliced pepperoni</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24589</th>
-      <td>scallion green f</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24590</th>
-      <td>pear crisps</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24591</th>
-      <td>coarsely torn frisée</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24592</th>
-      <td>raw jasmine rice</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24593</th>
-      <td>fresh sorrel leaves</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24594</th>
-      <td>sheets phyllo</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24595</th>
-      <td>cooked whole farro</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24596</th>
-      <td>total) baby carrots in assorted colors</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24597</th>
-      <td>thinly sliced cored green cabbage</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24598</th>
-      <td>sliced maui</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24599</th>
-      <td>oil mango salsa</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24600</th>
-      <td>and cut into chunks. pears and apples should b...</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24601</th>
-      <td>prepared boxed pie crust</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24602</th>
-      <td>grain rolls</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24603</th>
-      <td>peel</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24604</th>
-      <td>drambuie</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24605</th>
-      <td>diced drained oil-packed sun-dried tomatoes</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24606</th>
-      <td>fully cooked bone-in smoked ham</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24607</th>
-      <td>prepared cream style horseradish</td>
-      <td>1</td>
-    </tr>
   </tbody>
 </table>
-<p>24608 rows × 2 columns</p>
 </div>
 </div>
 
@@ -14668,89 +13752,6 @@ Géneralement les items dans la liste des ingrédients se présentent ainsi :</p
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_head</span> <span class="o">=</span> <span class="n">dFrame</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-<span class="n">df_head</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[10]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Ingredients</th>
-      <th>Frequency</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>salt</td>
-      <td>6538</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>sugar</td>
-      <td>5764</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>olive oil</td>
-      <td>4612</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>unsalted butter</td>
-      <td>4050</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>water</td>
-      <td>3240</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_head</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Ingredients&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -14769,7 +13770,7 @@ Géneralement les items dans la liste des ingrédients se présentent ainsi :</p
 
 
 <div class="output_html rendered_html output_subarea ">
-<div id="4bf57c1c-54fd-4b55-8558-e0338d0aea9a" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("4bf57c1c-54fd-4b55-8558-e0338d0aea9a", [{"type": "bar", "x": ["salt", "sugar", "olive oil", "unsalted butter", "water"], "y": [6538, 5764, 4612, 4050, 3240], "name": "Frequency", "text": "", "marker": {"color": "rgba(226, 74, 51, 0.6)", "line": {"color": "rgba(226, 74, 51, 1.0)", "width": 1}}, "orientation": "v"}], {"legend": {"bgcolor": "#FFFFFF", "font": {"color": "#666666"}}, "paper_bgcolor": "#FFFFFF", "plot_bgcolor": "#E5E5E5", "yaxis1": {"tickfont": {"color": "#666666"}, "gridcolor": "#F6F6F6", "titlefont": {"color": "#666666"}, "zerolinecolor": "#F6F6F6", "showgrid": true, "title": ""}, "xaxis1": {"tickfont": {"color": "#666666"}, "gridcolor": "#F6F6F6", "titlefont": {"color": "#666666"}, "zerolinecolor": "#F6F6F6", "showgrid": true, "title": ""}, "titlefont": {"color": "#151516"}}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="95051524-0fab-4e5e-9ca9-0b793d29e3bc" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("95051524-0fab-4e5e-9ca9-0b793d29e3bc", [{"type": "bar", "x": ["salt", "sugar", "olive oil", "unsalted butter", "water"], "y": [6538, 5764, 4612, 4050, 3240], "name": "Frequency", "text": "", "marker": {"color": "rgba(226, 74, 51, 0.6)", "line": {"color": "rgba(226, 74, 51, 1.0)", "width": 1}}, "orientation": "v"}], {"legend": {"bgcolor": "#FFFFFF", "font": {"color": "#666666"}}, "paper_bgcolor": "#FFFFFF", "plot_bgcolor": "#E5E5E5", "yaxis1": {"tickfont": {"color": "#666666"}, "gridcolor": "#F6F6F6", "titlefont": {"color": "#666666"}, "zerolinecolor": "#F6F6F6", "showgrid": true, "title": ""}, "xaxis1": {"tickfont": {"color": "#666666"}, "gridcolor": "#F6F6F6", "titlefont": {"color": "#666666"}, "zerolinecolor": "#F6F6F6", "showgrid": true, "title": ""}, "titlefont": {"color": "#151516"}}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 </div>
 
 </div>
@@ -14790,7 +13791,7 @@ Géneralement les items dans la liste des ingrédients se présentent ainsi :</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getIngredientCountList</span><span class="p">(</span><span class="n">allIngredientsRecipesList</span><span class="p">):</span>
@@ -14810,7 +13811,7 @@ Géneralement les items dans la liste des ingrédients se présentent ainsi :</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.figure_factory</span> <span class="k">as</span> <span class="nn">ff</span>
@@ -14851,7 +13852,7 @@ Consider using IPython.display.IFrame instead
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -14881,19 +13882,6 @@ Consider using IPython.display.IFrame instead
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
