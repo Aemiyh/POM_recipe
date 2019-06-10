@@ -3,12 +3,15 @@ Chart.defaults.global.defaultFontColor = '#292b2c';
 
 var JSONItems = [];
 var ingredientsList = [];
+let chooseButton;
+let itemList=[];
+let outputBox;
 
 window.onload = function() {
 
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
-        $.getJSON( "./data/Cookies_small.json", function( data){
+        $.getJSON( "./data/Pasta_small.json", function( data){
             function createAndModifyDivs() {
                 var text = "<div class=\"container-fluid\">"
                 var progress1 = "<div class=\"card-footer small text-muted\"><div class=\"progress\">";
@@ -47,7 +50,7 @@ window.onload = function() {
                 // selectiontext+="<br></br>"
 
                 /*     FILTRE SELECTION   */
-                selectiontext+="<form><select id= \"ingredients\" size=\"15\" name=\"ingredients\" multiple>"
+                selectiontext+="<form><select id= \"ingredients\"  size=\"15\" name=\"ingredients\" multiple>"
                 $.each(data, function (index, value) { 
                     $.each(data[index].ingredients, function (ingredientsName, quantite) 
                         { 
@@ -61,7 +64,8 @@ window.onload = function() {
                     selectiontext+= ingredientsList[j];
                     selectiontext+="</option>";
                 }
-                selectiontext+="</select></form>"
+                selectiontext+='</select></form>'
+                selectiontext+="<button name=\"choose\" id=\"choose\">Filtrer </button>"
                 // range
                 // selectiontext+="<br><br>"
                 selectiontext+="<form class=\"slidecontainer\">"
@@ -76,8 +80,12 @@ window.onload = function() {
                 // slider.oninput = function() {
                 //     output.innerHTML = this.value;
                 // }
-
                 document.getElementById("leftColonne").innerHTML = selectiontext;
+
+                chooseButton = document.getElementById("choose");
+                itemList = document.getElementById("ingredients");
+                outputBox = document.getElementById("output");
+
             }
             createAndModifyDivs();
             //Tangle
@@ -99,8 +107,40 @@ window.onload = function() {
                 });
             }
             //Charts
+            chooseButton.addEventListener("click", function() {
+                let listeSelection = itemList.selectedOptions;
+                let output = "";
+                
+                for (let i=0; i<listeSelection.length; i++) {
+                    if (output === "") {
+                    output = "Your order for the following items has been placed: ";
+                    }
+                    output += listeSelection[i].label;
+                    
+                    if (i === (listeSelection.length - 2) && (listeSelection.length < 3)) {
+                    output +=  " and ";
+                    } else if (i < (listeSelection.length - 2)) {
+                    output += ", ";
+                    } else if (i === (listeSelection.length - 2)) {
+                    output += ", and ";
+                    }
+                }
+                
+                if (output === "") {
+                    output = "You didn't order anything!";
+                }
+                
+                outputBox.innerHTML = output;
+                }, false);
+
+
+
+
+
+
+
                 recettesArray = []
-                $.getJSON( "./data/Cookies_small.json", function (data) {
+                $.getJSON( "./data/Pasta_small.json", function (data) {
                 $.each(data, function (index, value) {
                     labels = []
                     datas = []

@@ -8,7 +8,7 @@ window.onload = function() {
 
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
-        $.getJSON( "./data/Cookies_small.json", function( data){
+        $.getJSON( "./data/recettesale.json", function( data){
             function createAndModifyDivs() {
                 var text = "<div class=\"container-fluid\">"
                 var progress1 = "<div class=\"card-footer small text-muted\"><div class=\"progress\">";
@@ -95,12 +95,17 @@ window.onload = function() {
                         this.pruneaux2 = this.person * this.quantitePerPerson;
                         this.pruneaux3 = this.person * this.quantitePerPerson;
                         this.pruneaux4 = this.person * this.quantitePerPerson;
+                        this.pruneaux5 = this.person * this.quantitePerPerson;
+                        this.pruneaux6 = this.person * this.quantitePerPerson;
+                        this.pruneaux7 = this.person * this.quantitePerPerson;
+                        this.pruneaux8 = this.person * this.quantitePerPerson;
+                        this.pruneaux9 = this.person * this.quantitePerPerson;
                     }
                 });
             }
             //Charts
                 recettesArray = []
-                $.getJSON( "./data/Cookies_small.json", function (data) {
+                $.getJSON( "./data/recettesale.json", function (data) {
                 $.each(data, function (index, value) {
                     labels = []
                     datas = []
