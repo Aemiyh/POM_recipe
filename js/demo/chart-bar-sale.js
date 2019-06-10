@@ -33,8 +33,8 @@ window.onload = function() {
                 selectiontext+="<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"pagesDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">"
                 selectiontext+="<i class=\"fas fa-fw fa-folder\"></i><span>Recettes</span></a>"
                 selectiontext+="<div class=\"dropdown-menu\" aria-labelledby=\"pagesDropdown\">"
-                selectiontext+="<a class=\"dropdown-item\" id=\"sandwichs\" href=\"sandwich.html\">Sandwichs</a><a class=\"dropdown-item\" id=\"pasta\"href=\"pasta.html\">Pasta</a>"
-                selectiontext+="<a class=\"dropdown-item\" id=\"cookies\" href=\"index.html\">Cookies</a></div></li>"
+                selectiontext+="<a class=\"dropdown-item\" id=\"cookies\" href=\"index.html\">Cookies</a>"
+                selectiontext+="<a class=\"dropdown-item\" id=\"sandwichs\" href=\"sandwich.html\">Sandwichs</a><a class=\"dropdown-item\" id=\"pasta\"href=\"pasta.html\">Pasta</a></div></li>"
                 selectiontext+="<li class=\"nav-item dropdown\">"
                 selectiontext+="<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"pagesDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">"
                 selectiontext+="<i class=\"fas fa-fw fa-folder\"></i><span>Type</span></a>"
@@ -47,7 +47,7 @@ window.onload = function() {
                 // selectiontext+="<br></br>"
 
                 /*     FILTRE SELECTION   */
-                selectiontext+="<form><select id= \"ingredients\" size=\"15\" name=\"ingredients\" multiple>"
+                selectiontext+="<form><select  id= \"ingredients\" size=\"15\" name=\"ingredients\" multiple>"
                 $.each(data, function (index, value) { 
                     $.each(data[index].ingredients, function (ingredientsName, quantite) 
                         { 
