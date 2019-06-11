@@ -3,9 +3,10 @@ Chart.defaults.global.defaultFontColor = '#292b2c';
 
 var JSONItems = [];
 var ingredientsList = [];
-let chooseButton;
-let itemList=[];
-let outputBox;
+var e;
+var strUser;
+var selectIngredients = "Tous sélectionner";
+var recettesArray = []
 
 window.onload = function() {
 
@@ -50,13 +51,16 @@ window.onload = function() {
                 // selectiontext+="<br></br>"
 
                 /*     FILTRE SELECTION   */
-                selectiontext+="<form><select id= \"ingredients\"  size=\"15\" name=\"ingredients\" multiple>"
+                selectiontext+="<form><select id= \"ingredients\" size=\"15\" name=\"ingredients\" multiple>"
                 $.each(data, function (index, value) { 
                     $.each(data[index].ingredients, function (ingredientsName, quantite) 
                         { 
                             ingredientsList.push(ingredientsName) ;
                         }) 
                 }) 
+                selectiontext+="<option>";
+                selectiontext+= "Tous sélectionner";
+                selectiontext+="</option>";
                 for(var j=0; j<ingredientsList.length;j++){
                     
                     
@@ -64,28 +68,30 @@ window.onload = function() {
                     selectiontext+= ingredientsList[j];
                     selectiontext+="</option>";
                 }
-                selectiontext+='</select></form>'
-                selectiontext+="<button name=\"choose\" id=\"choose\">Filtrer </button>"
+                selectiontext+="</select></form>"
                 // range
-                // selectiontext+="<br><br>"
                 selectiontext+="<form class=\"slidecontainer\">"
                 selectiontext+="<input type=\"range\" min=\"1\" max=\"100\" value=\"50\" class=\"slider\" id=\"myRange\"/>"
-                selectiontext+="<p id=\"value\">Value: <span id=\"demo\"></span></p></div>"
+                selectiontext+="<p id=\"value\">Temps: <span id=\"demo\"></span> min</p></div>"
                 selectiontext+="</form></ul>"
 
-                // var slider = document.getElementById("myRange");
-                // var output = document.getElementById("demo");
-                // output.innerHTML = slider.value;
-
-                // slider.oninput = function() {
-                //     output.innerHTML = this.value;
-                // }
                 document.getElementById("leftColonne").innerHTML = selectiontext;
+                e = document.getElementById("ingredients");
+                console.log(selectIngredients)
+                e.addEventListener("change", function (event) {
+                    e = document.getElementById("ingredients");
+                    selectIngredients = e.options[e.selectedIndex].text;
+                    console.log(selectIngredients)
+                    afficheFiltre();
+                })
 
-                chooseButton = document.getElementById("choose");
-                itemList = document.getElementById("ingredients");
-                outputBox = document.getElementById("output");
+                var slider = document.getElementById("myRange");
+                var output = document.getElementById("demo");
+                output.innerHTML = slider.value;
 
+                slider.oninput = function() {
+                    output.innerHTML = this.value;
+                }
             }
             createAndModifyDivs();
             //Tangle
@@ -107,98 +113,140 @@ window.onload = function() {
                 });
             }
             //Charts
-            chooseButton.addEventListener("click", function() {
-                let listeSelection = itemList.selectedOptions;
-                let output = "";
-                
-                for (let i=0; i<listeSelection.length; i++) {
-                    if (output === "") {
-                    output = "Your order for the following items has been placed: ";
-                    }
-                    output += listeSelection[i].label;
-                    
-                    if (i === (listeSelection.length - 2) && (listeSelection.length < 3)) {
-                    output +=  " and ";
-                    } else if (i < (listeSelection.length - 2)) {
-                    output += ", ";
-                    } else if (i === (listeSelection.length - 2)) {
-                    output += ", and ";
-                    }
-                }
-                
-                if (output === "") {
-                    output = "You didn't order anything!";
-                }
-                
-                outputBox.innerHTML = output;
-                }, false);
-
-
-
-
-
-
-
-                recettesArray = []
-                $.getJSON( "./data/Pasta_small.json", function (data) {
-                $.each(data, function (index, value) {
-                    labels = []
-                    datas = []
-                    $.each(data[index].ingredients, function (ingredientsName, quantite) {
-                        labels.push(ingredientsName)
-                        datas.push(quantite)
-                    })
-                    recettesArray.push({
-                        title: data[index].title,
-                        labels: labels,
-                        datas: datas
-                    })
-                })
-                // recettesArray -> afficher le bar chart
-                for (var i = 0; i < recettesArray.length; i++) {
-                    var ctx = document.getElementById('myBarChart' + i) // ton element
-                    var myLineChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: recettesArray[i].labels,
-                        datasets: [{
-                            label: 'Cup/Value',
-                            backgroundColor: 'rgba(2,117,216,1)',
-                            borderColor: 'rgba(2,117,216,1)',
-                            data: recettesArray[i].datas
-                        }]
-                    },
-                    options: {
-                        scales: {
-                        xAxes: [{
-                            time: {
-                            unit: 'Unit'
-                            },
-                            gridLines: {
-                            display: false
-                            },
-                            ticks: {
-                            maxTicksLimit: 15
-                            }
-                        }],
-                        yAxes: [{
-                            ticks: {
-                            min: 0,
-                            max: 15,
-                            maxTicksLimit: 5
-                            },
-                            gridLines: {
-                            display: true
-                            }
-                        }]
-                        },
-                        legend: {
-                        display: false
-                        }
-                    }
-                    })
-                }
-                })    
+            afficheChart();
         });
     });
+}
+
+function afficheChart () {
+    
+    $.getJSON( "./data/Pasta_small.json", function (data) {
+        $.each(data, function (index, value) {
+            labels = []
+            datas = []
+            let found = false;
+            $.each(data[index].ingredients, function (ingredientsName, quantite) {
+                labels.push(ingredientsName)
+                datas.push(quantite)
+            })
+            recettesArray.push({
+                title: data[index].title,
+                labels: labels,
+                datas: datas
+            })
+        })
+        // recettesArray -> afficher le bar chart
+        for (var i = 0; i < recettesArray.length; i++) {
+            var ctx = document.getElementById('myBarChart' + i) // ton element
+            let myLineChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: recettesArray[i].labels,
+                datasets: [{
+                    label: 'Cup/Value',
+                    backgroundColor: 'rgba(2,117,216,1)',
+                    borderColor: 'rgba(2,117,216,1)',
+                    data: recettesArray[i].datas
+                }]
+            },
+            options: {
+                scales: {
+                xAxes: [{
+                    time: {
+                    unit: 'Unit'
+                    },
+                    gridLines: {
+                    display: false
+                    },
+                    ticks: {
+                    maxTicksLimit: 15
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                    min: 0,
+                    max: 15,
+                    maxTicksLimit: 5
+                    },
+                    gridLines: {
+                    display: true
+                    }
+                }]
+                },
+                legend: {
+                display: false
+                }
+            }
+            })
+        }
+    }) 
+}
+
+function afficheFiltre() {
+    var isAffiche = []
+    $.each(recettesArray, function (index, value) {
+        let found = false
+        isAffiche[index] = false
+        $.each(recettesArray[index].labels, function (index, ingredientsName) {
+            if (ingredientsName === selectIngredients) {
+                found = true
+            }
+        })
+        if (found || selectIngredients === "Tous sélectionner") {
+            isAffiche[index] = true
+        }
+    })
+    for (var i = 0; i < recettesArray.length; i++) {
+        var ctx = document.getElementById('myBarChart' + i) // ton element
+        var parent = ctx.parentNode.parentNode
+        if (isAffiche[i]) {
+            if ( parent.classList.contains('hidden') ) {
+                parent.classList.remove('hidden')
+            }
+            let myLineChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: recettesArray[i].labels,
+                datasets: [{
+                    label: 'Cup/Value',
+                    backgroundColor: 'rgba(2,117,216,1)',
+                    borderColor: 'rgba(2,117,216,1)',
+                    data: recettesArray[i].datas
+                }]
+            },
+            options: {
+                scales: {
+                xAxes: [{
+                    time: {
+                    unit: 'Unit'
+                    },
+                    gridLines: {
+                    display: false
+                    },
+                    ticks: {
+                    maxTicksLimit: 15
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                    min: 0,
+                    max: 15,
+                    maxTicksLimit: 5
+                    },
+                    gridLines: {
+                    display: true
+                    }
+                }]
+                },
+                legend: {
+                display: false
+                }
+            }
+            })
+        } else {
+            if ( !parent.classList.contains('hidden') ) {
+                parent.classList.add('hidden')
+            }
+        }
+    }
 }
