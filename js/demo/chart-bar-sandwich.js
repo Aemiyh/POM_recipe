@@ -12,7 +12,7 @@ window.onload = function() {
 
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
-        $.getJSON( "./data/Cookies_small.json", function( data){
+        $.getJSON( "./data/sandwich_small.json", function( data){
             function createAndModifyDivs() {
                 var text = "<div class=\"container-fluid\">"
                 var progress1 = "<div class=\"card-footer small text-muted\"><div class=\"progress\">";
@@ -120,7 +120,7 @@ window.onload = function() {
 
 function afficheChart () {
     
-    $.getJSON( "./data/Cookies_small.json", function (data) {
+    $.getJSON( "./data/sandwich_small.json", function (data) {
         $.each(data, function (index, value) {
             labels = []
             datas = []
